@@ -1,0 +1,1290 @@
+
+/* ==========================================
+   PLACEMENT RECORD MANAGEMENT PAGE
+========================================== */
+
+.placement-record-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f8fafc;
+    color: #0f172a;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.placement-page-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 28px;
+}
+
+.placement-breadcrumb {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.placement-page-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.placement-page-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   ADD BUTTON
+========================================== */
+
+.add-placement-btn {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.add-placement-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.add-placement-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   SUMMARY CARDS
+========================================== */
+
+.placement-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.placement-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.summary-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.total-icon {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.placed-icon {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.joined-icon {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.not-joined-icon {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.placement-summary-card span {
+    display: block;
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.placement-summary-card strong {
+    display: block;
+    color: #0f172a;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   TOOLBAR
+========================================== */
+
+.placement-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.placement-search {
+    width: 380px;
+    max-width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid #dbe3ed;
+    border-radius: 8px;
+    padding: 0 13px;
+    box-sizing: border-box;
+}
+
+.placement-search span {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.placement-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #0f172a;
+    font-size: 13px;
+}
+
+.placement-search input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.placement-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 7px rgba(15, 23, 42, 0.04);
+}
+
+.placement-table {
+    width: 100%;
+    min-width: 1150px;
+    border-collapse: collapse;
+}
+
+.placement-table th {
+    padding: 14px 16px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+
+.placement-table td {
+    padding: 15px 16px;
+    border-bottom: 1px solid #eef2f7;
+    color: #334155;
+    font-size: 13px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.placement-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.placement-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.placement-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* ==========================================
+   STUDENT INFO
+========================================== */
+
+.placement-student {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.placement-avatar {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.placement-student strong {
+    display: block;
+    color: #0f172a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.placement-student span {
+    display: block;
+    margin-top: 3px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   SALARY
+========================================== */
+
+.placement-salary {
+    color: #059669;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   LOCATION
+========================================== */
+
+.placement-location {
+    color: #475569;
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.placement-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-placed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-joined {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-not-joined {
+    background: #ffedd5;
+    color: #c2410c;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.placement-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.edit-placement-btn,
+.delete-placement-btn {
+    border: none;
+    padding: 7px 11px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edit-placement-btn {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.edit-placement-btn:hover {
+    background: #dbeafe;
+}
+
+.delete-placement-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.delete-placement-btn:hover {
+    background: #fee2e2;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.placement-empty-state {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 65px 25px;
+    text-align: center;
+    box-shadow: 0 2px 7px rgba(15, 23, 42, 0.04);
+}
+
+.empty-placement-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.placement-empty-state h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 18px;
+}
+
+.placement-empty-state p {
+    margin: 8px auto 20px;
+    max-width: 450px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.placement-empty-state button {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.placement-empty-state button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   MODAL OVERLAY
+========================================== */
+
+.placement-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.55);
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.placement-modal {
+    width: 100%;
+    max-width: 760px;
+    max-height: 92vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.22);
+}
+
+.placement-modal::-webkit-scrollbar {
+    width: 6px;
+}
+
+.placement-modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.placement-modal::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+
+/* ==========================================
+   MODAL HEADER
+========================================== */
+
+.placement-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 24px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.placement-modal-header h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.placement-modal-header p {
+    margin: 5px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.placement-modal-close {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 7px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 21px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.placement-modal-close:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.placement-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+    padding: 24px;
+}
+
+.placement-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.placement-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.placement-form-group label {
+    color: #334155;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.placement-form-group label span {
+    margin-left: 3px;
+    color: #dc2626;
+}
+
+.placement-form-group input,
+.placement-form-group select,
+.placement-form-group textarea {
+    width: 100%;
+    border: 1px solid #dbe3ed;
+    outline: none;
+    background: #ffffff;
+    color: #0f172a;
+    border-radius: 7px;
+    padding: 10px 11px;
+    font-family: inherit;
+    font-size: 13px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.placement-form-group input,
+.placement-form-group select {
+    height: 40px;
+}
+
+.placement-form-group textarea {
+    min-height: 95px;
+    resize: vertical;
+}
+
+.placement-form-group input:focus,
+.placement-form-group select:focus,
+.placement-form-group textarea:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.placement-form-group input[readonly] {
+    background: #f8fafc;
+    color: #64748b;
+    cursor: default;
+}
+
+.placement-form-group input::placeholder,
+.placement-form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   MODAL ACTIONS
+========================================== */
+
+.placement-modal-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 5px;
+}
+
+.cancel-placement-btn,
+.save-placement-btn {
+    min-width: 105px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancel-placement-btn {
+    border: 1px solid #dbe3ed;
+    background: #ffffff;
+    color: #475569;
+}
+
+.cancel-placement-btn:hover {
+    background: #f8fafc;
+}
+
+.save-placement-btn {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.save-placement-btn:hover {
+    background: #1d4ed8;
+}
+
+.cancel-placement-btn:disabled,
+.save-placement-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   SUCCESS / ERROR POPUPS
+========================================== */
+
+.placement-message-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.placement-message-popup {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 16px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.18);
+    border: 1px solid #e2e8f0;
+    pointer-events: auto;
+    animation: placementMessageIn 0.25s ease;
+}
+
+.placement-message-popup.error {
+    border-left: 4px solid #ef4444;
+}
+
+.placement-message-popup.success {
+    border-left: 4px solid #22c55e;
+}
+
+.placement-message-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.placement-message-popup.error .placement-message-icon {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.placement-message-popup.success .placement-message-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.placement-message-popup h3 {
+    margin: 0 0 3px;
+    color: #0f172a;
+    font-size: 13px;
+}
+
+.placement-message-popup p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.placement-message-popup > button {
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    color: #94a3b8;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.placement-message-popup > button:hover {
+    color: #475569;
+}
+
+@keyframes placementMessageIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.placement-loading {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    gap: 12px;
+}
+
+.placement-loader {
+    width: 34px;
+    height: 34px;
+    border: 3px solid #dbeafe;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: placementLoaderSpin 0.8s linear infinite;
+}
+
+@keyframes placementLoaderSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .placement-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .placement-record-page {
+        padding: 20px 15px;
+    }
+
+    .placement-page-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .placement-page-header h1 {
+        font-size: 24px;
+    }
+
+    .add-placement-btn {
+        width: 100%;
+    }
+
+    .placement-summary-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .placement-toolbar {
+        display: block;
+    }
+
+    .placement-search {
+        width: 100%;
+    }
+
+    .placement-modal-overlay {
+        padding: 10px;
+    }
+
+    .placement-modal {
+        max-height: 95vh;
+        border-radius: 11px;
+    }
+
+    .placement-form {
+        grid-template-columns: 1fr;
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .placement-form-group.full-width {
+        grid-column: auto;
+    }
+
+    .placement-modal-actions {
+        grid-column: auto;
+        flex-direction: column-reverse;
+    }
+
+    .cancel-placement-btn,
+    .save-placement-btn {
+        width: 100%;
+    }
+
+    .placement-message-popup {
+        top: 15px;
+        right: 15px;
+        left: 15px;
+        width: auto;
+        max-width: none;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .placement-record-page {
+        padding: 16px 10px;
+    }
+
+    .placement-page-header h1 {
+        font-size: 21px;
+    }
+
+    .placement-page-header p {
+        font-size: 12px;
+    }
+
+    .placement-summary-card {
+        padding: 15px;
+    }
+
+    .placement-summary-card strong {
+        font-size: 20px;
+    }
+
+    .placement-table {
+        min-width: 1050px;
+    }
+
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark .placement-record-page {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+body.dark .placement-breadcrumb {
+    color: #94a3b8;
+}
+
+body.dark .placement-page-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .placement-page-header p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   SUMMARY CARDS
+========================================== */
+
+body.dark .placement-summary-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .total-icon {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .placed-icon {
+    background: #052e24;
+    color: #34d399;
+}
+
+body.dark .joined-icon {
+    background: #052e24;
+    color: #4ade80;
+}
+
+body.dark .not-joined-icon {
+    background: #431407;
+    color: #fb923c;
+}
+
+body.dark .placement-summary-card span {
+    color: #94a3b8;
+}
+
+body.dark .placement-summary-card strong {
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   SEARCH / TOOLBAR
+========================================== */
+
+body.dark .placement-search {
+    background: #1e293b;
+    border-color: #475569;
+}
+
+body.dark .placement-search span {
+    color: #94a3b8;
+}
+
+body.dark .placement-search input {
+    color: #f8fafc;
+}
+
+body.dark .placement-search input::placeholder {
+    color: #64748b;
+}
+
+
+/* ==========================================
+   TABLE
+========================================== */
+
+body.dark .placement-table-wrapper {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .placement-table th {
+    background: #0f172a;
+    border-bottom-color: #334155;
+    color: #94a3b8;
+}
+
+body.dark .placement-table td {
+    background: #1e293b;
+    border-bottom-color: #334155;
+    color: #cbd5e1;
+}
+
+body.dark .placement-table tbody tr:hover,
+body.dark .placement-table tbody tr:hover td {
+    background: #263449;
+}
+
+
+/* ==========================================
+   STUDENT INFO
+========================================== */
+
+body.dark .placement-avatar {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .placement-student strong {
+    color: #f1f5f9;
+}
+
+body.dark .placement-student span {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   SALARY
+========================================== */
+
+body.dark .placement-salary {
+    color: #34d399;
+}
+
+
+/* ==========================================
+   LOCATION
+========================================== */
+
+body.dark .placement-location {
+    color: #cbd5e1;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+body.dark .status-placed {
+    background: #052e24;
+    color: #34d399;
+}
+
+body.dark .status-joined {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .status-not-joined {
+    background: #431407;
+    color: #fb923c;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+body.dark .edit-placement-btn {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .edit-placement-btn:hover {
+    background: #1e3a8a;
+}
+
+body.dark .delete-placement-btn {
+    background: #450a0a;
+    color: #f87171;
+}
+
+body.dark .delete-placement-btn:hover {
+    background: #7f1d1d;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+body.dark .placement-empty-state {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .empty-placement-icon {
+    background: #172554;
+}
+
+body.dark .placement-empty-state h3 {
+    color: #f8fafc;
+}
+
+body.dark .placement-empty-state p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   MODAL OVERLAY
+========================================== */
+
+body.dark .placement-modal-overlay {
+    background: rgba(2, 6, 23, 0.75);
+}
+
+
+/* ==========================================
+   MODAL
+========================================== */
+
+body.dark .placement-modal {
+    background: #1e293b;
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.45),
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .placement-modal::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+
+/* ==========================================
+   MODAL HEADER
+========================================== */
+
+body.dark .placement-modal-header {
+    border-bottom-color: #334155;
+}
+
+body.dark .placement-modal-header h2 {
+    color: #f8fafc;
+}
+
+body.dark .placement-modal-header p {
+    color: #94a3b8;
+}
+
+body.dark .placement-modal-close {
+    background: #334155;
+    color: #cbd5e1;
+}
+
+body.dark .placement-modal-close:hover {
+    background: #475569;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+body.dark .placement-form-group label {
+    color: #cbd5e1;
+}
+
+body.dark .placement-form-group label span {
+    color: #f87171;
+}
+
+body.dark .placement-form-group input,
+body.dark .placement-form-group select,
+body.dark .placement-form-group textarea {
+    background: #0f172a;
+    border-color: #475569;
+    color: #f8fafc;
+}
+
+body.dark .placement-form-group input::placeholder,
+body.dark .placement-form-group textarea::placeholder {
+    color: #64748b;
+}
+
+body.dark .placement-form-group input:focus,
+body.dark .placement-form-group select:focus,
+body.dark .placement-form-group textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+body.dark .placement-form-group input[readonly] {
+    background: #172033;
+    color: #64748b;
+    border-color: #334155;
+}
+
+body.dark .placement-form-group select option {
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   MODAL ACTIONS
+========================================== */
+
+body.dark .placement-modal-actions {
+    border-color: #334155;
+}
+
+body.dark .cancel-placement-btn {
+    background: #1e293b;
+    border-color: #475569;
+    color: #cbd5e1;
+}
+
+body.dark .cancel-placement-btn:hover {
+    background: #334155;
+    color: #ffffff;
+}
+
+body.dark .save-placement-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .save-placement-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   SUCCESS / ERROR POPUPS
+========================================== */
+
+body.dark .placement-message-popup {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .placement-message-popup.error {
+    border-left-color: #ef4444;
+}
+
+body.dark .placement-message-popup.success {
+    border-left-color: #22c55e;
+}
+
+body.dark .placement-message-popup.error .placement-message-icon {
+    background: #450a0a;
+    color: #f87171;
+}
+
+body.dark .placement-message-popup.success .placement-message-icon {
+    background: #052e24;
+    color: #34d399;
+}
+
+body.dark .placement-message-popup h3 {
+    color: #f8fafc;
+}
+
+body.dark .placement-message-popup p {
+    color: #94a3b8;
+}
+
+body.dark .placement-message-popup > button {
+    color: #64748b;
+}
+
+body.dark .placement-message-popup > button:hover {
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+body.dark .placement-loading {
+    color: #94a3b8;
+}
+
+body.dark .placement-loader {
+    border-color: #334155;
+    border-top-color: #3b82f6;
+}

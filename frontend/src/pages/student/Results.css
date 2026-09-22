@@ -1,0 +1,1019 @@
+/* =========================================================
+   RESULTS PAGE
+========================================================= */
+
+.results-page {
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 100vh;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background: #f8fafc;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.results-header {
+    width: 100%;
+    max-width: 100%;
+
+    margin-bottom: 28px;
+}
+
+.results-header h1 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    overflow-wrap: break-word;
+}
+
+.results-header p {
+    margin: 7px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.results-message {
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    border-radius: 8px;
+
+    background: #eff6ff;
+    color: #1d4ed8;
+
+    font-size: 13px;
+
+    border: 1px solid #dbeafe;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.result-summary {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.result-summary-card {
+    min-width: 0;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+
+    transition: 0.2s ease;
+}
+
+.result-summary-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.result-summary-card span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.result-summary-card strong {
+    color: #0f172a;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+
+/* PASS STATUS */
+
+.result-summary-card .pass-status {
+    color: #16a34a;
+}
+
+
+/* =========================================================
+   DOWNLOAD SECTION
+========================================================= */
+
+.results-download-section {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-bottom: 18px;
+}
+
+.download-marksheet-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 42px;
+
+    padding: 11px 18px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.download-marksheet-btn::before {
+    content: "↓";
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.download-marksheet-btn:hover {
+    background: #1d4ed8;
+
+    border-color: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 7px 15px rgba(37, 99, 235, 0.2);
+}
+
+.download-marksheet-btn:active {
+    transform: translateY(0);
+}
+
+.download-marksheet-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   RESULTS CARD
+========================================================= */
+
+.results-card {
+    width: 100%;
+    max-width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.results-card-header {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 22px 24px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.results-card-header > div {
+    min-width: 0;
+}
+
+.results-card-header h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    overflow-wrap: break-word;
+}
+
+.results-card-header p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.results-card-header > span {
+    flex-shrink: 0;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.results-table {
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+}
+
+.result-row {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(55px, 0.8fr)
+        minmax(100px, 2fr)
+        minmax(65px, 1fr)
+        minmax(50px, 0.7fr);
+
+    align-items: center;
+
+    min-height: 58px;
+
+    padding: 0 24px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    column-gap: 10px;
+}
+
+.result-row:last-child {
+    border-bottom: none;
+}
+
+.result-heading {
+    min-height: 45px;
+
+    background: #f8fafc;
+}
+
+.result-heading span {
+    min-width: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+}
+
+.result-row span {
+    min-width: 0;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    overflow-wrap: break-word;
+}
+
+.result-row > strong {
+    min-width: 0;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    overflow-wrap: break-word;
+}
+
+.result-row .grade {
+    color: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ROW HOVER
+========================================================= */
+
+.results-table
+.result-row:not(.result-heading):hover {
+    background: #f8fbff;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.results-page > p {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .results-page {
+        padding: 24px;
+    }
+
+    .result-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .results-page {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 18px 14px;
+
+        overflow-x: hidden;
+    }
+
+
+    /* HEADER */
+
+    .results-header {
+        margin-bottom: 20px;
+    }
+
+    .results-header h1 {
+        font-size: 23px;
+
+        line-height: 1.25;
+    }
+
+    .results-header p {
+        font-size: 12px;
+    }
+
+
+    /* SUMMARY */
+
+    .result-summary {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        margin-bottom: 16px;
+    }
+
+    .result-summary-card {
+        padding: 15px;
+
+        border-radius: 11px;
+    }
+
+    .result-summary-card span {
+        margin-bottom: 7px;
+
+        font-size: 11px;
+    }
+
+    .result-summary-card strong {
+        font-size: 18px;
+    }
+
+
+    /* DOWNLOAD */
+
+    .results-download-section {
+        width: 100%;
+
+        justify-content: stretch;
+
+        margin-bottom: 16px;
+    }
+
+    .download-marksheet-btn {
+        width: 100%;
+
+        min-height: 48px;
+
+        padding: 11px 12px;
+
+        font-size: 13px;
+    }
+
+
+    /* RESULTS CARD */
+
+    .results-card {
+        width: 100%;
+        max-width: 100%;
+
+        border-radius: 10px;
+    }
+
+
+    /* CARD HEADER */
+
+    .results-card-header {
+        padding: 16px;
+
+        gap: 8px;
+    }
+
+    .results-card-header h2 {
+        font-size: 14px;
+    }
+
+    .results-card-header p {
+        font-size: 10px;
+    }
+
+    .results-card-header > span {
+        padding: 5px 8px;
+
+        font-size: 8px;
+    }
+
+
+    /* TABLE */
+
+    .results-table {
+        width: 100%;
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+    .result-row {
+        width: 100%;
+        min-width: 0;
+
+        grid-template-columns:
+            0.8fr
+            1.7fr
+            0.9fr
+            0.7fr;
+
+        column-gap: 5px;
+
+        min-height: 52px;
+
+        padding: 0 12px;
+    }
+
+    .result-heading {
+        min-height: 42px;
+    }
+
+    .result-heading span {
+        font-size: 9px;
+
+        letter-spacing: 0;
+    }
+
+    .result-row span {
+        font-size: 10px;
+    }
+
+    .result-row > strong {
+        font-size: 10px;
+    }
+
+    .result-row .grade {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .results-page {
+        padding: 16px 10px;
+    }
+
+
+    /* HEADER */
+
+    .results-header {
+        margin-bottom: 18px;
+    }
+
+    .results-header h1 {
+        font-size: 21px;
+    }
+
+    .results-header p {
+        font-size: 10px;
+    }
+
+
+    /* SUMMARY */
+
+    .result-summary {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+    .result-summary-card {
+        min-height: 68px;
+
+        padding: 14px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 12px;
+    }
+
+    .result-summary-card span {
+        margin: 0;
+
+        font-size: 11px;
+    }
+
+    .result-summary-card strong {
+        font-size: 19px;
+
+        text-align: right;
+    }
+
+
+    /* DOWNLOAD */
+
+    .download-marksheet-btn {
+        min-height: 50px;
+
+        font-size: 13px;
+    }
+
+
+    /* CARD HEADER */
+
+    .results-card-header {
+        padding: 14px 12px;
+    }
+
+    .results-card-header h2 {
+        font-size: 13px;
+    }
+
+    .results-card-header p {
+        font-size: 9px;
+    }
+
+    .results-card-header > span {
+        font-size: 8px;
+
+        padding: 5px 7px;
+    }
+
+
+    /* TABLE */
+
+    .result-row {
+        grid-template-columns:
+            0.8fr
+            1.55fr
+            0.85fr
+            0.65fr;
+
+        column-gap: 4px;
+
+        min-height: 50px;
+
+        padding: 0 10px;
+    }
+
+    .result-heading {
+        min-height: 40px;
+    }
+
+    .result-heading span {
+        font-size: 8px;
+    }
+
+    .result-row span {
+        font-size: 9px;
+    }
+
+    .result-row > strong {
+        font-size: 9px;
+    }
+
+    .result-row .grade {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   320px
+========================================================= */
+
+@media (max-width: 320px) {
+
+    .results-page {
+        padding: 14px 8px;
+    }
+
+
+    .results-header h1 {
+        font-size: 20px;
+    }
+
+    .results-header p {
+        font-size: 9px;
+    }
+
+
+    /* Summary */
+
+    .result-summary-card {
+        min-height: 64px;
+
+        padding: 12px;
+    }
+
+    .result-summary-card span {
+        font-size: 10px;
+    }
+
+    .result-summary-card strong {
+        font-size: 18px;
+    }
+
+
+    /* Download */
+
+    .download-marksheet-btn {
+        min-height: 48px;
+
+        font-size: 12px;
+
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
+    /* Card */
+
+    .results-card-header {
+        padding: 12px 10px;
+    }
+
+    .results-card-header h2 {
+        font-size: 12px;
+    }
+
+    .results-card-header p {
+        font-size: 8px;
+    }
+
+    .results-card-header > span {
+        font-size: 7px;
+
+        padding: 4px 6px;
+    }
+
+
+    /* Table */
+
+    .result-row {
+        grid-template-columns:
+            0.75fr
+            1.45fr
+            0.8fr
+            0.6fr;
+
+        column-gap: 3px;
+
+        min-height: 48px;
+
+        padding: 0 8px;
+    }
+
+    .result-heading {
+        min-height: 38px;
+    }
+
+    .result-heading span {
+        font-size: 7px;
+    }
+
+    .result-row span {
+        font-size: 8px;
+    }
+
+    .result-row > strong {
+        font-size: 8px;
+    }
+
+    .result-row .grade {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .results-page {
+    background: #0f172a;
+
+    color: #f8fafc;
+}
+
+
+/* HEADER */
+
+body.dark .results-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .results-header p {
+    color: #94a3b8;
+}
+
+
+/* MESSAGE */
+
+body.dark .results-message {
+    background: #172554;
+
+    border-color: #1e40af;
+
+    color: #60a5fa;
+}
+
+
+/* SUMMARY */
+
+body.dark .result-summary-card {
+    background: #1e293b;
+
+    border-color: #334155;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .result-summary-card:hover {
+    background: #243247;
+
+    border-color: #475569;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+body.dark .result-summary-card span {
+    color: #94a3b8;
+}
+
+body.dark .result-summary-card strong {
+    color: #f8fafc;
+}
+
+
+/* PASS */
+
+body.dark .result-summary-card .pass-status {
+    color: #34d399;
+}
+
+
+/* DOWNLOAD */
+
+body.dark .download-marksheet-btn {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: #ffffff;
+}
+
+body.dark .download-marksheet-btn:hover {
+    background: #1d4ed8;
+
+    border-color: #1d4ed8;
+
+    box-shadow: 0 7px 15px rgba(37, 99, 235, 0.28);
+}
+
+
+/* RESULTS CARD */
+
+body.dark .results-card {
+    background: #1e293b;
+
+    border-color: #334155;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.22);
+}
+
+
+/* CARD HEADER */
+
+body.dark .results-card-header {
+    border-bottom-color: #334155;
+}
+
+body.dark .results-card-header h2 {
+    color: #f8fafc;
+}
+
+body.dark .results-card-header p {
+    color: #94a3b8;
+}
+
+body.dark .results-card-header > span {
+    background: #052e24;
+
+    color: #34d399;
+}
+
+
+/* TABLE */
+
+body.dark .result-row {
+    border-bottom-color: #334155;
+}
+
+body.dark .result-heading {
+    background: #172033;
+}
+
+body.dark .result-heading span {
+    color: #94a3b8;
+}
+
+body.dark .result-row span {
+    color: #cbd5e1;
+}
+
+body.dark .result-row > strong {
+    color: #e2e8f0;
+}
+
+body.dark .result-row .grade {
+    color: #60a5fa;
+}
+
+
+/* HOVER */
+
+body.dark
+.results-table
+.result-row:not(.result-heading):hover {
+    background: #243247;
+}
+
+
+/* LOADING */
+
+body.dark .results-page > p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   MOBILE DARK MODE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body.dark .results-card {
+        background: #1e293b;
+    }
+
+    body.dark .results-card-header {
+        background: #1e293b;
+    }
+
+    body.dark .results-table {
+        background: #1e293b;
+    }
+
+    body.dark .result-row {
+        background: #1e293b;
+    }
+
+    body.dark .result-heading {
+        background: #172033;
+    }
+}

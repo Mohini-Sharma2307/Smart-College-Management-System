@@ -1,0 +1,1495 @@
+/* =========================================================
+   STUDENT ASSIGNMENTS PAGE
+========================================================= */
+
+.student-assignments-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #f8fafc;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.student-assignment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.student-assignment-header h1 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 30px;
+    font-weight: 750;
+    letter-spacing: -0.6px;
+}
+
+.student-assignment-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ASSIGNMENT COUNT
+========================================================= */
+
+.assignment-count {
+    min-width: 110px;
+    padding: 13px 20px;
+
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+
+    background: #eff6ff;
+
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.05);
+}
+
+.assignment-count span {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 23px;
+    font-weight: 750;
+    line-height: 1.1;
+}
+
+.assignment-count small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ASSIGNMENT LIST
+========================================================= */
+
+.student-assignment-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   ASSIGNMENT CARD
+========================================================= */
+
+.student-assignment-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 22px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 4px 16px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.student-assignment-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #2563eb;
+}
+
+.student-assignment-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #dbeafe;
+
+    box-shadow:
+        0 14px 32px rgba(15, 23, 42, 0.09);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.assignment-card-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.assignment-title-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.assignment-icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dbeafe;
+    border-radius: 13px;
+
+    background: #eff6ff;
+
+    font-size: 21px;
+}
+
+.assignment-title-area h2 {
+    margin: 0;
+
+    color: #1e293b;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+.assignment-title-area p {
+    margin: 4px 0 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DUE STATUS
+========================================================= */
+
+.due-status {
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.due-status.days-left {
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+}
+
+.due-status.due-tomorrow {
+    color: #b45309;
+
+    background: #fffbeb;
+
+    border: 1px solid #fde68a;
+}
+
+.due-status.due-today {
+    color: #c2410c;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+}
+
+.due-status.overdue {
+    color: #dc2626;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+}
+
+
+/* =========================================================
+   ASSIGNMENT DETAILS
+========================================================= */
+
+.assignment-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    padding: 16px 0;
+
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.assignment-detail {
+    min-width: 0;
+}
+
+.assignment-detail span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+}
+
+.assignment-detail strong {
+    display: block;
+
+    color: #334155;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.assignment-description {
+    margin-top: 18px;
+}
+
+.assignment-description h3 {
+    margin: 0 0 7px;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.assignment-description p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   SUBMIT ASSIGNMENT
+========================================================= */
+
+.submit-assignment-section {
+    margin-top: 22px;
+
+    padding: 18px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    background: #f8fafc;
+}
+
+.submit-assignment-section h3 {
+    margin: 0 0 13px;
+
+    color: #1e293b;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ANSWER TEXTAREA
+========================================================= */
+
+.submit-assignment-section textarea {
+    display: block;
+
+    width: 100%;
+    min-height: 115px;
+
+    padding: 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    outline: none;
+
+    resize: vertical;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.submit-assignment-section textarea::placeholder {
+    color: #94a3b8;
+}
+
+.submit-assignment-section textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   FILE UPLOAD
+========================================================= */
+
+.file-upload-area {
+    margin-top: 13px;
+}
+
+.file-upload-area input {
+    display: none;
+}
+
+.file-upload-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 62px;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    border: 2px dashed #cbd5e1;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.file-upload-label:hover {
+    border-color: #2563eb;
+
+    background: #eff6ff;
+}
+
+.file-upload-label > span {
+    font-size: 23px;
+}
+
+.file-upload-label div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.file-upload-label strong {
+    color: #334155;
+
+    font-size: 13px;
+}
+
+.file-upload-label small {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SELECTED FILE
+========================================================= */
+
+.selected-file {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-top: 11px;
+
+    padding: 11px 13px;
+
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+
+    background: #eff6ff;
+}
+
+.selected-file > span {
+    font-size: 20px;
+}
+
+.selected-file div {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    gap: 3px;
+}
+
+.selected-file strong {
+    color: #1e40af;
+
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
+}
+
+.selected-file small {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.submit-assignment-btn {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.submit-assignment-btn:hover {
+    background: #1d4ed8;
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.18);
+}
+
+.submit-assignment-btn:active {
+    transform: scale(0.99);
+}
+
+.submit-assignment-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   SUBMITTED ASSIGNMENT
+========================================================= */
+
+.submitted-assignment {
+    margin-top: 22px;
+
+    padding: 18px;
+
+    border: 1px solid #bbf7d0;
+    border-radius: 14px;
+
+    background: #f0fdf4;
+}
+
+.submitted-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.submitted-header > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.submitted-icon {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.submitted-header strong {
+    color: #166534;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SUBMISSION STATUS
+========================================================= */
+
+.submission-status {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.submission-status.submitted {
+    color: #15803d;
+
+    background: #dcfce7;
+}
+
+.submission-status.late {
+    color: #dc2626;
+
+    background: #fee2e2;
+}
+
+
+/* =========================================================
+   SUBMISSION INFO
+========================================================= */
+
+.submission-info {
+    display: flex;
+
+    gap: 35px;
+
+    margin-top: 17px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #bbf7d0;
+}
+
+.submission-info div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.submission-info span,
+.submitted-answer > span {
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.submission-info strong {
+    color: #334155;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TEACHER FEEDBACK
+========================================================= */
+
+.submission-feedback {
+    position: relative;
+
+    margin-top: 17px;
+
+    padding: 15px 17px 16px;
+
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid #2563eb;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 3px 10px rgba(15, 23, 42, 0.04);
+
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.submission-feedback:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 16px rgba(15, 23, 42, 0.07);
+}
+
+
+/* FEEDBACK HEADER */
+
+.feedback-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 9px;
+}
+
+.feedback-header span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #eff6ff;
+
+    font-size: 16px;
+}
+
+.feedback-header strong {
+    color: #1e3a8a;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* FEEDBACK TEXT */
+
+.submission-feedback p {
+    margin: 0;
+
+    padding-left: 39px;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    white-space: pre-wrap;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SUBMITTED ANSWER
+========================================================= */
+
+.submitted-answer {
+    margin-top: 16px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #bbf7d0;
+}
+
+.submitted-answer p {
+    margin: 7px 0 0;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SUBMITTED FILE
+========================================================= */
+
+.submitted-file {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-top: 14px;
+
+    padding: 11px 13px;
+
+    border: 1px solid #d1fae5;
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.submitted-file > span {
+    font-size: 20px;
+}
+
+.submitted-file div {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    gap: 3px;
+}
+
+.submitted-file strong {
+    color: #166534;
+
+    font-size: 12px;
+}
+
+.submitted-file small {
+    color: #64748b;
+
+    font-size: 11px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.no-assignments {
+    padding: 65px 20px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.empty-assignment-icon {
+    margin-bottom: 12px;
+
+    font-size: 46px;
+}
+
+.no-assignments h3 {
+    margin: 0 0 7px;
+
+    color: #334155;
+
+    font-size: 20px;
+}
+
+.no-assignments p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.student-assignment-loading {
+    min-height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.assignment-loader {
+    width: 32px;
+    height: 32px;
+
+    border: 3px solid #dbeafe;
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        assignment-spin 0.8s linear infinite;
+}
+
+@keyframes assignment-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.student-assignment-error {
+    padding: 14px 16px;
+
+    border: 1px solid #fecaca;
+    border-radius: 11px;
+
+    background: #fef2f2;
+
+    color: #dc2626;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .student-assignment-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .student-assignments-page {
+        padding: 18px;
+    }
+
+    .student-assignment-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 22px;
+    }
+
+    .student-assignment-header h1 {
+        font-size: 25px;
+    }
+
+    .assignment-count {
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 7px;
+    }
+
+    .assignment-count span,
+    .assignment-count small {
+        display: inline;
+
+        margin: 0;
+    }
+
+    .assignment-count span {
+        font-size: 18px;
+    }
+
+    .student-assignment-card {
+        padding: 17px;
+
+        border-radius: 15px;
+    }
+
+    .assignment-card-header {
+        flex-direction: column;
+    }
+
+    .due-status {
+        align-self: flex-start;
+    }
+
+    .assignment-details {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .submit-assignment-section,
+    .submitted-assignment {
+        padding: 15px;
+    }
+
+    .submitted-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .submission-info {
+        flex-wrap: wrap;
+
+        gap: 18px 30px;
+    }
+
+    .submission-feedback {
+        padding: 14px;
+    }
+
+    .submission-feedback p {
+        padding-left: 0;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .student-assignments-page {
+        padding: 14px;
+    }
+
+    .student-assignment-card {
+        padding: 14px;
+    }
+
+    .assignment-title-area {
+        align-items: flex-start;
+    }
+
+    .assignment-icon {
+        flex-basis: 40px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+    .assignment-title-area h2 {
+        font-size: 16px;
+    }
+
+    .submission-feedback {
+        border-left-width: 3px;
+    }
+
+}
+
+/* =========================================================
+   DARK MODE
+   Theme controlled from Landing Page
+========================================================= */
+
+body.dark .student-assignments-page {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+body.dark .student-assignment-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .student-assignment-header p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   ASSIGNMENT COUNT
+========================================================= */
+
+body.dark .assignment-count {
+    background: #172554;
+    border-color: #1e40af;
+    box-shadow: none;
+}
+
+body.dark .assignment-count span {
+    color: #60a5fa;
+}
+
+body.dark .assignment-count small {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   ASSIGNMENT CARD
+========================================================= */
+
+body.dark .student-assignment-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .student-assignment-card::before {
+    background: #2563eb;
+}
+
+body.dark .student-assignment-card:hover {
+    background: #243247;
+    border-color: #475569;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+body.dark .assignment-icon {
+    background: #172554;
+    border-color: #1e40af;
+}
+
+body.dark .assignment-title-area h2 {
+    color: #f1f5f9;
+}
+
+body.dark .assignment-title-area p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   DUE STATUS
+========================================================= */
+
+body.dark .due-status.days-left {
+    background: #172554;
+    border-color: #1e40af;
+    color: #60a5fa;
+}
+
+body.dark .due-status.due-tomorrow {
+    background: #431407;
+    border-color: #9a3412;
+    color: #fb923c;
+}
+
+body.dark .due-status.due-today {
+    background: #431407;
+    border-color: #9a3412;
+    color: #fb923c;
+}
+
+body.dark .due-status.overdue {
+    background: #450a0a;
+    border-color: #991b1b;
+    color: #f87171;
+}
+
+
+/* =========================================================
+   ASSIGNMENT DETAILS
+========================================================= */
+
+body.dark .assignment-details {
+    border-top-color: #334155;
+    border-bottom-color: #334155;
+}
+
+body.dark .assignment-detail span {
+    color: #94a3b8;
+}
+
+body.dark .assignment-detail strong {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+body.dark .assignment-description h3 {
+    color: #e2e8f0;
+}
+
+body.dark .assignment-description p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   SUBMIT ASSIGNMENT SECTION
+========================================================= */
+
+body.dark .submit-assignment-section {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark .submit-assignment-section h3 {
+    color: #f1f5f9;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+body.dark .submit-assignment-section textarea {
+    background: #0f172a;
+    border-color: #475569;
+    color: #f8fafc;
+}
+
+body.dark .submit-assignment-section textarea::placeholder {
+    color: #64748b;
+}
+
+body.dark .submit-assignment-section textarea:focus {
+    border-color: #3b82f6;
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+
+/* =========================================================
+   FILE UPLOAD
+========================================================= */
+
+body.dark .file-upload-label {
+    background: #0f172a;
+    border-color: #475569;
+}
+
+body.dark .file-upload-label:hover {
+    background: #172554;
+    border-color: #3b82f6;
+}
+
+body.dark .file-upload-label strong {
+    color: #e2e8f0;
+}
+
+body.dark .file-upload-label small {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   SELECTED FILE
+========================================================= */
+
+body.dark .selected-file {
+    background: #172554;
+    border-color: #1e40af;
+}
+
+body.dark .selected-file strong {
+    color: #60a5fa;
+}
+
+body.dark .selected-file small {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+body.dark .submit-assignment-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .submit-assignment-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   SUBMITTED ASSIGNMENT
+========================================================= */
+
+body.dark .submitted-assignment {
+    background: #052e24;
+    border-color: #166534;
+}
+
+body.dark .submitted-header strong {
+    color: #86efac;
+}
+
+body.dark .submitted-icon {
+    background: #16a34a;
+}
+
+
+/* =========================================================
+   SUBMISSION STATUS
+========================================================= */
+
+body.dark .submission-status.submitted {
+    background: #064e3b;
+    color: #34d399;
+}
+
+body.dark .submission-status.late {
+    background: #450a0a;
+    color: #f87171;
+}
+
+
+/* =========================================================
+   SUBMISSION INFO
+========================================================= */
+
+body.dark .submission-info {
+    border-top-color: #166534;
+}
+
+body.dark .submission-info span,
+body.dark .submitted-answer > span {
+    color: #94a3b8;
+}
+
+body.dark .submission-info strong {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   TEACHER FEEDBACK
+========================================================= */
+
+body.dark .submission-feedback {
+    background: #1e293b;
+    border-color: #1e40af;
+    border-left-color: #2563eb;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .submission-feedback:hover {
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.28);
+}
+
+body.dark .feedback-header span {
+    background: #172554;
+}
+
+body.dark .feedback-header strong {
+    color: #93c5fd;
+}
+
+body.dark .submission-feedback p {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   SUBMITTED ANSWER
+========================================================= */
+
+body.dark .submitted-answer {
+    border-top-color: #166534;
+}
+
+body.dark .submitted-answer p {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   SUBMITTED FILE
+========================================================= */
+
+body.dark .submitted-file {
+    background: #172033;
+    border-color: #166534;
+}
+
+body.dark .submitted-file strong {
+    color: #86efac;
+}
+
+body.dark .submitted-file small {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+body.dark .no-assignments {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .no-assignments h3 {
+    color: #e2e8f0;
+}
+
+body.dark .no-assignments p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+body.dark .student-assignment-loading {
+    color: #94a3b8;
+}
+
+body.dark .assignment-loader {
+    border-color: #334155;
+    border-top-color: #3b82f6;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+body.dark .student-assignment-error {
+    background: #450a0a;
+    border-color: #7f1d1d;
+    color: #f87171;
+}

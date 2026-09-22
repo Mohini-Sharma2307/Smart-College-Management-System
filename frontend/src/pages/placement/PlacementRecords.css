@@ -1,0 +1,1551 @@
+/* =========================================================
+   PLACEMENT RECORDS PAGE
+========================================================= */
+
+.placement-record-page {
+    min-height: 100vh;
+
+    padding: 32px 36px 50px;
+
+    background: #f6f8fc;
+
+    color: #172033;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.placement-record-header {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+}
+
+.placement-record-header-content {
+    position: relative;
+
+    padding: 30px 32px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f8fbff 100%
+        );
+
+    border: 1px solid #e5eaf2;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.05);
+
+    overflow: hidden;
+}
+
+.placement-record-header-content::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -70px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, 0.06);
+
+    pointer-events: none;
+}
+
+.placement-record-header-main {
+    position: relative;
+
+    z-index: 1;
+}
+
+.placement-record-breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 13px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+.placement-record-breadcrumb span {
+    color: #94a3b8;
+}
+
+.placement-record-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.placement-record-header h1 {
+    position: relative;
+
+    z-index: 1;
+
+    margin: 13px 0 7px;
+
+    color: #172033;
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    font-weight: 750;
+
+    letter-spacing: -0.8px;
+}
+
+.placement-record-header p {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.placement-record-content {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.placement-record-section-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+.placement-record-section-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 7px;
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+    letter-spacing: 0.8px;
+}
+
+.placement-record-section-header h2 {
+    margin: 0 0 6px;
+
+    color: #172033;
+
+    font-size: 23px;
+
+    line-height: 1.3;
+
+    font-weight: 750;
+}
+
+.placement-record-section-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PLACEMENT COUNT
+========================================================= */
+
+.placement-record-count {
+    min-width: 115px;
+
+    padding: 13px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    flex-shrink: 0;
+}
+
+.placement-record-count strong {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 24px;
+
+    line-height: 1.2;
+
+    font-weight: 750;
+}
+
+.placement-record-count span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   RECORD LIST
+========================================================= */
+
+.placement-record-list {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   PLACEMENT CARD
+========================================================= */
+
+.placement-record-card {
+    position: relative;
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e9f1;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 24px rgba(15, 23, 42, 0.045);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.placement-record-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #60a5fa
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+}
+
+.placement-record-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #d5deeb;
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.09);
+}
+
+.placement-record-card:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.placement-record-card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.company-info {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.company-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #dbeafe
+        );
+
+    border: 1px solid #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 22px;
+}
+
+.company-info-text {
+    min-width: 0;
+}
+
+.company-info h2 {
+    margin: 0 0 5px;
+
+    overflow: hidden;
+
+    color: #172033;
+
+    font-size: 21px;
+
+    line-height: 1.25;
+
+    font-weight: 750;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.company-info p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.placement-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 11px;
+
+    flex-shrink: 0;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.placement-status-dot {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* PLACED */
+
+.placement-status.placed {
+    background: #ecfdf5;
+
+    color: #15803d;
+
+    border: 1px solid #bbf7d0;
+}
+
+
+/* SELECTED */
+
+.placement-status.selected {
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border: 1px solid #bfdbfe;
+}
+
+
+/* JOINED */
+
+.placement-status.joined {
+    background: #ecfdf5;
+
+    color: #047857;
+
+    border: 1px solid #a7f3d0;
+}
+
+
+/* WITHDRAWN */
+
+.placement-status.withdrawn {
+    background: #fff7ed;
+
+    color: #c2410c;
+
+    border: 1px solid #fed7aa;
+}
+
+
+/* CANCELLED */
+
+.placement-status.cancelled {
+    background: #fef2f2;
+
+    color: #dc2626;
+
+    border: 1px solid #fecaca;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.placement-record-divider {
+    width: 100%;
+
+    height: 1px;
+
+    margin: 20px 0;
+
+    background: #eef2f7;
+}
+
+
+/* =========================================================
+   PLACEMENT DETAILS
+========================================================= */
+
+.placement-record-details {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 16px;
+}
+
+.placement-detail {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    border: 1px solid #eef2f7;
+}
+
+.placement-detail-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    font-size: 14px;
+}
+
+.placement-detail > div {
+    min-width: 0;
+}
+
+.placement-detail small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+}
+
+.placement-detail strong {
+    display: block;
+
+    max-width: 220px;
+
+    overflow: hidden;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.placement-detail .salary-value {
+    color: #059669;
+}
+
+
+/* =========================================================
+   REMARKS
+========================================================= */
+
+.placement-record-remarks {
+    margin-top: 20px;
+
+    padding: 15px 16px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    border-radius: 11px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+}
+
+.placement-remarks-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    font-size: 14px;
+}
+
+.placement-record-remarks small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #2563eb;
+
+    font-size: 9px;
+
+    font-weight: 750;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+}
+
+.placement-record-remarks p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.placement-record-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eef2f7;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+.placement-record-footer span {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.no-placement-record {
+    width: 100%;
+
+    padding: 75px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf2;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 24px rgba(15, 23, 42, 0.04);
+}
+
+.no-placement-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #f1f5f9;
+
+    font-size: 27px;
+}
+
+.no-placement-record h2 {
+    margin: 0 0 7px;
+
+    color: #334155;
+
+    font-size: 21px;
+}
+
+.no-placement-record p {
+    margin: 0 0 5px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.no-placement-record span {
+    display: block;
+
+    max-width: 440px;
+
+    margin: 0 auto;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.placement-record-loading {
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #f6f8fc;
+
+    color: #172033;
+}
+
+.placement-record-loader {
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 14px;
+
+    border-radius: 50%;
+
+    border: 3px solid #dbeafe;
+
+    border-top-color: #2563eb;
+
+    animation:
+        placementRecordSpin
+        0.8s linear infinite;
+}
+
+.placement-record-loading p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+@keyframes placementRecordSpin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .placement-record-page {
+    background: #0b1220;
+
+    color: #f8fafc;
+}
+
+
+/* ---------- Header ---------- */
+
+body.dark .placement-record-header-content {
+    background:
+        linear-gradient(
+            135deg,
+            #111c31 0%,
+            #101a2d 100%
+        );
+
+    border-color: #26344d;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .placement-record-header-content::after {
+    background: rgba(96, 165, 250, 0.07);
+}
+
+body.dark .placement-record-breadcrumb {
+    color: #94a3b8;
+}
+
+body.dark .placement-record-breadcrumb span {
+    color: #64748b;
+}
+
+body.dark .placement-record-badge {
+    background: rgba(37, 99, 235, 0.13);
+
+    border-color: rgba(96, 165, 250, 0.2);
+
+    color: #60a5fa;
+}
+
+body.dark .placement-record-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .placement-record-header p {
+    color: #94a3b8;
+}
+
+
+/* ---------- Section ---------- */
+
+body.dark .placement-record-section-badge {
+    color: #60a5fa;
+}
+
+body.dark .placement-record-section-header h2 {
+    color: #f1f5f9;
+}
+
+body.dark .placement-record-section-header p {
+    color: #94a3b8;
+}
+
+
+/* ---------- Count ---------- */
+
+body.dark .placement-record-count {
+    background: rgba(37, 99, 235, 0.13);
+
+    border-color: rgba(96, 165, 250, 0.2);
+}
+
+body.dark .placement-record-count strong {
+    color: #60a5fa;
+}
+
+body.dark .placement-record-count span {
+    color: #94a3b8;
+}
+
+
+/* ---------- Cards ---------- */
+
+body.dark .placement-record-card {
+    background: #111c31;
+
+    border-color: #26344d;
+
+    box-shadow:
+        0 7px 24px rgba(0, 0, 0, 0.17);
+}
+
+body.dark .placement-record-card:hover {
+    border-color: #35445f;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------- Company ---------- */
+
+body.dark .company-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #1e3a5f,
+            #172b47
+        );
+
+    border-color: #2e4b70;
+
+    color: #60a5fa;
+}
+
+body.dark .company-info h2 {
+    color: #f1f5f9;
+}
+
+body.dark .company-info p {
+    color: #64748b;
+}
+
+
+/* ---------- Status ---------- */
+
+body.dark .placement-status.placed {
+    background: rgba(34, 197, 94, 0.11);
+
+    border-color: rgba(74, 222, 128, 0.2);
+
+    color: #4ade80;
+}
+
+body.dark .placement-status.selected {
+    background: rgba(37, 99, 235, 0.13);
+
+    border-color: rgba(96, 165, 250, 0.2);
+
+    color: #60a5fa;
+}
+
+body.dark .placement-status.joined {
+    background: rgba(16, 185, 129, 0.11);
+
+    border-color: rgba(52, 211, 153, 0.2);
+
+    color: #34d399;
+}
+
+body.dark .placement-status.withdrawn {
+    background: rgba(249, 115, 22, 0.11);
+
+    border-color: rgba(251, 146, 60, 0.2);
+
+    color: #fb923c;
+}
+
+body.dark .placement-status.cancelled {
+    background: rgba(239, 68, 68, 0.11);
+
+    border-color: rgba(248, 113, 113, 0.2);
+
+    color: #f87171;
+}
+
+
+/* ---------- Divider ---------- */
+
+body.dark .placement-record-divider {
+    background: #25324a;
+}
+
+
+/* ---------- Details ---------- */
+
+body.dark .placement-detail {
+    background: #172235;
+
+    border-color: #293852;
+}
+
+body.dark .placement-detail-icon {
+    background: #1e293b;
+}
+
+body.dark .placement-detail small {
+    color: #64748b;
+}
+
+body.dark .placement-detail strong {
+    color: #cbd5e1;
+}
+
+body.dark .placement-detail .salary-value {
+    color: #4ade80;
+}
+
+
+/* ---------- Remarks ---------- */
+
+body.dark .placement-record-remarks {
+    background: rgba(37, 99, 235, 0.11);
+
+    border-color: rgba(96, 165, 250, 0.18);
+}
+
+body.dark .placement-remarks-icon {
+    background: #1e293b;
+}
+
+body.dark .placement-record-remarks small {
+    color: #60a5fa;
+}
+
+body.dark .placement-record-remarks p {
+    color: #94a3b8;
+}
+
+
+/* ---------- Footer ---------- */
+
+body.dark .placement-record-footer {
+    border-color: #293852;
+
+    color: #64748b;
+}
+
+
+/* ---------- Empty ---------- */
+
+body.dark .no-placement-record {
+    background: #111c31;
+
+    border-color: #26344d;
+}
+
+body.dark .no-placement-icon {
+    background: #172235;
+}
+
+body.dark .no-placement-record h2 {
+    color: #e2e8f0;
+}
+
+body.dark .no-placement-record p {
+    color: #94a3b8;
+}
+
+body.dark .no-placement-record span {
+    color: #64748b;
+}
+
+
+/* ---------- Loading ---------- */
+
+body.dark .placement-record-loading {
+    background: #0b1220;
+
+    color: #f8fafc;
+}
+
+body.dark .placement-record-loader {
+    border-color: #1e3a5f;
+
+    border-top-color: #60a5fa;
+}
+
+body.dark .placement-record-loading p {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1000px
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .placement-record-page {
+        padding: 28px 25px 45px;
+    }
+
+    .placement-record-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .placement-record-page {
+        padding: 25px 20px 40px;
+    }
+
+    .placement-record-header-content {
+        padding: 25px;
+    }
+
+    .placement-record-list {
+        grid-template-columns: 1fr;
+    }
+
+    .placement-record-section-header {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .placement-record-page {
+        padding: 20px 15px 35px;
+    }
+
+    .placement-record-header-content {
+        padding: 22px 20px;
+
+        border-radius: 15px;
+    }
+
+    .placement-record-header h1 {
+        font-size: 29px;
+    }
+
+    .placement-record-header p {
+        font-size: 13px;
+    }
+
+    .placement-record-badge {
+        font-size: 9px;
+
+        padding: 6px 9px;
+    }
+
+    .placement-record-section-header {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 15px;
+    }
+
+    .placement-record-count {
+        align-self: flex-start;
+    }
+
+    .placement-record-card {
+        padding: 20px;
+
+        border-radius: 15px;
+    }
+
+    .company-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 20px;
+    }
+
+    .company-info h2 {
+        font-size: 18px;
+    }
+
+    .company-info p {
+        font-size: 10px;
+    }
+
+    .placement-status {
+        padding: 6px 9px;
+
+        font-size: 9px;
+    }
+
+    .placement-record-details {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .placement-detail strong {
+        font-size: 12px;
+    }
+
+    .placement-record-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .placement-record-page {
+        padding: 16px 11px 30px;
+    }
+
+    .placement-record-header-content {
+        padding: 19px 16px;
+    }
+
+    .placement-record-header h1 {
+        font-size: 23px;
+    }
+
+    .placement-record-header p {
+        font-size: 10px;
+    }
+
+    .placement-record-breadcrumb {
+        font-size: 10px;
+
+        gap: 6px;
+    }
+
+    .placement-record-card {
+        padding: 15px;
+    }
+
+    .placement-record-card-header {
+        gap: 10px;
+    }
+
+    .company-info {
+        gap: 9px;
+    }
+
+    .company-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+    .company-info h2 {
+        font-size: 15px;
+    }
+
+    .company-info p {
+        font-size: 8px;
+    }
+
+    .placement-status {
+        padding: 4px 6px;
+
+        font-size: 7px;
+    }
+
+    .placement-detail {
+        padding: 11px;
+    }
+
+    .placement-detail-icon {
+        width: 33px;
+        height: 33px;
+
+        font-size: 13px;
+    }
+
+    .placement-detail small {
+        font-size: 8px;
+    }
+
+    .placement-detail strong {
+        font-size: 11px;
+    }
+
+    .placement-record-remarks {
+        padding: 12px;
+    }
+
+    .placement-record-remarks p {
+        font-size: 10px;
+    }
+
+    .no-placement-record {
+        padding: 60px 18px;
+    }
+
+    .no-placement-record h2 {
+        font-size: 18px;
+    }
+
+    .no-placement-record p {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   FINAL READABILITY IMPROVEMENTS
+========================================================= */
+
+.placement-record-header h1 {
+    font-size: 36px;
+
+    line-height: 1.2;
+}
+
+.placement-record-header p {
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.placement-record-badge {
+    font-size: 11px;
+
+    padding: 8px 13px;
+}
+
+
+/* =========================================================
+   PLACEMENT CARD READABILITY
+========================================================= */
+
+.placement-record-card {
+    padding: 24px;
+}
+
+.company-icon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 22px;
+}
+
+.company-info h2 {
+    margin-bottom: 5px;
+
+    font-size: 21px;
+
+    line-height: 1.25;
+}
+
+.company-info p {
+    font-size: 11px;
+}
+
+.placement-status {
+    padding: 7px 11px;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   DETAILS READABILITY
+========================================================= */
+
+.placement-record-details {
+    gap: 16px;
+}
+
+.placement-detail {
+    gap: 11px;
+}
+
+.placement-detail-icon {
+    width: 37px;
+    height: 37px;
+
+    font-size: 14px;
+}
+
+.placement-detail small {
+    margin-bottom: 5px;
+
+    font-size: 10px;
+}
+
+.placement-detail strong {
+    max-width: 220px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   REMARKS READABILITY
+========================================================= */
+
+.placement-record-remarks {
+    margin-top: 22px;
+
+    padding: 15px 16px;
+}
+
+.placement-record-remarks p {
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER READABILITY
+========================================================= */
+
+.placement-record-footer {
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   FINAL MOBILE READABILITY
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .placement-record-header h1 {
+        font-size: 29px;
+    }
+
+    .placement-record-header p {
+        font-size: 13px;
+    }
+
+    .placement-record-card {
+        padding: 20px;
+    }
+
+    .company-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 20px;
+    }
+
+    .company-info h2 {
+        font-size: 18px;
+    }
+
+    .company-info p {
+        font-size: 10px;
+    }
+
+    .placement-record-details {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .placement-detail small {
+        font-size: 9px;
+    }
+
+    .placement-detail strong {
+        font-size: 12px;
+    }
+
+    .placement-record-remarks p {
+        font-size: 11px;
+    }
+
+}

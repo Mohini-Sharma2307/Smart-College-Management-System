@@ -1,0 +1,43 @@
+/* ==========================================
+   GLOBAL THEME
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    min-height: 100%;
+}
+
+
+/* ==========================================
+   LIGHT MODE
+========================================== */
+
+body.light {
+    background: #f5f7fb;
+    color: #111827;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark {
+    background: #0f172a;
+    color: #ffffff;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+

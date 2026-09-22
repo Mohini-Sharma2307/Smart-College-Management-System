@@ -1,0 +1,1065 @@
+/* ==========================================
+   CAREER RECOMMENDATION PAGE
+========================================== */
+
+.career-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.career-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.career-title-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.career-title-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #eef2ff;
+  font-size: 27px;
+}
+
+.career-title-section h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.career-title-section p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ==========================================
+   REFRESH BUTTON
+========================================== */
+
+.refresh-career-btn {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.refresh-career-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.career-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 18px;
+  margin-bottom: 25px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.career-error p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.section-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.ai-badge {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   CAREER RECOMMENDATION GRID
+========================================== */
+
+.career-recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 45px;
+}
+
+/* ==========================================
+   CAREER CARD
+========================================== */
+
+.career-card {
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+  transition: 0.25s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* ==========================================
+   CAREER CARD HEADER
+========================================== */
+
+.career-card-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 20px;
+}
+
+.career-number {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.career-card-header h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.career-card-header span {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* ==========================================
+   ML CONFIDENCE
+========================================== */
+
+.career-score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.career-score span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.career-score strong {
+  color: #2563eb;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   MATCH SECTIONS
+========================================== */
+
+.career-match-section {
+  margin-top: 17px;
+}
+
+.career-match-section h4 {
+  margin: 0 0 9px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   CAREER TAGS
+========================================== */
+
+.career-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.career-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid #dbeafe;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   INTEREST TAGS
+========================================== */
+
+.career-tags.interest-tags span {
+  border-color: #ede9fe;
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+/* ==========================================
+   JOBS SECTION
+========================================== */
+
+.jobs-section {
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+/* ==========================================
+   JOB COUNT
+========================================== */
+
+.jobs-count {
+  padding: 8px 13px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   RECOMMENDED JOBS GRID
+========================================== */
+
+.recommended-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ==========================================
+   JOB CARD
+========================================== */
+
+.recommended-job-card {
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+  transition: 0.25s ease;
+}
+
+.recommended-job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* ==========================================
+   JOB CARD HEADER
+========================================== */
+
+.job-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.job-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #f1f5f9;
+  font-size: 20px;
+}
+
+.job-status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   JOB TITLE
+========================================== */
+
+.recommended-job-card h3 {
+  margin: 0 0 7px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  text-transform: capitalize;
+}
+
+.job-company {
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   JOB DETAILS
+========================================== */
+
+.job-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.job-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.job-detail span {
+  font-size: 14px;
+}
+
+.job-detail strong {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* ==========================================
+   JOB SKILL MATCH
+========================================== */
+
+.job-skill-match {
+  padding: 14px;
+  margin-bottom: 17px;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.skill-match-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill-match-header span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.skill-match-header strong {
+  color: #059669;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   MATCHED JOB SKILLS
+========================================== */
+
+.matched-job-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.matched-job-skills span {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border: 1px solid #a7f3d0;
+  border-radius: 7px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   JOB DEADLINE
+========================================== */
+
+.job-deadline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 0;
+  margin-bottom: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.job-deadline span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.job-deadline strong {
+  color: #334155;
+  font-size: 12px;
+}
+
+/* ==========================================
+   APPLY BUTTON
+========================================== */
+
+.apply-job-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 15px;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.apply-job-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ==========================================
+   EMPTY STATES
+========================================== */
+
+.career-empty,
+.no-jobs {
+  padding: 45px 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.career-empty-icon,
+.no-jobs-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.career-empty h3,
+.no-jobs h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.career-empty p,
+.no-jobs p {
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.complete-profile-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   AI INFORMATION
+========================================== */
+
+.ai-information {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #ddd6fe;
+  border-radius: 14px;
+  background: #faf5ff;
+}
+
+.ai-information-icon {
+  font-size: 25px;
+}
+
+.ai-information h3 {
+  margin: 0 0 6px;
+  color: #581c87;
+  font-size: 15px;
+}
+
+.ai-information p {
+  margin: 0;
+  color: #6b21a8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.career-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.career-loader {
+  width: 38px;
+  height: 38px;
+  border: 4px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: careerSpin 0.8s linear infinite;
+}
+
+@keyframes careerSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+  .career-recommendation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recommended-jobs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+  .career-page {
+    padding: 18px;
+  }
+
+  .career-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .career-title-section {
+    align-items: flex-start;
+  }
+
+  .career-title-section h1 {
+    font-size: 22px;
+  }
+
+  .career-title-section p {
+    font-size: 13px;
+  }
+
+  .refresh-career-btn {
+    width: 100%;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .career-recommendation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommended-jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-details {
+    grid-template-columns: 1fr;
+  }
+
+  .job-deadline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .career-card,
+  .recommended-job-card {
+    padding: 18px;
+  }
+
+  .ai-information {
+    padding: 16px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+  .career-page {
+    padding: 14px;
+  }
+
+  .career-title-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .career-title-section h1 {
+    font-size: 19px;
+  }
+
+  .career-card-header h3 {
+    font-size: 15px;
+  }
+
+  .career-tags span {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+}
+
+
+/* ==========================================
+   DARK MODE
+   Theme controlled from Landing Page
+========================================== */
+
+body.dark .career-page {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+body.dark .career-title-section h1 {
+    color: #f8fafc;
+}
+
+body.dark .career-title-section p {
+    color: #94a3b8;
+}
+
+body.dark .career-title-icon {
+    background: #172554;
+}
+
+
+/* ==========================================
+   REFRESH BUTTON
+========================================== */
+
+body.dark .refresh-career-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .refresh-career-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+body.dark .career-error {
+    background: #450a0a;
+    border-color: #7f1d1d;
+    color: #f87171;
+}
+
+body.dark .career-error p {
+    color: #f87171;
+}
+
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+body.dark .section-header h2 {
+    color: #f8fafc;
+}
+
+body.dark .section-header p {
+    color: #94a3b8;
+}
+
+body.dark .ai-badge {
+    background: #2e1065;
+    color: #c4b5fd;
+}
+
+
+/* ==========================================
+   CAREER CARD
+========================================== */
+
+body.dark .career-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .career-card:hover {
+    background: #243247;
+    border-color: #475569;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+}
+
+
+/* ==========================================
+   CAREER CARD HEADER
+========================================== */
+
+body.dark .career-number {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .career-card-header h3 {
+    color: #f8fafc;
+}
+
+body.dark .career-card-header span {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   ML CONFIDENCE
+========================================== */
+
+body.dark .career-score {
+    background: #172033;
+}
+
+body.dark .career-score span {
+    color: #94a3b8;
+}
+
+body.dark .career-score strong {
+    color: #60a5fa;
+}
+
+
+/* ==========================================
+   MATCH SECTIONS
+========================================== */
+
+body.dark .career-match-section h4 {
+    color: #cbd5e1;
+}
+
+
+/* ==========================================
+   CAREER TAGS
+========================================== */
+
+body.dark .career-tags span {
+    background: #172554;
+    border-color: #1e40af;
+    color: #60a5fa;
+}
+
+
+/* ==========================================
+   INTEREST TAGS
+========================================== */
+
+body.dark .career-tags.interest-tags span {
+    background: #2e1065;
+    border-color: #5b21b6;
+    color: #c4b5fd;
+}
+
+
+/* ==========================================
+   JOB COUNT
+========================================== */
+
+body.dark .jobs-count {
+    background: #172554;
+    color: #60a5fa;
+}
+
+
+/* ==========================================
+   RECOMMENDED JOB CARD
+========================================== */
+
+body.dark .recommended-job-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .recommended-job-card:hover {
+    background: #243247;
+    border-color: #475569;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+}
+
+
+/* ==========================================
+   JOB CARD HEADER
+========================================== */
+
+body.dark .job-icon {
+    background: #334155;
+}
+
+body.dark .job-status {
+    background: #052e24;
+    color: #34d399;
+}
+
+
+/* ==========================================
+   JOB TITLE
+========================================== */
+
+body.dark .recommended-job-card h3 {
+    color: #f8fafc;
+}
+
+body.dark .job-company {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   JOB DETAILS
+========================================== */
+
+body.dark .job-detail {
+    background: #172033;
+    border: 1px solid #334155;
+}
+
+body.dark .job-detail strong {
+    color: #e2e8f0;
+}
+
+
+/* ==========================================
+   JOB SKILL MATCH
+========================================== */
+
+body.dark .job-skill-match {
+    background: #172033;
+}
+
+body.dark .skill-match-header span {
+    color: #94a3b8;
+}
+
+body.dark .skill-match-header strong {
+    color: #34d399;
+}
+
+
+/* ==========================================
+   MATCHED JOB SKILLS
+========================================== */
+
+body.dark .matched-job-skills span {
+    background: #052e24;
+    border-color: #166534;
+    color: #34d399;
+}
+
+
+/* ==========================================
+   JOB DEADLINE
+========================================== */
+
+body.dark .job-deadline {
+    border-top-color: #334155;
+}
+
+body.dark .job-deadline span {
+    color: #94a3b8;
+}
+
+body.dark .job-deadline strong {
+    color: #e2e8f0;
+}
+
+
+/* ==========================================
+   APPLY BUTTON
+========================================== */
+
+body.dark .apply-job-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .apply-job-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   EMPTY STATES
+========================================== */
+
+body.dark .career-empty,
+body.dark .no-jobs {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .career-empty h3,
+body.dark .no-jobs h3 {
+    color: #f8fafc;
+}
+
+body.dark .career-empty p,
+body.dark .no-jobs p {
+    color: #94a3b8;
+}
+
+body.dark .complete-profile-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .complete-profile-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   AI INFORMATION
+========================================== */
+
+body.dark .ai-information {
+    background: #2e1065;
+    border-color: #5b21b6;
+}
+
+body.dark .ai-information h3 {
+    color: #e9d5ff;
+}
+
+body.dark .ai-information p {
+    color: #d8b4fe;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+body.dark .career-loading {
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+body.dark .career-loader {
+    border-color: #334155;
+    border-top-color: #3b82f6;
+}

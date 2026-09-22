@@ -1,0 +1,1621 @@
+/* =========================================================
+   STUDENT DASHBOARD
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+.dashboard {
+    min-height: 100vh;
+    display: flex;
+    background: #f3f5f9;
+    color: #172033;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   SIDEBAR LOGO
+   ========================================================= */
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 20px 18px;
+
+    flex-shrink: 0;
+}
+
+.logo-box {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: inherit;
+}
+
+.sidebar-logo h2 {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.2;
+
+    color: #172033;
+}
+
+.sidebar-logo span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 9px;
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+   ========================================================= */
+
+.sidebar-menu {
+    flex: 1;
+
+    min-height: 0;
+
+    padding: 0 12px 10px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 42px;
+
+    margin-bottom: 3px;
+    padding: 0 9px;
+
+    border-radius: 10px;
+
+    color: #475569;
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    transition: 0.2s ease;
+
+    white-space: nowrap;
+}
+
+.sidebar-menu a span {
+    width: 18px;
+    min-width: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+}
+
+.sidebar-menu a:hover {
+    background: #f1f5ff;
+    color: #315bdc;
+}
+
+.sidebar-menu a.active {
+    background: #f1f5ff;
+    color: #2454d7;
+
+    border-left: 4px solid #315bdc;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.logout-btn {
+    flex-shrink: 0;
+
+    margin: 10px 12px;
+
+    min-height: 44px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #fff1f2;
+    color: #dc2626;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #ffe4e6;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.dashboard-main {
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    margin-left: 250px;
+
+    padding: 28px 30px 40px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.dashboard-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.dashboard-header > div:first-child {
+    min-width: 0;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 6px;
+
+    font-size: 27px;
+    line-height: 1.2;
+
+    color: #172033;
+}
+
+.dashboard-header p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   STUDENT INFO
+   ========================================================= */
+
+.student-info {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+.student-avatar {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8edff;
+    color: #315bdc;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    box-shadow: 0 5px 15px rgba(49, 91, 220, 0.12);
+}
+
+.student-info strong {
+    display: block;
+
+    max-width: 180px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 13px;
+    color: #172033;
+}
+
+.student-info span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   WELCOME CARD
+   ========================================================= */
+
+.welcome-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 145px;
+
+    padding: 28px 30px;
+
+    margin-bottom: 18px;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #315bdc,
+        #2f55c7
+    );
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.welcome-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    opacity: 0.85;
+}
+
+.welcome-card h2 {
+    margin: 0 0 8px;
+
+    font-size: 21px;
+}
+
+.welcome-card p {
+    max-width: 600px;
+
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.welcome-icon {
+    font-size: 58px;
+
+    opacity: 0.9;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    min-width: 0;
+
+    min-height: 86px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 15px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    transition: 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
+}
+
+.stat-icon {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+}
+
+.stat-icon.blue {
+    background: #eef4ff;
+}
+
+.stat-icon.green {
+    background: #ecfdf5;
+}
+
+.stat-icon.orange {
+    background: #fff7ed;
+}
+
+.stat-icon.purple {
+    background: #f5f3ff;
+}
+
+.stat-card span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 10px;
+
+    color: #64748b;
+}
+
+.stat-card h3 {
+    margin: 0;
+
+    font-size: 19px;
+
+    color: #172033;
+}
+
+
+/* =========================================================
+   DASHBOARD GRID
+   ========================================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.dashboard-card {
+    min-width: 0;
+
+    padding: 18px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+.card-header h3 {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #172033;
+}
+
+.card-header span {
+    font-size: 10px;
+
+    color: #315bdc;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   EXAM ITEM
+   ========================================================= */
+
+.exam-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 9px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+
+    background: #ffffff;
+}
+
+.exam-item:last-child {
+    margin-bottom: 0;
+}
+
+.exam-item strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 11px;
+
+    color: #172033;
+}
+
+.exam-item p {
+    margin: 0;
+
+    font-size: 9px;
+
+    color: #94a3b8;
+}
+
+.exam-badge {
+    flex-shrink: 0;
+
+    padding: 6px 8px;
+
+    border-radius: 8px;
+
+    background: #eef4ff;
+    color: #315bdc;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   NOTICE ITEM
+   ========================================================= */
+
+.notice-item {
+    display: flex;
+
+    gap: 11px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.notice-item:last-child {
+    border-bottom: none;
+}
+
+.notice-item > span {
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #fff7ed;
+
+    font-size: 13px;
+}
+
+.notice-item strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 10px;
+
+    color: #172033;
+}
+
+.notice-item p {
+    margin: 0;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .sidebar {
+        width: 225px;
+    }
+
+    .dashboard-main {
+        width: calc(100% - 225px);
+
+        margin-left: 225px;
+
+        padding: 25px 22px 35px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+    .sidebar {
+        width: 112px;
+    }
+
+    .dashboard-main {
+        width: calc(100% - 112px);
+
+        margin-left: 112px;
+
+        padding: 20px 12px 30px;
+    }
+
+
+    /* Sidebar */
+
+    .sidebar-logo {
+        padding: 16px 10px;
+
+        gap: 7px;
+    }
+
+    .logo-box {
+        width: 34px;
+        height: 34px;
+
+        min-width: 34px;
+
+        border-radius: 9px;
+    }
+
+    .logo-box img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .sidebar-logo h2 {
+        font-size: 10px;
+    }
+
+    .sidebar-logo span {
+        font-size: 6px;
+    }
+
+    .sidebar-menu {
+        padding: 0 6px 8px;
+    }
+
+    .sidebar-menu a {
+        min-height: 42px;
+
+        gap: 5px;
+
+        padding: 0 6px;
+
+        font-size: 8px;
+
+        white-space: normal;
+    }
+
+    .sidebar-menu a span {
+        width: 15px;
+        min-width: 15px;
+
+        font-size: 11px;
+    }
+
+    .sidebar-menu a.active {
+        padding-left: 2px;
+    }
+
+    .logout-btn {
+        margin: 7px 6px;
+
+        min-height: 42px;
+
+        font-size: 8px;
+    }
+
+
+    /* Header */
+
+    .dashboard-header {
+        margin-bottom: 16px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 21px;
+    }
+
+    .dashboard-header p {
+        font-size: 10px;
+    }
+
+    .student-avatar {
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+
+        font-size: 14px;
+    }
+
+    .student-info strong {
+        max-width: 120px;
+
+        font-size: 10px;
+    }
+
+    .student-info span {
+        font-size: 8px;
+    }
+
+
+    /* Welcome */
+
+    .welcome-card {
+        min-height: 120px;
+
+        padding: 20px 16px;
+
+        border-radius: 14px;
+    }
+
+    .welcome-card h2 {
+        font-size: 17px;
+    }
+
+    .welcome-card p {
+        font-size: 9px;
+
+        line-height: 1.5;
+    }
+
+    .welcome-icon {
+        font-size: 38px;
+    }
+
+
+    /* Stats */
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .stat-card {
+        min-height: 72px;
+
+        padding: 12px;
+    }
+
+
+    /* Bottom cards */
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .dashboard-card {
+        padding: 12px;
+    }
+}
+
+
+/* =========================================================
+   380px AND BELOW
+   COMPLETE HEADER FIX
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .dashboard-main {
+        width: calc(100% - 105px);
+
+        margin-left: 105px;
+
+        padding: 15px 9px 25px;
+    }
+
+
+    /* Sidebar */
+
+    .sidebar {
+        width: 105px;
+    }
+
+    .sidebar-logo {
+        padding: 14px 7px;
+
+        gap: 5px;
+    }
+
+    .logo-box {
+        width: 31px;
+        height: 31px;
+
+        min-width: 31px;
+
+        border-radius: 9px;
+    }
+
+    .logo-box img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .sidebar-logo h2 {
+        font-size: 8px;
+    }
+
+    .sidebar-logo span {
+        font-size: 5px;
+    }
+
+    .sidebar-menu {
+        padding: 0 5px 7px;
+    }
+
+    .sidebar-menu a {
+        min-height: 40px;
+
+        gap: 4px;
+
+        padding: 0 4px;
+
+        font-size: 7px;
+    }
+
+    .sidebar-menu a span {
+        width: 14px;
+        min-width: 14px;
+
+        font-size: 10px;
+    }
+
+    .sidebar-menu a.active {
+        padding-left: 1px;
+    }
+
+    .logout-btn {
+        margin: 6px 5px;
+
+        min-height: 40px;
+
+        font-size: 7px;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .dashboard-header {
+        position: relative !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 0 0 14px 0 !important;
+        padding: 0 !important;
+
+        gap: 10px !important;
+    }
+
+
+    .dashboard-header > div:first-child {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .dashboard-header h1 {
+        position: relative !important;
+
+        display: block !important;
+
+        width: 100% !important;
+
+        margin: 0 0 4px 0 !important;
+        padding: 0 !important;
+
+        font-size: 20px !important;
+        line-height: 1.2 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    .dashboard-header p {
+        position: relative !important;
+
+        display: block !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 9px !important;
+        line-height: 1.4 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    .dashboard-header .student-info {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        gap: 8px !important;
+    }
+
+
+    .dashboard-header .student-avatar {
+        position: relative !important;
+
+        flex: 0 0 34px !important;
+
+        width: 34px !important;
+        min-width: 34px !important;
+        max-width: 34px !important;
+
+        height: 34px !important;
+        min-height: 34px !important;
+        max-height: 34px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        font-size: 13px !important;
+    }
+
+
+    .dashboard-header .student-info > div:last-child {
+        position: relative !important;
+
+        width: auto !important;
+        max-width: calc(100% - 42px) !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .dashboard-header .student-info strong {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 10px !important;
+        line-height: 1.3 !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    .dashboard-header .student-info span {
+        display: block !important;
+
+        margin: 2px 0 0 0 !important;
+        padding: 0 !important;
+
+        font-size: 8px !important;
+        line-height: 1.2 !important;
+    }
+
+
+    /* =====================================================
+       WELCOME
+    ===================================================== */
+
+    .welcome-card {
+        min-height: 104px;
+
+        padding: 16px 12px;
+
+        margin-bottom: 12px;
+
+        border-radius: 13px;
+    }
+
+    .welcome-label {
+        font-size: 8px;
+
+        margin-bottom: 5px;
+    }
+
+    .welcome-card h2 {
+        font-size: 15px;
+
+        margin-bottom: 6px;
+    }
+
+    .welcome-card p {
+        font-size: 8px;
+
+        line-height: 1.45;
+    }
+
+    .welcome-icon {
+        display: none;
+    }
+
+
+    /* =====================================================
+       STATS
+    ===================================================== */
+
+    .stats-grid {
+        gap: 9px;
+
+        margin-bottom: 14px;
+    }
+
+    .stat-card {
+        min-height: 70px;
+
+        padding: 11px;
+
+        gap: 10px;
+
+        border-radius: 12px;
+    }
+
+    .stat-icon {
+        width: 35px;
+        height: 35px;
+
+        min-width: 35px;
+
+        font-size: 14px;
+    }
+
+    .stat-card span {
+        font-size: 8px;
+
+        margin-bottom: 3px;
+    }
+
+    .stat-card h3 {
+        font-size: 17px;
+    }
+
+
+    /* =====================================================
+       DASHBOARD CARDS
+    ===================================================== */
+
+    .dashboard-grid {
+        gap: 10px;
+    }
+
+    .dashboard-card {
+        padding: 11px;
+
+        border-radius: 12px;
+    }
+
+    .card-header {
+        margin-bottom: 10px;
+    }
+
+    .card-header h3 {
+        font-size: 12px;
+    }
+
+    .card-header span {
+        font-size: 8px;
+    }
+
+
+    /* =====================================================
+       EXAMS
+    ===================================================== */
+
+    .exam-item {
+        align-items: flex-start;
+
+        padding: 12px;
+
+        gap: 8px;
+
+        border-radius: 11px;
+    }
+
+    .exam-item strong {
+        font-size: 9px;
+    }
+
+    .exam-item p {
+        font-size: 7px;
+    }
+
+    .exam-badge {
+        padding: 5px 6px;
+
+        font-size: 7px;
+    }
+
+
+    /* =====================================================
+       NOTICES
+    ===================================================== */
+
+    .notice-item {
+        gap: 8px;
+
+        padding: 10px 0;
+    }
+
+    .notice-item > span {
+        width: 26px;
+        height: 26px;
+
+        min-width: 26px;
+
+        font-size: 11px;
+    }
+
+    .notice-item strong {
+        font-size: 8px;
+    }
+
+    .notice-item p {
+        font-size: 7px;
+    }
+}
+
+
+/* =========================================================
+   320px EXTRA SAFE MODE
+   ========================================================= */
+
+@media screen and (max-width: 320px) {
+
+    .sidebar {
+        width: 100px;
+    }
+
+    .dashboard-main {
+        width: calc(100% - 100px);
+
+        margin-left: 100px;
+
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .sidebar-logo {
+        padding-left: 6px;
+        padding-right: 5px;
+    }
+
+    .logo-box {
+        width: 29px;
+        height: 29px;
+
+        min-width: 29px;
+
+        border-radius: 8px;
+    }
+
+    .logo-box img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .sidebar-logo h2 {
+        font-size: 7px;
+    }
+
+    .sidebar-logo span {
+        font-size: 4px;
+    }
+
+    .sidebar-menu a {
+        font-size: 6.5px;
+
+        min-height: 39px;
+    }
+
+    .logout-btn {
+        font-size: 6.5px;
+    }
+
+
+    /* Header */
+
+    .dashboard-header {
+        gap: 9px !important;
+
+        margin-bottom: 12px !important;
+    }
+
+    .dashboard-header h1 {
+        font-size: 19px !important;
+    }
+
+    .dashboard-header p {
+        font-size: 8px !important;
+    }
+
+    .dashboard-header .student-avatar {
+        width: 32px !important;
+        min-width: 32px !important;
+
+        height: 32px !important;
+
+        font-size: 12px !important;
+    }
+
+    .dashboard-header .student-info {
+        gap: 7px !important;
+    }
+
+    .dashboard-header .student-info strong {
+        font-size: 9px !important;
+    }
+
+    .dashboard-header .student-info span {
+        font-size: 7px !important;
+    }
+
+
+    /* Welcome */
+
+    .welcome-card {
+        padding: 14px 11px;
+    }
+
+    .welcome-card h2 {
+        font-size: 14px;
+    }
+
+    .welcome-card p {
+        font-size: 7.5px;
+    }
+
+
+    /* Stats */
+
+    .stat-card {
+        min-height: 67px;
+    }
+
+    .stat-card h3 {
+        font-size: 16px;
+    }
+
+
+    /* Exams */
+
+    .exam-item {
+        padding: 10px;
+    }
+
+    .exam-item strong {
+        font-size: 8px;
+    }
+
+    .exam-badge {
+        font-size: 6.5px;
+    }
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark .dashboard {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+body.dark .sidebar {
+    background: #111827;
+    border-right-color: #1f2937;
+}
+
+
+/* Logo */
+
+body.dark .logo-box {
+    background: #ffffff;
+    border-color: #334155;
+}
+
+body.dark .logo-box img {
+    background: #ffffff;
+}
+
+
+body.dark .sidebar-logo h2 {
+    color: #f8fafc;
+}
+
+body.dark .sidebar-menu a {
+    color: #94a3b8;
+}
+
+body.dark .sidebar-menu a:hover,
+body.dark .sidebar-menu a.active {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+body.dark .sidebar-menu a.active {
+    border-left-color: #5b7cfa;
+}
+
+body.dark .logout-btn {
+    background: #351b22;
+    color: #f87171;
+}
+
+body.dark .logout-btn:hover {
+    background: #45202a;
+}
+
+body.dark .dashboard-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .dashboard-header p {
+    color: #94a3b8;
+}
+
+body.dark .student-avatar {
+    background: #1e293b;
+    color: #8da5ff;
+}
+
+body.dark .student-info strong {
+    color: #f8fafc;
+}
+
+body.dark .student-info span {
+    color: #64748b;
+}
+
+body.dark .stat-card,
+body.dark .dashboard-card {
+    background: #111827;
+    border-color: #1f2937;
+}
+
+body.dark .stat-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .stat-card span {
+    color: #94a3b8;
+}
+
+body.dark .stat-card h3 {
+    color: #f8fafc;
+}
+
+body.dark .stat-icon.blue {
+    background: #172554;
+}
+
+body.dark .stat-icon.green {
+    background: #052e24;
+}
+
+body.dark .stat-icon.orange {
+    background: #431407;
+}
+
+body.dark .stat-icon.purple {
+    background: #2e1065;
+}
+
+body.dark .card-header h3 {
+    color: #f8fafc;
+}
+
+body.dark .card-header span {
+    color: #8da5ff;
+}
+
+body.dark .exam-item {
+    background: #111827;
+    border-color: #263244;
+}
+
+body.dark .exam-item strong {
+    color: #f8fafc;
+}
+
+body.dark .exam-item p {
+    color: #64748b;
+}
+
+body.dark .exam-badge {
+    background: #172554;
+    color: #8da5ff;
+}
+
+body.dark .notice-item {
+    border-bottom-color: #1f2937;
+}
+
+body.dark .notice-item strong {
+    color: #f8fafc;
+}
+
+body.dark .notice-item p {
+    color: #64748b;
+}
+
+body.dark .notice-item > span {
+    background: #431407;
+}
+
+
+/* =========================================================
+   MOBILE SIDEBAR - BIGGER TEXT
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+    .sidebar-menu a {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        gap: 4px !important;
+
+        min-height: 56px !important;
+
+        padding: 6px 2px !important;
+
+        text-align: center !important;
+        white-space: normal !important;
+
+        font-size: 9px !important;
+        font-weight: 600 !important;
+    }
+
+    .sidebar-menu a span {
+        width: auto !important;
+        min-width: 0 !important;
+
+        font-size: 15px !important;
+    }
+
+    .sidebar-menu a.active {
+        padding-left: 2px !important;
+
+        border-left: none !important;
+        border-top: 3px solid #315bdc !important;
+    }
+}
+
+
+/* =========================================================
+   380px
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .sidebar-menu a {
+        min-height: 54px !important;
+
+        gap: 3px !important;
+
+        font-size: 8.5px !important;
+    }
+
+    .sidebar-menu a span {
+        font-size: 14px !important;
+    }
+}
+
+
+/* =========================================================
+   320px
+   ========================================================= */
+
+@media screen and (max-width: 320px) {
+
+    .sidebar-menu a {
+        min-height: 52px !important;
+
+        gap: 3px !important;
+
+        font-size: 8px !important;
+    }
+
+    .sidebar-menu a span {
+        font-size: 13px !important;
+    }
+}

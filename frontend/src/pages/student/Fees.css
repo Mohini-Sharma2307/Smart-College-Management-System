@@ -1,0 +1,1079 @@
+/* ==========================================
+   FEES PAGE
+========================================== */
+
+.fees-page {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+
+    padding: 30px;
+    box-sizing: border-box;
+
+    background: #f8fafc;
+    color: #0f172a;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.fees-header {
+    margin-bottom: 25px;
+}
+
+.fees-header h1 {
+    margin: 0 0 6px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #0f172a;
+}
+
+.fees-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   FEE SUMMARY
+========================================== */
+
+.fee-summary {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 26px;
+}
+
+
+/* ==========================================
+   FEE CARD
+========================================== */
+
+.fee-card {
+    min-width: 0;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fee-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.fee-card span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.fee-card strong {
+    display: block;
+
+    color: #0f172a;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   AMOUNT COLORS
+========================================== */
+
+.paid-amount {
+    color: #16a34a !important;
+}
+
+.remaining-amount {
+    color: #dc2626 !important;
+}
+
+.fee-status {
+    color: #d97706 !important;
+}
+
+
+/* ==========================================
+   PAYMENT HISTORY CARD
+========================================== */
+
+.fees-history-card {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 22px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.05);
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.fees-card-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.fees-card-header h2 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.fees-card-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.fees-table {
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   FEE ROW
+========================================== */
+
+.fee-row {
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1fr
+        1fr
+        1fr
+        0.9fr
+        1.2fr;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 12px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.fee-row:last-child {
+    border-bottom: none;
+}
+
+
+/* ==========================================
+   TABLE HEADING
+========================================== */
+
+.fee-heading {
+    padding-top: 5px;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* ==========================================
+   ROW TEXT
+========================================== */
+
+.fee-row span,
+.fee-row strong {
+    min-width: 0;
+
+    overflow-wrap: break-word;
+}
+
+.fee-row span {
+    color: #475569;
+
+    font-size: 13px;
+}
+
+.fee-row strong {
+    color: #0f172a;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   PAYMENT STATUS
+========================================== */
+
+.payment-status {
+    display: inline-flex;
+
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #dcfce7;
+
+    color: #15803d !important;
+
+    font-size: 11px !important;
+    font-weight: 700 !important;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   DOWNLOAD RECEIPT
+========================================== */
+
+.download-receipt-btn {
+    width: fit-content;
+
+    padding: 8px 13px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.download-receipt-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.download-receipt-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   NO RECEIPTS
+========================================== */
+
+.no-receipts {
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.no-receipts-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    border-radius: 14px;
+
+    background: #eff6ff;
+
+    font-size: 28px;
+}
+
+.no-receipts h3 {
+    margin: 0 0 7px;
+
+    color: #334155;
+
+    font-size: 16px;
+}
+
+.no-receipts p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   NO FEE DETAILS
+========================================== */
+
+.fees-history-card > p {
+    margin: 0;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .fees-page {
+        padding: 24px;
+    }
+
+    .fee-summary {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .fees-page {
+        padding: 18px 14px;
+
+        overflow-x: hidden;
+    }
+
+
+    /* HEADER */
+
+    .fees-header {
+        margin-bottom: 24px;
+    }
+
+    .fees-header h1 {
+        font-size: 24px;
+    }
+
+    .fees-header p {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+
+    /* SUMMARY */
+
+    .fee-summary {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 13px;
+
+        margin-bottom: 27px;
+    }
+
+    .fee-card {
+        width: 100%;
+
+        min-height: 82px;
+
+        padding: 18px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        border-radius: 13px;
+    }
+
+    .fee-card span {
+        margin-bottom: 8px;
+
+        font-size: 12px;
+    }
+
+    .fee-card strong {
+        font-size: 22px;
+    }
+
+
+    /* HISTORY */
+
+    .fees-history-card {
+        padding: 18px 16px;
+
+        border-radius: 14px;
+    }
+
+    .fees-card-header {
+        display: block;
+
+        margin-bottom: 20px;
+    }
+
+    .fees-card-header h2 {
+        margin-bottom: 6px;
+
+        font-size: 18px;
+    }
+
+    .fees-card-header p {
+        font-size: 11px;
+    }
+
+
+    /* TABLE */
+
+    .fees-table {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .fee-row {
+        width: 100%;
+
+        min-width: 0;
+
+        grid-template-columns:
+            1.2fr
+            0.8fr
+            0.8fr
+            0.8fr
+            0.7fr
+            0.9fr;
+
+        gap: 6px;
+
+        padding: 13px 3px;
+    }
+
+    .fee-heading {
+        padding-bottom: 10px;
+
+        font-size: 8px;
+
+        letter-spacing: 0;
+    }
+
+    .fee-row span {
+        font-size: 9px;
+    }
+
+    .fee-row strong {
+        font-size: 9px;
+    }
+
+    .payment-status {
+        padding: 4px 6px;
+
+        font-size: 7px !important;
+    }
+
+    .download-receipt-btn {
+        padding: 6px 7px;
+
+        font-size: 8px;
+    }
+}
+
+
+/* ==========================================
+   400px
+========================================== */
+
+@media (max-width: 400px) {
+
+    .fees-page {
+        padding: 16px 12px;
+    }
+
+
+    .fees-header {
+        margin-bottom: 22px;
+    }
+
+    .fees-header h1 {
+        font-size: 22px;
+    }
+
+
+    .fee-summary {
+        gap: 12px;
+
+        margin-bottom: 25px;
+    }
+
+    .fee-card {
+        min-height: 80px;
+
+        padding: 17px;
+    }
+
+    .fee-card span {
+        font-size: 11px;
+    }
+
+    .fee-card strong {
+        font-size: 21px;
+    }
+
+
+    .fees-history-card {
+        padding: 17px 14px;
+    }
+
+    .fees-card-header {
+        margin-bottom: 18px;
+    }
+
+    .fees-card-header h2 {
+        font-size: 17px;
+    }
+
+    .fees-card-header p {
+        font-size: 10px;
+    }
+
+
+    /* PAYMENT ROW */
+
+    .fee-row {
+        grid-template-columns:
+            1.2fr
+            0.8fr
+            0.8fr
+            0.8fr
+            0.7fr
+            0.85fr;
+
+        gap: 5px;
+
+        padding: 12px 3px;
+    }
+
+    .fee-heading {
+        font-size: 7.5px;
+    }
+
+    .fee-row span,
+    .fee-row strong {
+        font-size: 8.5px;
+    }
+
+    .payment-status {
+        padding: 3px 5px;
+
+        font-size: 6.5px !important;
+    }
+
+    .download-receipt-btn {
+        padding: 5px 6px;
+
+        font-size: 7px;
+    }
+}
+
+
+/* ==========================================
+   320px - CARD STYLE PAYMENT HISTORY
+========================================== */
+
+@media (max-width: 320px) {
+
+    .fees-page {
+        padding: 15px 10px;
+    }
+
+
+    /* HEADER */
+
+    .fees-header {
+        margin-bottom: 21px;
+    }
+
+    .fees-header h1 {
+        font-size: 21px;
+    }
+
+    .fees-header p {
+        font-size: 10px;
+    }
+
+
+    /* SUMMARY */
+
+    .fee-summary {
+        gap: 12px;
+
+        margin-bottom: 25px;
+    }
+
+    .fee-card {
+        min-height: 76px;
+
+        padding: 15px;
+
+        border-radius: 11px;
+    }
+
+    .fee-card span {
+        font-size: 10px;
+
+        margin-bottom: 6px;
+    }
+
+    .fee-card strong {
+        font-size: 20px;
+    }
+
+
+    /* HISTORY CARD */
+
+    .fees-history-card {
+        padding: 15px 12px;
+
+        border-radius: 12px;
+    }
+
+    .fees-card-header {
+        margin-bottom: 17px;
+    }
+
+    .fees-card-header h2 {
+        font-size: 16px;
+    }
+
+    .fees-card-header p {
+        font-size: 9px;
+    }
+
+
+    /* ======================================
+       HIDE TABLE HEADING
+    ====================================== */
+
+    .fees-table .fee-heading {
+        display: none;
+    }
+
+
+    /* ======================================
+       PAYMENT ROW AS CARD
+    ====================================== */
+
+    .fees-table .fee-row:not(.fee-heading) {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 12px 10px;
+
+        padding: 15px 12px;
+
+        margin-bottom: 10px;
+
+        border: 1px solid #e2e8f0;
+
+        border-radius: 11px;
+
+        background: #f8fafc;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ======================================
+       EACH PAYMENT FIELD
+    ====================================== */
+
+    .fees-table .fee-row:not(.fee-heading) > * {
+
+        min-width: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 4px;
+    }
+
+
+    /* ======================================
+       FIELD LABELS
+    ====================================== */
+
+    .fees-table .fee-row:not(.fee-heading) > *::before {
+
+        display: block;
+
+        color: #64748b;
+
+        font-size: 7px;
+
+        font-weight: 600;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.04em;
+    }
+
+
+    .fees-table .fee-row:not(.fee-heading) > :nth-child(1)::before {
+        content: "Receipt No.";
+    }
+
+    .fees-table .fee-row:not(.fee-heading) > :nth-child(2)::before {
+        content: "Date";
+    }
+
+    .fees-table .fee-row:not(.fee-heading) > :nth-child(3)::before {
+        content: "Amount";
+    }
+
+    .fees-table .fee-row:not(.fee-heading) > :nth-child(4)::before {
+        content: "Payment Mode";
+    }
+
+    .fees-table .fee-row:not(.fee-heading) > :nth-child(5)::before {
+        content: "Status";
+    }
+
+    /* Action button gets its own label */
+    .fees-table .fee-row:not(.fee-heading) > :nth-child(6) {
+        align-items: flex-start;
+    }
+
+    .fees-table .fee-row:not(.fee-heading) > :nth-child(6)::before {
+        content: "Action";
+    }
+
+
+    /* ======================================
+       PAYMENT TEXT
+    ====================================== */
+
+    .fees-table .fee-row:not(.fee-heading) span,
+    .fees-table .fee-row:not(.fee-heading) strong {
+
+        font-size: 9px;
+
+        line-height: 1.3;
+
+        word-break: break-word;
+    }
+
+
+    /* ======================================
+       STATUS
+    ====================================== */
+
+    .fees-table .fee-row:not(.fee-heading) .payment-status {
+
+        width: fit-content;
+
+        padding: 4px 7px;
+
+        font-size: 7px !important;
+    }
+
+
+    /* ======================================
+       DOWNLOAD BUTTON
+    ====================================== */
+
+    .fees-table .fee-row:not(.fee-heading) .download-receipt-btn {
+
+        width: 100%;
+
+        min-height: 34px;
+
+        padding: 7px 8px;
+
+        font-size: 9px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ======================================
+       MULTIPLE RECEIPTS
+    ====================================== */
+
+    .fees-table .fee-row:not(.fee-heading):last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark .fees-page {
+    background: #0f172a;
+
+    color: #f8fafc;
+}
+
+
+/* HEADER */
+
+body.dark .fees-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .fees-header p {
+    color: #94a3b8;
+}
+
+
+/* FEE CARDS */
+
+body.dark .fee-card {
+    background: #1e293b;
+
+    border-color: #334155;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .fee-card:hover {
+    background: #243247;
+
+    border-color: #475569;
+}
+
+body.dark .fee-card span {
+    color: #94a3b8;
+}
+
+body.dark .fee-card strong {
+    color: #f8fafc;
+}
+
+
+/* AMOUNTS */
+
+body.dark .paid-amount {
+    color: #34d399 !important;
+}
+
+body.dark .remaining-amount {
+    color: #f87171 !important;
+}
+
+body.dark .fee-status {
+    color: #fb923c !important;
+}
+
+
+/* HISTORY */
+
+body.dark .fees-history-card {
+    background: #1e293b;
+
+    border-color: #334155;
+}
+
+
+/* HEADER */
+
+body.dark .fees-card-header h2 {
+    color: #f8fafc;
+}
+
+body.dark .fees-card-header p {
+    color: #94a3b8;
+}
+
+
+/* TABLE */
+
+body.dark .fee-row {
+    border-bottom-color: #334155;
+}
+
+body.dark .fee-heading {
+    border-bottom-color: #334155;
+
+    color: #94a3b8;
+}
+
+body.dark .fee-row span {
+    color: #cbd5e1;
+}
+
+body.dark .fee-row strong {
+    color: #f1f5f9;
+}
+
+
+/* STATUS */
+
+body.dark .payment-status {
+    background: #052e24;
+
+    color: #34d399 !important;
+}
+
+
+/* DOWNLOAD */
+
+body.dark .download-receipt-btn {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: #ffffff;
+}
+
+body.dark .download-receipt-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* EMPTY */
+
+body.dark .no-receipts-icon {
+    background: #172554;
+}
+
+body.dark .no-receipts h3 {
+    color: #e2e8f0;
+}
+
+body.dark .no-receipts p {
+    color: #94a3b8;
+}
+
+body.dark .fees-history-card > p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   320px DARK PAYMENT CARD
+========================================== */
+
+@media (max-width: 320px) {
+
+    body.dark
+    .fees-table
+    .fee-row:not(.fee-heading) {
+
+        background: #172033;
+
+        border-color: #334155;
+    }
+
+    body.dark
+    .fees-table
+    .fee-row:not(.fee-heading) > *::before {
+
+        color: #94a3b8;
+    }
+}

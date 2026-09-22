@@ -1,0 +1,1386 @@
+
+/* =========================================================
+   PLACEMENT DASHBOARD
+========================================================= */
+
+.placement-dashboard {
+    min-height: 100vh;
+    padding: 32px;
+    background: #f8fafc;
+    color: #0f172a;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.placement-loading {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    color: #64748b;
+    text-align: center;
+}
+
+.placement-loading p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.placement-loader {
+    width: 40px;
+    height: 40px;
+
+    border: 4px solid #e2e8f0;
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: placementLoaderSpin 0.8s linear infinite;
+}
+
+@keyframes placementLoaderSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.placement-header {
+    margin-bottom: 30px;
+}
+
+.placement-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 13px;
+
+    border: 1px solid #bfdbfe;
+    border-radius: 20px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 0.3px;
+}
+
+.placement-header h1 {
+    margin: 13px 0 7px;
+
+    color: #0f172a;
+
+    font-size: 31px;
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+}
+
+.placement-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.placement-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 34px;
+}
+
+.placement-stat-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 0;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.placement-stat-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #cbd5e1;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.placement-stat-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background: #eff6ff;
+
+    font-size: 23px;
+}
+
+.placement-stat-card span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.placement-stat-card strong {
+    display: block;
+
+    color: #0f172a;
+
+    font-size: 24px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.placement-section {
+    margin-bottom: 34px;
+}
+
+.placement-section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+.placement-section-header h2 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 21px;
+    font-weight: 750;
+}
+
+.placement-section-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.placement-actions-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   QUICK ACTION CARD
+========================================================= */
+
+.placement-action-card {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+    min-height: 145px;
+
+    padding: 20px;
+
+    text-align: left;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+
+    box-sizing: border-box;
+}
+
+.placement-action-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #bfdbfe;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.placement-action-card:active {
+    transform: translateY(-1px);
+}
+
+.placement-action-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    margin-right: 14px;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    font-size: 22px;
+}
+
+.placement-action-content {
+    min-width: 0;
+
+    padding-right: 20px;
+}
+
+.placement-action-content h3 {
+    margin: 1px 0 6px;
+
+    color: #0f172a;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.placement-action-content p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.placement-action-arrow {
+    position: absolute;
+
+    right: 18px;
+    bottom: 16px;
+
+    color: #2563eb;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    transition: transform 0.2s ease;
+}
+
+.placement-action-card:hover .placement-action-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   VIEW ALL JOBS
+========================================================= */
+
+.placement-view-all {
+    padding: 9px 14px;
+
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.placement-view-all:hover {
+    background: #dbeafe;
+    border-color: #bfdbfe;
+}
+
+
+/* =========================================================
+   LATEST JOBS
+========================================================= */
+
+.latest-jobs-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.latest-job-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.latest-job-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #cbd5e1;
+
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   JOB TOP
+========================================================= */
+
+.latest-job-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+}
+
+.latest-job-logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.job-open-status {
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: #dcfce7;
+    color: #15803d;
+
+    font-size: 11px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   JOB DETAILS
+========================================================= */
+
+.latest-job-card h3 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 17px;
+    font-weight: 750;
+
+    overflow-wrap: anywhere;
+}
+
+.latest-job-company {
+    margin: 0 0 15px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.latest-job-details {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+}
+
+.latest-job-details span {
+    color: #475569;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   JOB BUTTON
+========================================================= */
+
+.latest-job-btn {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 10px 13px;
+
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.latest-job-btn:hover {
+    background: #dbeafe;
+    border-color: #bfdbfe;
+}
+
+.latest-job-btn span {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.placement-empty {
+    padding: 45px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+}
+
+.placement-empty > div {
+    margin-bottom: 10px;
+
+    font-size: 32px;
+}
+
+.placement-empty h3 {
+    margin: 0 0 6px;
+
+    color: #0f172a;
+
+    font-size: 18px;
+}
+
+.placement-empty p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PLACEMENT JOURNEY
+========================================================= */
+
+.placement-journey {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 22px;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+
+    scrollbar-width: thin;
+}
+
+.journey-step {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 175px;
+}
+
+.journey-number {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.journey-step h3 {
+    margin: 0 0 4px;
+
+    color: #0f172a;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.journey-step p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.journey-arrow {
+    flex-shrink: 0;
+
+    color: #94a3b8;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   AI CAREER CARD
+========================================================= */
+
+.placement-ai-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+    border-radius: 17px;
+
+    box-sizing: border-box;
+}
+
+.placement-ai-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    font-size: 27px;
+
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.08);
+}
+
+.placement-ai-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.placement-ai-content > span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.placement-ai-content h2 {
+    margin: 0 0 6px;
+
+    color: #0f172a;
+
+    font-size: 19px;
+    font-weight: 750;
+}
+
+.placement-ai-content p {
+    max-width: 750px;
+
+    margin: 0;
+
+    color: #475569;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.placement-ai-btn {
+    flex-shrink: 0;
+
+    padding: 11px 17px;
+
+    border: 1px solid #2563eb;
+    border-radius: 9px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.placement-ai-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .placement-dashboard {
+        padding: 28px;
+    }
+
+    .placement-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .placement-actions-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .latest-jobs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .placement-dashboard {
+        padding: 22px;
+    }
+
+    .placement-header h1 {
+        font-size: 28px;
+    }
+
+    .placement-actions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .placement-journey {
+        padding: 18px;
+    }
+
+    .placement-ai-card {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .placement-ai-content {
+        flex-basis: calc(100% - 80px);
+    }
+
+    .placement-ai-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .placement-dashboard {
+        padding: 16px;
+    }
+
+
+    /* Header */
+
+    .placement-header {
+        margin-bottom: 24px;
+    }
+
+    .placement-badge {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+
+    .placement-header h1 {
+        margin-top: 11px;
+
+        font-size: 24px;
+    }
+
+    .placement-header p {
+        font-size: 13px;
+    }
+
+
+    /* Stats */
+
+    .placement-stats {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-bottom: 28px;
+    }
+
+    .placement-stat-card {
+        padding: 16px;
+    }
+
+    .placement-stat-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 20px;
+    }
+
+    .placement-stat-card strong {
+        font-size: 21px;
+    }
+
+
+    /* Section */
+
+    .placement-section {
+        margin-bottom: 28px;
+    }
+
+    .placement-section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .placement-section-header h2 {
+        font-size: 19px;
+    }
+
+    .placement-section-header p {
+        font-size: 13px;
+    }
+
+
+    /* Quick Actions */
+
+    .placement-actions-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .placement-action-card {
+        min-height: 120px;
+
+        padding: 17px;
+    }
+
+    .placement-action-icon {
+        width: 44px;
+        height: 44px;
+
+        margin-right: 12px;
+
+        font-size: 20px;
+    }
+
+    .placement-action-content h3 {
+        font-size: 15px;
+    }
+
+    .placement-action-content p {
+        font-size: 12px;
+    }
+
+
+    /* Latest Jobs */
+
+    .latest-jobs-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .latest-job-card {
+        padding: 17px;
+    }
+
+
+    /* View All */
+
+    .placement-view-all {
+        width: 100%;
+    }
+
+
+    /* Journey */
+
+    .placement-journey {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 14px;
+
+        overflow-x: visible;
+
+        padding: 18px;
+    }
+
+    .journey-step {
+        min-width: 0;
+
+        width: 100%;
+    }
+
+    .journey-arrow {
+        display: none;
+    }
+
+
+    /* AI Card */
+
+    .placement-ai-card {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .placement-ai-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 23px;
+    }
+
+    .placement-ai-content {
+        flex-basis: auto;
+
+        width: 100%;
+    }
+
+    .placement-ai-content h2 {
+        font-size: 18px;
+    }
+
+    .placement-ai-content p {
+        font-size: 13px;
+    }
+
+    .placement-ai-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .placement-dashboard {
+        padding: 12px;
+    }
+
+    .placement-header h1 {
+        font-size: 22px;
+    }
+
+    .placement-stat-card {
+        padding: 14px;
+    }
+
+    .placement-action-card {
+        min-height: 112px;
+
+        padding: 15px;
+    }
+
+    .placement-action-icon {
+        width: 41px;
+        height: 41px;
+
+        font-size: 18px;
+    }
+
+    .placement-action-arrow {
+        right: 14px;
+        bottom: 13px;
+    }
+
+    .latest-job-card {
+        padding: 15px;
+    }
+
+    .placement-ai-card {
+        padding: 17px;
+    }
+}
+
+/* =========================================================
+   DARK MODE
+   Theme controlled from Landing Page
+========================================================= */
+
+body.dark .placement-dashboard {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+body.dark .placement-loading {
+    color: #94a3b8;
+}
+
+body.dark .placement-loading p {
+    color: #94a3b8;
+}
+
+body.dark .placement-loader {
+    border-color: #334155;
+    border-top-color: #3b82f6;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+body.dark .placement-badge {
+    background: #172554;
+    border-color: #1e40af;
+    color: #60a5fa;
+}
+
+body.dark .placement-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .placement-header p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+body.dark .placement-stat-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.20);
+}
+
+body.dark .placement-stat-card:hover {
+    background: #243247;
+    border-color: #475569;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.30);
+}
+
+body.dark .placement-stat-icon {
+    background: #172554;
+}
+
+body.dark .placement-stat-card span {
+    color: #94a3b8;
+}
+
+body.dark .placement-stat-card strong {
+    color: #f8fafc;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+body.dark .placement-section-header h2 {
+    color: #f1f5f9;
+}
+
+body.dark .placement-section-header p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   QUICK ACTION CARDS
+========================================================= */
+
+body.dark .placement-action-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .placement-action-card:hover {
+    background: #243247;
+    border-color: #475569;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.30);
+}
+
+body.dark .placement-action-icon {
+    background: #172554;
+}
+
+body.dark .placement-action-content h3 {
+    color: #f1f5f9;
+}
+
+body.dark .placement-action-content p {
+    color: #94a3b8;
+}
+
+body.dark .placement-action-arrow {
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   VIEW ALL JOBS
+========================================================= */
+
+body.dark .placement-view-all {
+    background: #172554;
+    border-color: #1e40af;
+    color: #60a5fa;
+}
+
+body.dark .placement-view-all:hover {
+    background: #1e3a8a;
+    border-color: #2563eb;
+}
+
+
+/* =========================================================
+   LATEST JOBS
+========================================================= */
+
+body.dark .latest-job-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .latest-job-card:hover {
+    background: #243247;
+    border-color: #475569;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   JOB TOP
+========================================================= */
+
+body.dark .latest-job-logo {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .job-open-status {
+    background: #052e24;
+    color: #34d399;
+}
+
+
+/* =========================================================
+   JOB DETAILS
+========================================================= */
+
+body.dark .latest-job-card h3 {
+    color: #f1f5f9;
+}
+
+body.dark .latest-job-company {
+    color: #94a3b8;
+}
+
+body.dark .latest-job-details span {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   JOB BUTTON
+========================================================= */
+
+body.dark .latest-job-btn {
+    background: #172554;
+    border-color: #1e40af;
+    color: #60a5fa;
+}
+
+body.dark .latest-job-btn:hover {
+    background: #1e3a8a;
+    border-color: #2563eb;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+body.dark .placement-empty {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark .placement-empty h3 {
+    color: #f1f5f9;
+}
+
+body.dark .placement-empty p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   PLACEMENT JOURNEY
+========================================================= */
+
+body.dark .placement-journey {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .journey-number {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .journey-step h3 {
+    color: #e2e8f0;
+}
+
+body.dark .journey-step p {
+    color: #94a3b8;
+}
+
+body.dark .journey-arrow {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   AI CAREER CARD
+========================================================= */
+
+body.dark .placement-ai-card {
+    background: #172554;
+    border-color: #1e40af;
+}
+
+body.dark .placement-ai-icon {
+    background: #1e293b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+body.dark .placement-ai-content > span {
+    color: #60a5fa;
+}
+
+body.dark .placement-ai-content h2 {
+    color: #f8fafc;
+}
+
+body.dark .placement-ai-content p {
+    color: #cbd5e1;
+}
+
+body.dark .placement-ai-btn {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .placement-ai-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body.dark .placement-action-card {
+        background: #1e293b;
+    }
+
+    body.dark .latest-job-card {
+        background: #1e293b;
+    }
+
+    body.dark .placement-journey {
+        background: #1e293b;
+    }
+
+    body.dark .placement-ai-card {
+        background: #172554;
+    }
+
+}

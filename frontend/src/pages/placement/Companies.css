@@ -1,0 +1,1862 @@
+
+/* =========================================================
+   COMPANIES PAGE
+========================================================= */
+
+.companies-page {
+    min-height: 100vh;
+
+    padding: 32px 36px 50px;
+
+    background: #f6f8fc;
+
+    color: #172033;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.companies-header {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+}
+
+.companies-header-content {
+    position: relative;
+
+    padding: 30px 32px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f8fbff 100%
+        );
+
+    border: 1px solid #e5eaf2;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.05);
+
+    overflow: hidden;
+}
+
+.companies-header-content::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -70px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, 0.06);
+
+    pointer-events: none;
+}
+
+.companies-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.companies-header h1 {
+    position: relative;
+
+    z-index: 1;
+
+    margin: 13px 0 7px;
+
+    color: #172033;
+
+    font-size: 30px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.8px;
+}
+
+.companies-header p {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.companies-stats {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.company-stat-card {
+    min-height: 92px;
+
+    padding: 17px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf2;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 6px 20px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.company-stat-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #d6deea;
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.07);
+}
+
+.company-stat-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+}
+
+.company-stat-icon.blue {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+.company-stat-icon.green {
+    background: #ecfdf5;
+
+    color: #16a34a;
+}
+
+.company-stat-icon.purple {
+    background: #f5f3ff;
+
+    color: #7c3aed;
+}
+
+.company-stat-card span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.company-stat-card strong {
+    display: block;
+
+    color: #172033;
+
+    font-size: 20px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.companies-toolbar {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.companies-search-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 570px;
+
+    height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe5ee;
+
+    border-radius: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.companies-search-box:focus-within {
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.search-icon {
+    margin-left: 15px;
+
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+.companies-search-box input {
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0 42px 0 11px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #172033;
+
+    font-size: 12px;
+}
+
+.companies-search-box input::placeholder {
+    color: #9aa5b5;
+}
+
+.clear-search {
+    position: absolute;
+
+    right: 10px;
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.clear-search:hover {
+    background: #e2e8f0;
+
+    color: #1e293b;
+}
+
+
+/* =========================================================
+   RESULT COUNT
+========================================================= */
+
+.companies-result-count {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    white-space: nowrap;
+}
+
+.companies-result-count strong {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 750;
+}
+
+.companies-result-count span {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   COMPANY GRID
+========================================================= */
+
+.companies-grid {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   COMPANY CARD
+========================================================= */
+
+.company-card {
+    position: relative;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e9f1;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 24px rgba(15, 23, 42, 0.045);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.company-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #60a5fa
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #d5deeb;
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.09);
+}
+
+.company-card:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.company-card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.company-identity {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   COMPANY LOGO
+========================================================= */
+
+.company-logo {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #dbeafe
+        );
+
+    border: 1px solid #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+.company-logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    padding: 8px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   COMPANY NAME
+========================================================= */
+
+.company-name-wrapper {
+    min-width: 0;
+}
+
+.company-name-wrapper h2 {
+    margin: 0 0 3px;
+
+    overflow: hidden;
+
+    color: #172033;
+
+    font-size: 17px;
+
+    font-weight: 750;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.company-name-wrapper p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.company-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 6px 9px;
+
+    flex-shrink: 0;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.company-status.active {
+    background: #ecfdf5;
+
+    color: #15803d;
+
+    border: 1px solid #bbf7d0;
+}
+
+.company-status.inactive {
+    background: #f8fafc;
+
+    color: #64748b;
+
+    border: 1px solid #e2e8f0;
+}
+
+.status-dot {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.company-divider {
+    width: 100%;
+
+    height: 1px;
+
+    margin: 18px 0;
+
+    background: #eef2f7;
+}
+
+
+/* =========================================================
+   COMPANY DETAILS
+========================================================= */
+
+.company-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.company-info {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.company-info-icon {
+    width: 33px;
+    height: 33px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: #f8fafc;
+
+    font-size: 13px;
+}
+
+.company-info small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #94a3b8;
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+.company-info strong {
+    display: block;
+
+    max-width: 170px;
+
+    overflow: hidden;
+
+    color: #334155;
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.company-description-wrapper {
+    margin-top: 19px;
+
+    padding: 13px 14px;
+
+    border-radius: 11px;
+
+    background: #f8fafc;
+
+    border: 1px solid #eef2f7;
+}
+
+.description-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #94a3b8;
+
+    font-size: 7px;
+
+    font-weight: 750;
+
+    letter-spacing: 0.8px;
+}
+
+.company-description {
+    display: -webkit-box;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.company-actions {
+    margin-top: 18px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.2fr;
+
+    gap: 9px;
+}
+
+.company-website,
+.company-jobs-btn {
+    min-height: 39px;
+
+    padding: 9px 11px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.company-website {
+    background: #ffffff;
+
+    border: 1px solid #dfe5ee;
+
+    color: #475569;
+}
+
+.company-website:hover {
+    background: #f8fafc;
+
+    border-color: #cbd5e1;
+
+    color: #2563eb;
+}
+
+.company-jobs-btn {
+    background: #2563eb;
+
+    border: 1px solid #2563eb;
+
+    color: #ffffff;
+}
+
+.company-jobs-btn:hover {
+    background: #1d4ed8;
+
+    border-color: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 13px rgba(37, 99, 235, 0.18);
+}
+
+.action-arrow {
+    font-size: 12px;
+
+    transition: transform 0.2s ease;
+}
+
+.company-website:hover .action-arrow {
+    transform: translate(2px, -2px);
+}
+
+.company-jobs-btn:hover .action-arrow {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.companies-empty {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 70px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf2;
+
+    border-radius: 17px;
+}
+
+.companies-empty-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #f1f5f9;
+
+    font-size: 27px;
+}
+
+.companies-empty h3 {
+    margin: 0 0 7px;
+
+    color: #334155;
+
+    font-size: 17px;
+}
+
+.companies-empty p {
+    max-width: 440px;
+
+    margin: 0 auto;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.empty-clear-btn {
+    margin-top: 18px;
+
+    padding: 9px 15px;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 8px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.empty-clear-btn:hover {
+    background: #dbeafe;
+
+    border-color: #bfdbfe;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.companies-loading {
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #f6f8fc;
+
+    color: #172033;
+}
+
+.companies-loader {
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 14px;
+
+    border-radius: 50%;
+
+    border: 3px solid #dbeafe;
+
+    border-top-color: #2563eb;
+
+    animation: companiesSpin 0.8s linear infinite;
+}
+
+.companies-loading h3 {
+    margin: 0 0 5px;
+
+    color: #334155;
+
+    font-size: 14px;
+}
+
+.companies-loading p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+@keyframes companiesSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .companies-page {
+    background: #0b1220;
+
+    color: #f8fafc;
+}
+
+
+/* ---------- Header ---------- */
+
+body.dark .companies-header-content {
+    background:
+        linear-gradient(
+            135deg,
+            #111c31 0%,
+            #101a2d 100%
+        );
+
+    border-color: #26344d;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .companies-header-content::after {
+    background: rgba(96, 165, 250, 0.07);
+}
+
+body.dark .companies-badge {
+    background: rgba(37, 99, 235, 0.13);
+
+    border-color: rgba(96, 165, 250, 0.2);
+
+    color: #60a5fa;
+}
+
+body.dark .companies-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .companies-header p {
+    color: #94a3b8;
+}
+
+
+/* ---------- Stats ---------- */
+
+body.dark .company-stat-card {
+    background: #111c31;
+
+    border-color: #26344d;
+
+    box-shadow:
+        0 7px 24px rgba(0, 0, 0, 0.16);
+}
+
+body.dark .company-stat-card:hover {
+    border-color: #35445f;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+body.dark .company-stat-card span {
+    color: #94a3b8;
+}
+
+body.dark .company-stat-card strong {
+    color: #f1f5f9;
+}
+
+body.dark .company-stat-icon.blue {
+    background: rgba(37, 99, 235, 0.13);
+
+    color: #60a5fa;
+}
+
+body.dark .company-stat-icon.green {
+    background: rgba(34, 197, 94, 0.12);
+
+    color: #4ade80;
+}
+
+body.dark .company-stat-icon.purple {
+    background: rgba(124, 58, 237, 0.13);
+
+    color: #a78bfa;
+}
+
+
+/* ---------- Search ---------- */
+
+body.dark .companies-search-box {
+    background: #111c31;
+
+    border-color: #2a3953;
+}
+
+body.dark .companies-search-box:focus-within {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+body.dark .search-icon {
+    color: #64748b;
+}
+
+body.dark .companies-search-box input {
+    color: #f1f5f9;
+}
+
+body.dark .companies-search-box input::placeholder {
+    color: #64748b;
+}
+
+body.dark .clear-search {
+    background: #1e293b;
+
+    color: #94a3b8;
+}
+
+body.dark .clear-search:hover {
+    background: #334155;
+
+    color: #f8fafc;
+}
+
+body.dark .companies-result-count span {
+    color: #64748b;
+}
+
+body.dark .companies-result-count strong {
+    color: #60a5fa;
+}
+
+
+/* ---------- Company Card ---------- */
+
+body.dark .company-card {
+    background: #111c31;
+
+    border-color: #26344d;
+
+    box-shadow:
+        0 7px 24px rgba(0, 0, 0, 0.17);
+}
+
+body.dark .company-card:hover {
+    border-color: #35445f;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .company-logo {
+    background:
+        linear-gradient(
+            135deg,
+            #1e3a5f,
+            #172b47
+        );
+
+    border-color: #2e4b70;
+
+    color: #60a5fa;
+}
+
+body.dark .company-logo img {
+    background: #ffffff;
+}
+
+body.dark .company-name-wrapper h2 {
+    color: #f1f5f9;
+}
+
+body.dark .company-name-wrapper p {
+    color: #64748b;
+}
+
+body.dark .company-status.active {
+    background: rgba(34, 197, 94, 0.11);
+
+    border-color: rgba(74, 222, 128, 0.2);
+
+    color: #4ade80;
+}
+
+body.dark .company-status.inactive {
+    background: #172235;
+
+    border-color: #334155;
+
+    color: #94a3b8;
+}
+
+body.dark .company-divider {
+    background: #25324a;
+}
+
+
+/* ---------- Company Details ---------- */
+
+body.dark .company-info-icon {
+    background: #172235;
+}
+
+body.dark .company-info small {
+    color: #64748b;
+}
+
+body.dark .company-info strong {
+    color: #cbd5e1;
+}
+
+
+/* ---------- Description ---------- */
+
+body.dark .company-description-wrapper {
+    background: #172235;
+
+    border-color: #293852;
+}
+
+body.dark .description-label {
+    color: #64748b;
+}
+
+body.dark .company-description {
+    color: #94a3b8;
+}
+
+
+/* ---------- Actions ---------- */
+
+body.dark .company-website {
+    background: #172235;
+
+    border-color: #334155;
+
+    color: #cbd5e1;
+}
+
+body.dark .company-website:hover {
+    background: #1e2b42;
+
+    border-color: #475569;
+
+    color: #60a5fa;
+}
+
+body.dark .company-jobs-btn {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: #ffffff;
+}
+
+body.dark .company-jobs-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ---------- Empty ---------- */
+
+body.dark .companies-empty {
+    background: #111c31;
+
+    border-color: #26344d;
+}
+
+body.dark .companies-empty-icon {
+    background: #172235;
+}
+
+body.dark .companies-empty h3 {
+    color: #e2e8f0;
+}
+
+body.dark .companies-empty p {
+    color: #64748b;
+}
+
+body.dark .empty-clear-btn {
+    background: rgba(37, 99, 235, 0.12);
+
+    border-color: rgba(96, 165, 250, 0.2);
+
+    color: #60a5fa;
+}
+
+body.dark .empty-clear-btn:hover {
+    background: rgba(37, 99, 235, 0.2);
+}
+
+
+/* ---------- Loading ---------- */
+
+body.dark .companies-loading {
+    background: #0b1220;
+
+    color: #f8fafc;
+}
+
+body.dark .companies-loader {
+    border-color: #1e3a5f;
+
+    border-top-color: #60a5fa;
+}
+
+body.dark .companies-loading h3 {
+    color: #e2e8f0;
+}
+
+body.dark .companies-loading p {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1000px
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .companies-page {
+        padding: 28px 25px 45px;
+    }
+
+    .companies-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .companies-stats {
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .companies-page {
+        padding: 25px 20px 40px;
+    }
+
+    .companies-header-content {
+        padding: 25px;
+    }
+
+    .companies-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .company-stat-card {
+        min-height: 78px;
+    }
+
+    .companies-toolbar {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .companies-search-box {
+        max-width: none;
+    }
+
+    .companies-result-count {
+        justify-content: flex-end;
+    }
+
+    .companies-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .companies-page {
+        padding: 20px 15px 35px;
+    }
+
+    .companies-header-content {
+        padding: 22px 20px;
+
+        border-radius: 15px;
+    }
+
+    .companies-header h1 {
+        font-size: 25px;
+    }
+
+    .companies-header p {
+        font-size: 11px;
+    }
+
+    .companies-badge {
+        font-size: 8px;
+
+        padding: 6px 9px;
+    }
+
+    .companies-stats {
+        margin-bottom: 20px;
+    }
+
+    .company-stat-card {
+        padding: 14px;
+
+        min-height: 72px;
+    }
+
+    .company-stat-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+    .company-stat-card strong {
+        font-size: 18px;
+    }
+
+    .company-card {
+        padding: 18px;
+
+        border-radius: 15px;
+    }
+
+    .company-logo {
+        width: 46px;
+        height: 46px;
+
+        border-radius: 11px;
+
+        font-size: 18px;
+    }
+
+    .company-name-wrapper h2 {
+        font-size: 15px;
+    }
+
+    .company-status {
+        padding: 5px 7px;
+
+        font-size: 8px;
+    }
+
+    .company-details {
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+    }
+
+    .company-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .company-website,
+    .company-jobs-btn {
+        min-height: 42px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .companies-page {
+        padding: 16px 11px 30px;
+    }
+
+    .companies-header-content {
+        padding: 19px 16px;
+    }
+
+    .companies-header h1 {
+        font-size: 23px;
+    }
+
+    .companies-header p {
+        font-size: 10px;
+    }
+
+    .companies-search-box {
+        height: 43px;
+    }
+
+    .companies-search-box input {
+        font-size: 10px;
+
+        padding-left: 8px;
+    }
+
+    .company-card {
+        padding: 15px;
+    }
+
+    .company-card-header {
+        gap: 8px;
+    }
+
+    .company-identity {
+        gap: 9px;
+    }
+
+    .company-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .company-name-wrapper h2 {
+        font-size: 14px;
+    }
+
+    .company-name-wrapper p {
+        font-size: 8px;
+    }
+
+    .company-status {
+        padding: 4px 6px;
+
+        font-size: 7px;
+    }
+
+    .company-description {
+        font-size: 9px;
+    }
+
+}
+
+
+
+/* =========================================================
+   FINAL READABILITY IMPROVEMENTS
+========================================================= */
+
+/* ---------- Header ---------- */
+
+.companies-header h1 {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.companies-header p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.companies-badge {
+    font-size: 11px;
+    padding: 8px 13px;
+}
+
+
+/* ---------- Statistics ---------- */
+
+.company-stat-card {
+    padding: 20px;
+    min-height: 100px;
+}
+
+.company-stat-card span {
+    display: block;
+    margin-bottom: 6px;
+
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.company-stat-card strong {
+    display: block;
+
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+
+/* ---------- Search ---------- */
+
+.companies-search-box {
+    height: 50px;
+}
+
+.companies-search-box input {
+    font-size: 14px;
+}
+
+.companies-result-count {
+    gap: 7px;
+}
+
+.companies-result-count strong {
+    font-size: 15px;
+}
+
+.companies-result-count span {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   COMPANY CARD
+========================================================= */
+
+.company-card {
+    padding: 24px;
+}
+
+.company-logo {
+    width: 56px;
+    height: 56px;
+
+    font-size: 22px;
+}
+
+.company-name-wrapper h2 {
+    margin-bottom: 5px;
+
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.company-name-wrapper p {
+    font-size: 11px;
+}
+
+
+/* ---------- Status ---------- */
+
+.company-status {
+    padding: 7px 11px;
+
+    font-size: 10px;
+}
+
+
+/* ---------- Divider ---------- */
+
+.company-divider {
+    margin: 20px 0;
+}
+
+
+/* =========================================================
+   COMPANY INFORMATION
+========================================================= */
+
+.company-details {
+    gap: 16px;
+}
+
+.company-info {
+    gap: 11px;
+}
+
+.company-info-icon {
+    width: 37px;
+    height: 37px;
+
+    font-size: 14px;
+}
+
+.company-info small {
+    margin-bottom: 5px;
+
+    font-size: 10px;
+}
+
+.company-info strong {
+    max-width: 220px;
+
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.company-description-wrapper {
+    margin-top: 22px;
+
+    padding: 15px 16px;
+}
+
+.description-label {
+    margin-bottom: 7px;
+
+    font-size: 9px;
+}
+
+.company-description {
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.company-actions {
+    margin-top: 20px;
+
+    gap: 10px;
+}
+
+.company-website,
+.company-jobs-btn {
+    min-height: 44px;
+
+    padding: 10px 13px;
+
+    font-size: 12px;
+}
+
+.action-arrow {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.companies-empty {
+    padding: 75px 25px;
+}
+
+.companies-empty h3 {
+    font-size: 21px;
+}
+
+.companies-empty p {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .companies-header h1 {
+        font-size: 29px;
+    }
+
+    .companies-header p {
+        font-size: 13px;
+    }
+
+    .companies-badge {
+        font-size: 9px;
+    }
+
+
+    .company-stat-card {
+        min-height: 85px;
+
+        padding: 17px;
+    }
+
+    .company-stat-card span {
+        font-size: 11px;
+    }
+
+    .company-stat-card strong {
+        font-size: 21px;
+    }
+
+
+    .companies-search-box {
+        height: 47px;
+    }
+
+    .companies-search-box input {
+        font-size: 13px;
+    }
+
+
+    .company-card {
+        padding: 20px;
+    }
+
+    .company-logo {
+        width: 50px;
+        height: 50px;
+
+        font-size: 20px;
+    }
+
+    .company-name-wrapper h2 {
+        font-size: 18px;
+    }
+
+    .company-name-wrapper p {
+        font-size: 10px;
+    }
+
+    .company-status {
+        padding: 6px 9px;
+
+        font-size: 9px;
+    }
+
+
+    .company-details {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .company-info small {
+        font-size: 9px;
+    }
+
+    .company-info strong {
+        font-size: 12px;
+    }
+
+
+    .company-description {
+        font-size: 11px;
+    }
+
+
+    .company-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .company-website,
+    .company-jobs-btn {
+        min-height: 44px;
+
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,1591 @@
+
+/* =========================================================
+   STUDENTS MANAGEMENT PAGE
+========================================================= */
+
+.students-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f5f7fb;
+  color: #1e293b;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.students-header {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.students-title-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.students-title-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8f0ff;
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.students-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.students-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   ADD STUDENT BUTTON
+========================================================= */
+
+.add-student-btn {
+  border: none;
+  border-radius: 10px;
+
+  padding: 12px 18px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  transition: 0.2s ease;
+}
+
+.add-student-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.add-student-btn span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.students-summary {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.student-summary-card {
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.summary-card-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff6ff;
+  border-radius: 12px;
+
+  font-size: 21px;
+}
+
+.student-summary-card span {
+  display: block;
+
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.student-summary-card strong {
+  display: block;
+
+  color: #172033;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.students-card {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.students-card-header {
+  padding: 22px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.students-card-header h2 {
+  margin: 0;
+
+  font-size: 19px;
+  color: #172033;
+}
+
+.students-card-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.student-search-wrapper {
+  position: relative;
+  width: 280px;
+}
+
+.student-search {
+  width: 100%;
+  height: 42px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dbe1ea;
+  border-radius: 9px;
+
+  padding: 0 38px 0 38px;
+
+  outline: none;
+
+  color: #1e293b;
+  background: #ffffff;
+
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.student-search:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.search-icon {
+  position: absolute;
+
+  left: 13px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 14px;
+
+  pointer-events: none;
+}
+
+.clear-search-btn {
+  position: absolute;
+
+  right: 9px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 25px;
+  height: 25px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f1f5f9;
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.clear-search-btn:hover {
+  background: #e2e8f0;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.students-message {
+  margin: 18px 24px 0;
+
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+
+  border-radius: 9px;
+
+  color: #9a3412;
+}
+
+.students-message p {
+  margin: 0;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.students-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  min-width: 760px;
+}
+
+.students-table thead {
+  background: #f8fafc;
+}
+
+.students-table th {
+  padding: 14px 20px;
+
+  text-align: left;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #64748b;
+
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.students-table td {
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #eef1f5;
+
+  font-size: 13px;
+
+  color: #475569;
+
+  vertical-align: middle;
+}
+
+.students-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.students-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.students-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   STUDENT USER INFO
+========================================================= */
+
+.student-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-avatar {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+  color: #1d4ed8;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.student-user-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.student-user-text strong {
+  color: #1e293b;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.student-user-text span {
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.student-email {
+  color: #475569;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ROLE BADGE
+========================================================= */
+
+.student-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  background: #ecfdf5;
+  color: #047857;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+.role-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #10b981;
+}
+
+
+/* =========================================================
+   JOINED DATE
+========================================================= */
+
+.student-joined {
+  color: #64748b;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.student-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.student-action-btn {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  border: 1px solid transparent;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+.student-action-btn.view {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.student-action-btn.view:hover {
+  background: #dbeafe;
+}
+
+.student-action-btn.edit {
+  background: #fefce8;
+  color: #ca8a04;
+}
+
+.student-action-btn.edit:hover {
+  background: #fef08a;
+}
+
+.student-action-btn.delete {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.student-action-btn.delete:hover {
+  background: #fee2e2;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.students-empty-cell {
+  padding: 0 !important;
+}
+
+.students-empty {
+  padding: 55px 20px;
+
+  text-align: center;
+}
+
+.empty-student-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #f1f5f9;
+
+  font-size: 27px;
+}
+
+.students-empty h3 {
+  margin: 0 0 7px;
+
+  color: #334155;
+
+  font-size: 17px;
+}
+
+.students-empty p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   STUDENT DETAILS
+========================================================= */
+
+.student-details {
+  margin: 24px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+
+  background: #f8fafc;
+
+  overflow: hidden;
+}
+
+.student-details-header {
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  background: #ffffff;
+}
+
+.details-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.details-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+  color: #1d4ed8;
+
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.student-details-header h2 {
+  margin: 0;
+
+  color: #1e293b;
+
+  font-size: 16px;
+}
+
+.student-details-header p {
+  margin: 3px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.details-close-btn {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #f1f5f9;
+  color: #64748b;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.details-close-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.student-details-content {
+  padding: 18px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+}
+
+.student-detail-item {
+  padding: 13px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+}
+
+.student-detail-item span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+.student-detail-item strong {
+  display: block;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  word-break: break-word;
+}
+
+.details-role {
+  color: #047857 !important;
+  text-transform: capitalize;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.add-student-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  backdrop-filter: blur(3px);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.add-student-modal {
+  width: 100%;
+  max-width: 470px;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2);
+
+  overflow: hidden;
+
+  animation: studentModalIn 0.2s ease;
+}
+
+@keyframes studentModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.add-student-header {
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.modal-title-section {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.modal-title-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff6ff;
+
+  border-radius: 10px;
+
+  font-size: 19px;
+}
+
+.add-student-header h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 18px;
+}
+
+.add-student-header p {
+  margin: 4px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.close-modal-btn {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #f1f5f9;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.close-modal-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.add-student-modal form {
+  padding: 22px;
+}
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  height: 43px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  border: 1px solid #dbe1ea;
+  border-radius: 8px;
+
+  outline: none;
+
+  color: #1e293b;
+
+  background: #ffffff;
+
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #a0aec0;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 7px;
+}
+
+.cancel-btn,
+.save-student-btn {
+  min-width: 110px;
+
+  height: 40px;
+
+  padding: 0 15px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.cancel-btn {
+  border: 1px solid #dbe1ea;
+
+  background: #ffffff;
+
+  color: #475569;
+}
+
+.cancel-btn:hover {
+  background: #f8fafc;
+}
+
+.save-student-btn {
+  border: none;
+
+  background: #2563eb;
+
+  color: #ffffff;
+}
+
+.save-student-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.students-loading {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.students-loading p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.students-loader {
+  width: 35px;
+  height: 35px;
+
+  border: 3px solid #dbeafe;
+  border-top-color: #2563eb;
+
+  border-radius: 50%;
+
+  animation: studentsSpin 0.8s linear infinite;
+}
+
+@keyframes studentsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .students-page {
+    padding: 25px 20px;
+  }
+
+  .students-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .students-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-search-wrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .students-page {
+    padding: 20px 14px;
+  }
+
+  .students-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .students-header {
+    margin-bottom: 20px;
+  }
+
+  .students-title-icon {
+    width: 46px;
+    height: 46px;
+
+    font-size: 21px;
+  }
+
+  .students-header h1 {
+    font-size: 23px;
+  }
+
+  .students-header p {
+    font-size: 12px;
+  }
+
+  .add-student-btn {
+    width: 100%;
+  }
+
+  .students-summary {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .student-summary-card {
+    padding: 15px;
+  }
+
+  .students-card-header {
+    padding: 18px;
+  }
+
+  .students-table th,
+  .students-table td {
+    padding: 13px 14px;
+  }
+
+  .student-details {
+    margin: 18px;
+  }
+
+  .student-details-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .students-page {
+    padding: 16px 10px;
+  }
+
+  .students-title-section {
+    align-items: flex-start;
+  }
+
+  .students-header h1 {
+    font-size: 20px;
+  }
+
+  .students-card-header h2 {
+    font-size: 17px;
+  }
+
+  .student-search-wrapper {
+    max-width: 100%;
+  }
+
+  .student-actions {
+    gap: 5px;
+  }
+
+  .student-action-btn {
+    width: 31px;
+    height: 31px;
+
+    font-size: 12px;
+  }
+
+  .student-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .student-user-text strong {
+    font-size: 13px;
+  }
+
+  .student-user-text span {
+    display: none;
+  }
+
+  .add-student-overlay {
+    padding: 12px;
+  }
+
+  .add-student-modal {
+    border-radius: 13px;
+  }
+
+  .add-student-modal form {
+    padding: 18px;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .save-student-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .students-page {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+body.dark .students-title-icon {
+  background: #172554;
+}
+
+body.dark .students-header h1 {
+  color: #f8fafc;
+}
+
+body.dark .students-header p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   ADD STUDENT BUTTON
+========================================================= */
+
+body.dark .add-student-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+body.dark .add-student-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+body.dark .student-summary-card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .summary-card-icon {
+  background: #172554;
+}
+
+body.dark .student-summary-card span {
+  color: #94a3b8;
+}
+
+body.dark .student-summary-card strong {
+  color: #f8fafc;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+body.dark .students-card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+body.dark .students-card-header {
+  border-bottom-color: #334155;
+}
+
+body.dark .students-card-header h2 {
+  color: #f8fafc;
+}
+
+body.dark .students-card-header p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+body.dark .student-search {
+  background: #0f172a;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+body.dark .student-search::placeholder {
+  color: #64748b;
+}
+
+body.dark .student-search:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+body.dark .search-icon {
+  color: #94a3b8;
+}
+
+body.dark .clear-search-btn {
+  background: #334155;
+  color: #94a3b8;
+}
+
+body.dark .clear-search-btn:hover {
+  background: #475569;
+  color: #f8fafc;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+body.dark .students-message {
+  background: #431407;
+  border-color: #9a3412;
+  color: #fb923c;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+body.dark .students-table thead {
+  background: #0f172a;
+}
+
+body.dark .students-table th {
+  background: #0f172a;
+  border-bottom-color: #334155;
+  color: #94a3b8;
+}
+
+body.dark .students-table td {
+  background: #1e293b;
+  border-bottom-color: #334155;
+  color: #cbd5e1;
+}
+
+body.dark .students-table tbody tr:hover,
+body.dark .students-table tbody tr:hover td {
+  background: #263449;
+}
+
+
+/* =========================================================
+   STUDENT USER INFO
+========================================================= */
+
+body.dark .student-avatar {
+  background: #172554;
+  color: #60a5fa;
+}
+
+body.dark .student-user-text strong {
+  color: #f1f5f9;
+}
+
+body.dark .student-user-text span {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+body.dark .student-email {
+  color: #cbd5e1;
+}
+
+
+/* =========================================================
+   ROLE BADGE
+========================================================= */
+
+body.dark .student-role {
+  background: #052e24;
+  color: #34d399;
+}
+
+body.dark .role-dot {
+  background: #34d399;
+}
+
+
+/* =========================================================
+   JOINED DATE
+========================================================= */
+
+body.dark .student-joined {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+body.dark .student-action-btn.view {
+  background: #172554;
+  color: #60a5fa;
+}
+
+body.dark .student-action-btn.view:hover {
+  background: #1e3a8a;
+}
+
+body.dark .student-action-btn.edit {
+  background: #422006;
+  color: #fbbf24;
+}
+
+body.dark .student-action-btn.edit:hover {
+  background: #713f12;
+}
+
+body.dark .student-action-btn.delete {
+  background: #450a0a;
+  color: #f87171;
+}
+
+body.dark .student-action-btn.delete:hover {
+  background: #7f1d1d;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+body.dark .students-empty {
+  background: #1e293b;
+}
+
+body.dark .empty-student-icon {
+  background: #0f172a;
+}
+
+body.dark .students-empty h3 {
+  color: #e2e8f0;
+}
+
+body.dark .students-empty p {
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   STUDENT DETAILS
+========================================================= */
+
+body.dark .student-details {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+body.dark .student-details-header {
+  background: #1e293b;
+  border-bottom-color: #334155;
+}
+
+body.dark .details-avatar {
+  background: #172554;
+  color: #60a5fa;
+}
+
+body.dark .student-details-header h2 {
+  color: #f1f5f9;
+}
+
+body.dark .student-details-header p {
+  color: #94a3b8;
+}
+
+body.dark .details-close-btn {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+body.dark .details-close-btn:hover {
+  background: #475569;
+  color: #ffffff;
+}
+
+body.dark .student-detail-item {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark .student-detail-item span {
+  color: #94a3b8;
+}
+
+body.dark .student-detail-item strong {
+  color: #e2e8f0;
+}
+
+body.dark .details-role {
+  color: #34d399 !important;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+body.dark .add-student-overlay {
+  background: rgba(2, 6, 23, 0.76);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+body.dark .add-student-modal {
+  background: #1e293b;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+body.dark .add-student-header {
+  border-bottom-color: #334155;
+}
+
+body.dark .modal-title-icon {
+  background: #172554;
+}
+
+body.dark .add-student-header h2 {
+  color: #f8fafc;
+}
+
+body.dark .add-student-header p {
+  color: #94a3b8;
+}
+
+body.dark .close-modal-btn {
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+body.dark .close-modal-btn:hover {
+  background: #334155;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+body.dark .form-group label {
+  color: #cbd5e1;
+}
+
+body.dark .form-group input {
+  background: #0f172a;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+body.dark .form-group input::placeholder {
+  color: #64748b;
+}
+
+body.dark .form-group input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+body.dark .cancel-btn {
+  background: #1e293b;
+  border-color: #475569;
+  color: #cbd5e1;
+}
+
+body.dark .cancel-btn:hover {
+  background: #334155;
+}
+
+body.dark .save-student-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+body.dark .save-student-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+body.dark .students-loading {
+  background: #0f172a;
+}
+
+body.dark .students-loading p {
+  color: #94a3b8;
+}
+
+body.dark .students-loader {
+  border-color: #334155;
+  border-top-color: #3b82f6;
+}

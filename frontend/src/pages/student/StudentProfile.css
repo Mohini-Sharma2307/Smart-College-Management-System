@@ -1,0 +1,1718 @@
+
+/* ==========================================
+   PROFILE PAGE
+========================================== */
+
+.profile-page {
+    min-height: 100vh;
+    padding: 30px 35px;
+    box-sizing: border-box;
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+    color: #0f172a;
+
+    /* Center complete profile content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.profile-header {
+    width: 100%;
+    max-width: 950px;
+    margin-bottom: 24px;
+}
+
+.profile-header h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.profile-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   PROFILE HERO
+========================================== */
+
+.profile-hero {
+    width: 100%;
+    max-width: 950px;
+    min-height: 145px;
+    padding: 25px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 15px rgba(15, 23, 42, 0.05);
+
+    margin-bottom: 20px;
+}
+
+.profile-hero-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* ==========================================
+   PROFILE AVATAR
+========================================== */
+
+.profile-avatar {
+    width: 82px;
+    height: 82px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    box-shadow:
+        0 6px 15px rgba(37, 99, 235, 0.20);
+}
+
+
+/* ==========================================
+   PROFILE HERO INFO
+========================================== */
+
+.profile-hero-info h2 {
+    margin: 0 0 6px;
+
+    color: #0f172a;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.profile-hero-info p {
+    margin: 0 0 12px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   HERO BADGES
+========================================== */
+
+.profile-hero-badges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.student-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.active-badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #ecfdf5;
+    color: #059669;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.active-dot {
+    width: 7px;
+    height: 7px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    background: #10b981;
+}
+
+
+/* ==========================================
+   EDIT PROFILE BUTTON
+========================================== */
+
+.edit-profile-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 17px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.20);
+}
+
+
+/* ==========================================
+   PROFILE SECTIONS
+========================================== */
+
+.profile-section {
+    width: 100%;
+    max-width: 950px;
+
+    margin-bottom: 20px;
+
+    padding: 23px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.section-header {
+    margin-bottom: 20px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.section-header h2 {
+    margin: 0 0 5px;
+
+    color: #1e293b;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.section-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   INFORMATION GRID
+========================================== */
+
+.profile-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+/* ==========================================
+   INFORMATION ITEM
+========================================== */
+
+.info-item {
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    background: #f8fafc;
+
+    border: 1px solid #eef2f7;
+
+    border-radius: 11px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.info-item:hover {
+    background: #f8fafc;
+
+    border-color: #dbeafe;
+}
+
+
+/* ==========================================
+   INFORMATION ICON
+========================================== */
+
+.info-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #eff6ff;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   INFORMATION TEXT
+========================================== */
+
+.info-item div:last-child {
+    min-width: 0;
+}
+
+.info-item span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.info-item strong {
+    display: block;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   ROLE BADGE
+========================================== */
+
+.role-badge {
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+
+    color: #2563eb !important;
+
+    font-size: 11px !important;
+}
+
+
+/* ==========================================
+   STATUS BADGE
+========================================== */
+
+.status-badge {
+    width: fit-content;
+
+    display: inline-flex !important;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #ecfdf5;
+
+    color: #059669 !important;
+
+    font-size: 11px !important;
+}
+
+
+/* ==========================================
+   EDIT PROFILE FORM
+========================================== */
+
+.edit-profile-form {
+    width: 100%;
+    max-width: 650px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-group small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.profile-input {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 11px 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.profile-input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.disabled-input {
+    background: #f8fafc;
+
+    color: #64748b;
+
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   EDIT ACTIONS
+========================================== */
+
+.edit-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   SAVE BUTTON
+========================================== */
+
+.save-profile-btn {
+    padding: 10px 17px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #059669;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.save-profile-btn:hover {
+    background: #047857;
+
+    transform: translateY(-1px);
+}
+
+.save-profile-btn:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ==========================================
+   CANCEL BUTTON
+========================================== */
+
+.cancel-profile-btn {
+    padding: 10px 17px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.cancel-profile-btn:hover {
+    background: #f8fafc;
+
+    border-color: #94a3b8;
+}
+
+.cancel-profile-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   SUCCESS MESSAGE
+========================================== */
+
+.profile-message {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 0 0 20px;
+
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 9px;
+
+    background: #f0fdf4;
+
+    color: #15803d;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.profile-message span {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.profile-loading {
+    min-height: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.profile-spinner {
+    width: 30px;
+    height: 30px;
+
+    border: 3px solid #dbeafe;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        profileSpin 0.8s linear infinite;
+}
+
+@keyframes profileSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.profile-error {
+    width: 100%;
+    max-width: 450px;
+
+    margin: 80px auto;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #fee2e2;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.05);
+}
+
+.error-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+
+    background: #fef2f2;
+
+    color: #dc2626;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profile-error h3 {
+    margin: 0 0 7px;
+
+    color: #334155;
+
+    font-size: 16px;
+}
+
+.profile-error p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .profile-page {
+        padding: 25px;
+    }
+
+    .profile-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .profile-page {
+        padding: 18px 15px;
+    }
+
+    .profile-header h1 {
+        font-size: 24px;
+    }
+
+    .profile-hero {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    .profile-hero-left {
+        width: 100%;
+    }
+
+    .profile-avatar {
+        width: 68px;
+        height: 68px;
+
+        font-size: 25px;
+    }
+
+    .profile-hero-info h2 {
+        font-size: 18px;
+    }
+
+    .profile-hero-info p {
+        font-size: 12px;
+    }
+
+    .profile-hero .edit-profile-btn {
+        width: 100%;
+    }
+
+    .profile-section {
+        padding: 18px;
+    }
+
+    .section-header {
+        margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+        font-size: 16px;
+    }
+
+    .profile-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-item {
+        padding: 13px;
+    }
+
+    .profile-input {
+        max-width: 100%;
+    }
+
+    .edit-actions {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .save-profile-btn,
+    .cancel-profile-btn {
+        width: 100%;
+    }
+
+    .profile-message {
+        font-size: 11px;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .profile-page {
+        padding: 15px 12px;
+    }
+
+    .profile-hero {
+        padding: 16px;
+    }
+
+    .profile-section {
+        padding: 15px;
+    }
+
+    .profile-hero-left {
+        gap: 13px;
+    }
+
+    .profile-avatar {
+        width: 60px;
+        height: 60px;
+
+        font-size: 23px;
+    }
+
+}
+
+
+
+
+/* ==========================================
+   PROFILE AVATAR - FIXED SIZE
+========================================== */
+
+.profile-avatar {
+    width: 110px !important;
+    height: 110px !important;
+    min-width: 110px !important;
+    min-height: 110px !important;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-avatar-image {
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ==========================================
+   PHOTO PREVIEW
+========================================== */
+
+.photo-preview {
+    width: 110px !important;
+    height: 110px !important;
+    min-width: 110px !important;
+    min-height: 110px !important;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.photo-preview-image {
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ==========================================
+   CLICK EFFECT
+========================================== */
+
+.clickable-avatar:hover,
+.clickable-photo-preview:hover {
+    transform: scale(1.04);
+    opacity: 0.9;
+}
+
+
+/* ==========================================
+   SECURITY SECTION
+========================================== */
+
+.security-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.security-info-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ff;
+    font-size: 24px;
+}
+
+.security-info strong {
+    display: block;
+    font-size: 16px;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.security-info p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+/* ==========================================
+   PROFILE PHOTO SECTION
+========================================== */
+
+.photo-upload-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+
+/* ==========================================
+   CHOOSE PHOTO BUTTON
+========================================== */
+
+.choose-photo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.choose-photo-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.choose-photo-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   UPLOAD PHOTO BUTTON
+========================================== */
+
+.upload-photo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #16a34a;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.upload-photo-btn:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+}
+
+.upload-photo-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ==========================================
+   PHOTO INFORMATION
+========================================== */
+
+.photo-upload-content small {
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* Selected file name */
+
+.photo-upload-content small:nth-of-type(2) {
+    width: 100%;
+    color: #334155;
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   PHOTO MESSAGE
+========================================== */
+
+.photo-message {
+    width: 100%;
+    padding: 11px 14px;
+
+    border-radius: 9px;
+
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+
+    color: #1d4ed8;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .photo-upload-content {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+    }
+
+    .choose-photo-btn,
+    .upload-photo-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .photo-upload-content small {
+        text-align: center;
+    }
+
+}
+
+/* ==========================================
+   CHANGE PASSWORD BUTTON
+========================================== */
+
+.change-password-btn {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.change-password-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.change-password-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   CHANGE PASSWORD FORM
+========================================== */
+
+.change-password-form {
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.change-password-form .form-group {
+    margin-bottom: 18px;
+}
+
+.change-password-form .form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.change-password-form .profile-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.change-password-form > small {
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   PASSWORD MESSAGE
+========================================== */
+
+.password-message {
+    margin-bottom: 18px;
+    padding: 12px 15px;
+    border-radius: 9px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1d4ed8;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   PASSWORD FORM ACTIONS
+========================================== */
+
+.change-password-form .edit-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .security-info {
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .security-info-icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        font-size: 20px;
+    }
+
+    .change-password-btn {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .change-password-form {
+        padding: 16px;
+    }
+
+    .change-password-form .edit-actions {
+        flex-direction: column;
+    }
+
+    .change-password-form .edit-actions button {
+        width: 100%;
+    }
+}
+
+
+
+/* ==========================================
+   DARK MODE
+   Theme controlled from Landing Page
+========================================== */
+
+body.dark .profile-page {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+body.dark .profile-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .profile-header p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   PROFILE HERO
+========================================== */
+
+body.dark .profile-hero {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .profile-hero-info h2 {
+    color: #f8fafc;
+}
+
+body.dark .profile-hero-info p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   PROFILE AVATAR
+========================================== */
+
+body.dark .profile-avatar {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   HERO BADGES
+========================================== */
+
+body.dark .student-badge {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .active-badge {
+    background: #052e24;
+    color: #34d399;
+}
+
+
+/* ==========================================
+   EDIT PROFILE BUTTON
+========================================== */
+
+body.dark .edit-profile-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .edit-profile-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   PROFILE SECTIONS
+========================================== */
+
+body.dark .profile-section {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+body.dark .section-header {
+    border-bottom-color: #334155;
+}
+
+body.dark .section-header h2 {
+    color: #f1f5f9;
+}
+
+body.dark .section-header p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   INFORMATION ITEMS
+========================================== */
+
+body.dark .info-item {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark .info-item:hover {
+    background: #263449;
+    border-color: #475569;
+}
+
+
+/* ==========================================
+   INFORMATION ICON
+========================================== */
+
+body.dark .info-icon {
+    background: #172554;
+}
+
+
+/* ==========================================
+   INFORMATION TEXT
+========================================== */
+
+body.dark .info-item span {
+    color: #94a3b8;
+}
+
+body.dark .info-item strong {
+    color: #e2e8f0;
+}
+
+
+/* ==========================================
+   ROLE BADGE
+========================================== */
+
+body.dark .role-badge {
+    background: #172554;
+    color: #60a5fa !important;
+}
+
+
+/* ==========================================
+   STATUS BADGE
+========================================== */
+
+body.dark .status-badge {
+    background: #052e24;
+    color: #34d399 !important;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+body.dark .form-group label {
+    color: #cbd5e1;
+}
+
+body.dark .form-group small {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   PROFILE INPUT
+========================================== */
+
+body.dark .profile-input {
+    background: #0f172a;
+    border-color: #475569;
+    color: #f8fafc;
+}
+
+body.dark .profile-input::placeholder {
+    color: #64748b;
+}
+
+body.dark .profile-input:focus {
+    background: #0f172a;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+body.dark .disabled-input {
+    background: #172033;
+    color: #64748b;
+    border-color: #334155;
+}
+
+
+/* ==========================================
+   SAVE BUTTON
+========================================== */
+
+body.dark .save-profile-btn {
+    background: #059669;
+    color: #ffffff;
+}
+
+body.dark .save-profile-btn:hover {
+    background: #047857;
+}
+
+
+/* ==========================================
+   CANCEL BUTTON
+========================================== */
+
+body.dark .cancel-profile-btn {
+    background: #1e293b;
+    border-color: #475569;
+    color: #cbd5e1;
+}
+
+body.dark .cancel-profile-btn:hover {
+    background: #334155;
+    border-color: #64748b;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   SUCCESS MESSAGE
+========================================== */
+
+body.dark .profile-message {
+    background: #052e24;
+    border-color: #166534;
+    color: #86efac;
+}
+
+body.dark .profile-message span {
+    background: #166534;
+    color: #34d399;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+body.dark .profile-loading {
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+body.dark .profile-spinner {
+    border-color: #334155;
+    border-top-color: #3b82f6;
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+body.dark .profile-error {
+    background: #1e293b;
+    border-color: #7f1d1d;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .error-icon {
+    background: #450a0a;
+    color: #f87171;
+}
+
+body.dark .profile-error h3 {
+    color: #f1f5f9;
+}
+
+body.dark .profile-error p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   SECURITY SECTION
+========================================== */
+
+body.dark .security-info {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark .security-info-icon {
+    background: #1e1b4b;
+}
+
+body.dark .security-info strong {
+    color: #f1f5f9;
+}
+
+body.dark .security-info p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   PROFILE PHOTO SECTION
+========================================== */
+
+body.dark .photo-upload-content {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark .photo-upload-content small {
+    color: #94a3b8;
+}
+
+body.dark .photo-upload-content small:nth-of-type(2) {
+    color: #cbd5e1;
+}
+
+
+/* ==========================================
+   CHOOSE PHOTO BUTTON
+========================================== */
+
+body.dark .choose-photo-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .choose-photo-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   UPLOAD PHOTO BUTTON
+========================================== */
+
+body.dark .upload-photo-btn {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+body.dark .upload-photo-btn:hover {
+    background: #15803d;
+}
+
+
+/* ==========================================
+   PHOTO MESSAGE
+========================================== */
+
+body.dark .photo-message {
+    background: #172554;
+    border-color: #1e40af;
+    color: #60a5fa;
+}
+
+
+/* ==========================================
+   CHANGE PASSWORD BUTTON
+========================================== */
+
+body.dark .change-password-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .change-password-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   CHANGE PASSWORD FORM
+========================================== */
+
+body.dark .change-password-form {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark .change-password-form .form-group label {
+    color: #cbd5e1;
+}
+
+body.dark .change-password-form > small {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   PASSWORD MESSAGE
+========================================== */
+
+body.dark .password-message {
+    background: #172554;
+    border-color: #1e40af;
+    color: #60a5fa;
+}

@@ -1,0 +1,13 @@
+skills,interests,cgpa,experience,career_goal,career_role
+"python, machine learning, pandas, numpy","artificial intelligence, machine learning",8.5,Fresher,"build intelligent applications","AI / ML Engineer"
+"python, tensorflow, deep learning","machine learning, data science",8.2,Fresher,"work on AI models","AI / ML Engineer"
+"python, scikit-learn, pandas","data science, machine learning",8.0,"Internship Experience","develop machine learning solutions","AI / ML Engineer"
+"javascript, react, node.js, mongodb","web development, full stack development",8.1,Fresher,"build scalable web applications","Full Stack Developer"
+"react, javascript, html, css","frontend development, web development",8.4,Fresher,"create modern user interfaces","Frontend Developer"
+"react, javascript, typescript","ui development, web development",7.9,"Internship Experience","build frontend applications","Frontend Developer"
+"node.js, express, mongodb, javascript","backend development, api development",8.0,Fresher,"build backend APIs","Backend Developer"
+"java, spring boot, mysql","backend development, software development",8.3,Fresher,"develop enterprise applications","Backend Developer"
+"python, sql, excel, power bi","data analysis, business analytics",8.1,Fresher,"analyze business data","Data Analyst"
+"sql, excel, tableau, statistics","data analytics, data analysis",7.8,"Internship Experience","create data driven reports","Data Analyst"
+"java, python, c++, algorithms, git","software development, programming",8.6,Fresher,"become a software engineer","Software Engineer"
+"java, data structures, algorithms, git","software engineering, programming",8.2,"Internship Experience","develop reliable software","Software Engineer"

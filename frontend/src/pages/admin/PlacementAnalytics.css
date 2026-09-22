@@ -1,0 +1,849 @@
+
+/* ==========================================
+   PLACEMENT ANALYTICS PAGE
+========================================== */
+
+.placement-analytics-page {
+    margin-left: 250px;
+    padding: 30px;
+    min-height: 100vh;
+    background: #f8fafc;
+    color: #1e293b;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.analytics-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.analytics-breadcrumb {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.analytics-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.analytics-header p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   SUMMARY GRID
+========================================== */
+
+.analytics-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+
+/* ==========================================
+   SUMMARY CARD
+========================================== */
+
+.analytics-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    transition: all 0.2s ease;
+}
+
+.analytics-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.analytics-card-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eff6ff;
+    font-size: 22px;
+}
+
+.analytics-card span {
+    display: block;
+    margin-bottom: 5px;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.analytics-card strong {
+    display: block;
+    color: #0f172a;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   METRICS GRID
+========================================== */
+
+.analytics-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+
+/* ==========================================
+   METRIC CARD
+========================================== */
+
+.analytics-metric-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    transition: all 0.2s ease;
+}
+
+.analytics-metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.metric-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #f1f5f9;
+    font-size: 23px;
+}
+
+.analytics-metric-card span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.analytics-metric-card strong {
+    display: block;
+    color: #0f172a;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.analytics-metric-card small {
+    display: block;
+    margin-top: 3px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   ANALYTICS SECTION
+========================================== */
+
+.analytics-section {
+    margin-bottom: 22px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.analytics-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.analytics-section-header h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.analytics-section-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   COMPANY PLACEMENT LIST
+========================================== */
+
+.company-placement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.company-placement-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 15px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    transition: all 0.2s ease;
+}
+
+.company-placement-item:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.company-avatar {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.company-info strong {
+    color: #334155;
+    font-size: 14px;
+}
+
+.company-placement-count {
+    text-align: right;
+}
+
+.company-placement-count strong {
+    display: block;
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.company-placement-count span {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   YEAR PLACEMENT GRID
+========================================== */
+
+.year-placement-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.year-placement-card {
+    padding: 18px;
+    text-align: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.year-placement-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+    background: #f1f5f9;
+}
+
+.year-placement-card span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.year-placement-card strong {
+    display: block;
+    margin: 7px 0 2px;
+    color: #0f172a;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.year-placement-card small {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   NO DATA
+========================================== */
+
+.analytics-no-data {
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   REFRESH
+========================================== */
+
+.analytics-refresh {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.analytics-refresh-btn {
+    border: 1px solid #dbeafe;
+    outline: none;
+    padding: 9px 15px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.analytics-refresh-btn:hover {
+    background: #dbeafe;
+    border-color: #bfdbfe;
+}
+
+.analytics-refresh-btn:active {
+    transform: translateY(1px);
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.analytics-error {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 35px 25px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.analytics-error-icon {
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.analytics-error h3 {
+    margin: 0;
+    color: #991b1b;
+    font-size: 18px;
+}
+
+.analytics-error p {
+    margin: 8px 0 18px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.analytics-retry-btn {
+    border: none;
+    outline: none;
+    padding: 9px 18px;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.analytics-retry-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.analytics-loading {
+    min-height: 70vh;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    color: #64748b;
+}
+
+.analytics-loader {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 12px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: analytics-spin 0.8s linear infinite;
+}
+
+.analytics-loading p {
+    margin: 0;
+    font-size: 13px;
+}
+
+@keyframes analytics-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE - 1100px
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .analytics-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analytics-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .year-placement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE - 768px
+========================================== */
+
+@media (max-width: 768px) {
+
+    .placement-analytics-page {
+        margin-left: 210px;
+        padding: 22px;
+    }
+
+    .analytics-loading {
+        margin-left: 210px;
+    }
+
+    .analytics-header h1 {
+        font-size: 24px;
+    }
+
+    .analytics-summary-grid,
+    .analytics-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .year-placement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE - 600px
+========================================== */
+
+@media (max-width: 600px) {
+
+    .placement-analytics-page {
+        margin-left: 70px;
+        padding: 16px;
+    }
+
+    .analytics-loading {
+        margin-left: 70px;
+    }
+
+    .analytics-header {
+        margin-bottom: 20px;
+    }
+
+    .analytics-header h1 {
+        font-size: 21px;
+    }
+
+    .analytics-header p {
+        font-size: 12px;
+    }
+
+    .analytics-section {
+        padding: 16px;
+    }
+
+    .analytics-section-header h2 {
+        font-size: 16px;
+    }
+
+    .year-placement-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE - 480px
+========================================== */
+
+@media (max-width: 480px) {
+
+    .placement-analytics-page {
+        margin-left: 70px;
+        padding: 12px;
+    }
+
+    .analytics-loading {
+        margin-left: 70px;
+    }
+
+    .analytics-card,
+    .analytics-metric-card {
+        padding: 16px;
+    }
+
+    .analytics-card-icon,
+    .metric-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 19px;
+    }
+
+    .analytics-card strong {
+        font-size: 22px;
+    }
+
+    .analytics-metric-card strong {
+        font-size: 20px;
+    }
+
+    .year-placement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-placement-item {
+        padding: 11px;
+    }
+
+    .company-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .analytics-refresh {
+        justify-content: stretch;
+    }
+
+    .analytics-refresh-btn {
+        width: 100%;
+    }
+}
+
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark .placement-analytics-page {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+body.dark .analytics-breadcrumb {
+    color: #94a3b8;
+}
+
+body.dark .analytics-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .analytics-header p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   SUMMARY CARDS
+========================================== */
+
+body.dark .analytics-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .analytics-card:hover {
+    background: #243247;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+body.dark .analytics-card-icon {
+    background: #172554;
+}
+
+body.dark .analytics-card span {
+    color: #94a3b8;
+}
+
+body.dark .analytics-card strong {
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   METRIC CARDS
+========================================== */
+
+body.dark .analytics-metric-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .analytics-metric-card:hover {
+    background: #243247;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+body.dark .metric-icon {
+    background: #334155;
+}
+
+body.dark .analytics-metric-card span {
+    color: #94a3b8;
+}
+
+body.dark .analytics-metric-card strong {
+    color: #f8fafc;
+}
+
+body.dark .analytics-metric-card small {
+    color: #64748b;
+}
+
+
+/* ==========================================
+   ANALYTICS SECTION
+========================================== */
+
+body.dark .analytics-section {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .analytics-section-header h2 {
+    color: #f8fafc;
+}
+
+body.dark .analytics-section-header p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   COMPANY PLACEMENT
+========================================== */
+
+body.dark .company-placement-item {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark .company-placement-item:hover {
+    background: #263449;
+    border-color: #475569;
+}
+
+body.dark .company-avatar {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .company-info strong {
+    color: #e2e8f0;
+}
+
+body.dark .company-placement-count strong {
+    color: #f8fafc;
+}
+
+body.dark .company-placement-count span {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   YEAR PLACEMENT
+========================================== */
+
+body.dark .year-placement-card {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark .year-placement-card:hover {
+    background: #263449;
+    border-color: #475569;
+}
+
+body.dark .year-placement-card span {
+    color: #94a3b8;
+}
+
+body.dark .year-placement-card strong {
+    color: #f8fafc;
+}
+
+body.dark .year-placement-card small {
+    color: #64748b;
+}
+
+
+/* ==========================================
+   NO DATA
+========================================== */
+
+body.dark .analytics-no-data {
+    background: #172033;
+    border-color: #475569;
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   REFRESH BUTTON
+========================================== */
+
+body.dark .analytics-refresh-btn {
+    background: #172554;
+    border-color: #1e40af;
+    color: #60a5fa;
+}
+
+body.dark .analytics-refresh-btn:hover {
+    background: #1e3a8a;
+    border-color: #2563eb;
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+body.dark .analytics-error {
+    background: #1e293b;
+    border-color: #7f1d1d;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
+}
+
+body.dark .analytics-error h3 {
+    color: #f87171;
+}
+
+body.dark .analytics-error p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   RETRY BUTTON
+========================================== */
+
+body.dark .analytics-retry-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .analytics-retry-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+body.dark .analytics-loading {
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+body.dark .analytics-loader {
+    border-color: #334155;
+    border-top-color: #3b82f6;
+}
+
+body.dark .analytics-loading p {
+    color: #94a3b8;
+}

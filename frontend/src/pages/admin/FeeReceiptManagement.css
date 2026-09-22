@@ -1,0 +1,1618 @@
+/* =========================================================
+   FEE RECEIPT MANAGEMENT PAGE
+========================================================= */
+
+.fee-receipt-page {
+    min-height: 100vh;
+    padding: 28px;
+    background: #f5f7fb;
+    color: #1e293b;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.fee-receipt-header {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.fee-header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fee-header-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+
+    background: #e8f0ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.fee-receipt-header h1 {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #172033;
+}
+
+.fee-breadcrumb {
+    margin-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #94a3b8;
+}
+
+.fee-breadcrumb span {
+    color: #cbd5e1;
+}
+
+.fee-receipt-header p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+    font-size: 14px;
+}
+
+.fee-header-summary {
+    min-width: 110px;
+
+    padding: 11px 16px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    text-align: center;
+}
+
+.fee-header-summary span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 11px;
+    color: #64748b;
+}
+
+.fee-header-summary strong {
+    font-size: 20px;
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.fee-summary-grid {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.fee-summary-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.fee-summary-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.fee-summary-card span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    color: #64748b;
+}
+
+.fee-summary-card strong {
+    display: block;
+
+    font-size: 23px;
+
+    color: #172033;
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.fee-alert {
+    max-width: 1200px;
+
+    margin: 0 auto 20px;
+
+    padding: 13px 16px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+}
+
+.fee-success {
+    background: #ecfdf5;
+    border: 1px solid #bbf7d0;
+    color: #047857;
+}
+
+.fee-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+
+/* =========================================================
+   RECEIPT GENERATION CARD
+========================================================= */
+
+.fee-receipt-card {
+    max-width: 1200px;
+
+    margin: 0 auto 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.fee-card-heading {
+    padding: 20px 22px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.fee-card-title-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    background: #ecfdf5;
+    color: #059669;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.fee-card-heading h2 {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: #172033;
+}
+
+.fee-card-heading p {
+    margin: 4px 0 0;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.fee-receipt-form {
+    padding: 22px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    align-items: end;
+}
+
+.fee-form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.fee-form-group label {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #334155;
+}
+
+.fee-form-group label span {
+    color: #dc2626;
+
+    margin-left: 2px;
+}
+
+.fee-form-group input,
+.fee-form-group select,
+.fee-form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fee-form-group input,
+.fee-form-group select {
+    height: 44px;
+
+    padding: 0 13px;
+}
+
+.fee-form-group textarea {
+    min-height: 95px;
+
+    padding: 12px 13px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+.fee-form-group input::placeholder,
+.fee-form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+.fee-form-group input:hover,
+.fee-form-group select:hover,
+.fee-form-group textarea:hover {
+    border-color: #94a3b8;
+}
+
+.fee-form-group input:focus,
+.fee-form-group select:focus,
+.fee-form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.fee-full-width {
+    grid-column: span 2;
+}
+
+
+/* =========================================================
+   AMOUNT INPUT
+========================================================= */
+
+.fee-amount-input {
+    position: relative;
+}
+
+.fee-amount-input > span {
+    position: absolute;
+
+    left: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    pointer-events: none;
+}
+
+.fee-amount-input input {
+    padding-left: 31px;
+}
+
+
+/* =========================================================
+   FORM ACTION
+========================================================= */
+
+.fee-form-actions {
+    grid-column: span 2;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    padding-top: 2px;
+}
+
+.generate-receipt-btn {
+    height: 44px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.generate-receipt-btn:hover {
+    background: #1d4ed8;
+
+    box-shadow:
+        0 5px 14px rgba(37, 99, 235, 0.20);
+}
+
+.generate-receipt-btn:active {
+    transform: translateY(1px);
+}
+
+.generate-receipt-btn:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   BUTTON SPINNER
+========================================================= */
+
+.fee-button-spinner {
+    width: 15px;
+    height: 15px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation: feeSpin 0.7s linear infinite;
+}
+
+@keyframes feeSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   RECEIPT HISTORY HEADER
+========================================================= */
+
+.receipt-history-header {
+    padding: 21px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.history-label {
+    margin-bottom: 4px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    color: #94a3b8;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+}
+
+.receipt-history-header h2 {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: #172033;
+}
+
+.receipt-history-header p {
+    margin: 4px 0 0;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+.receipt-total {
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    text-align: center;
+}
+
+.receipt-total strong {
+    font-size: 14px;
+}
+
+.receipt-total span {
+    margin-left: 4px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.receipt-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.receipt-table {
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+}
+
+.receipt-table thead {
+    background: #f8fafc;
+}
+
+.receipt-table th {
+    padding: 14px 18px;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #64748b;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.receipt-table td {
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #eef2f7;
+
+    font-size: 13px;
+
+    color: #334155;
+
+    vertical-align: middle;
+}
+
+.receipt-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.receipt-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.receipt-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   RECEIPT NUMBER
+========================================================= */
+
+.receipt-number-cell {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 160px;
+}
+
+.receipt-document-icon {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: #e8f0ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+.receipt-number-cell > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.receipt-number-cell strong {
+    color: #1e293b;
+
+    font-size: 13px;
+}
+
+.receipt-number-cell small {
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   STUDENT
+========================================================= */
+
+.receipt-student {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 190px;
+}
+
+.receipt-student-avatar {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e8f0ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.receipt-student-info {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.receipt-student-info strong {
+    color: #1e293b;
+
+    font-size: 13px;
+}
+
+.receipt-student-info span {
+    max-width: 180px;
+
+    overflow: hidden;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   AMOUNT
+========================================================= */
+
+.receipt-amount {
+    color: #047857;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PAYMENT MODE
+========================================================= */
+
+.payment-mode-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.payment-mode-badge.upi {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.payment-mode-badge.cash {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.payment-mode-badge.card {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+.payment-mode-badge.bank-transfer {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.receipt-date {
+    color: #475569;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.receipt-status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #ecfdf5;
+
+    color: #047857;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+========================================================= */
+
+.download-receipt-btn {
+    height: 36px;
+
+    padding: 0 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    transition: all 0.2s ease;
+}
+
+.download-receipt-btn:hover {
+    background: #f1f5f9;
+
+    border-color: #94a3b8;
+
+    color: #1e293b;
+}
+
+.download-receipt-btn:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+}
+
+.download-spinner {
+    width: 13px;
+    height: 13px;
+
+    border: 2px solid #cbd5e1;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: feeSpin 0.7s linear infinite;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.fee-receipt-loading,
+.fee-history-loading {
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.fee-loading-spinner {
+    width: 35px;
+    height: 35px;
+
+    border: 3px solid #dbeafe;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: feeSpin 0.8s linear infinite;
+
+    margin-bottom: 16px;
+}
+
+.fee-receipt-loading p,
+.fee-history-loading p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.fee-receipt-empty {
+    min-height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.empty-fee-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 14px;
+
+    background: #f1f5f9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.fee-receipt-empty h3 {
+    margin: 13px 0 5px;
+
+    font-size: 15px;
+
+    color: #334155;
+}
+
+.fee-receipt-empty p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .fee-receipt-page {
+        padding: 22px;
+    }
+
+    .fee-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fee-receipt-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .fee-receipt-page {
+        padding: 15px;
+    }
+
+    .fee-receipt-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .fee-header-left {
+        width: 100%;
+    }
+
+    .fee-header-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 21px;
+    }
+
+    .fee-receipt-header h1 {
+        font-size: 22px;
+    }
+
+    .fee-receipt-header p {
+        font-size: 12px;
+    }
+
+    .fee-header-summary {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        text-align: left;
+    }
+
+    .fee-header-summary span {
+        margin: 0;
+    }
+
+
+    /* SUMMARY */
+
+    .fee-summary-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .fee-summary-card {
+        padding: 15px;
+    }
+
+
+    /* FORM */
+
+    .fee-card-heading {
+        padding: 17px;
+    }
+
+    .fee-receipt-form {
+        padding: 17px;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .fee-full-width {
+        grid-column: auto;
+    }
+
+    .fee-form-actions {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+    .generate-receipt-btn {
+        width: 100%;
+    }
+
+
+    /* HISTORY */
+
+    .receipt-history-header {
+        padding: 17px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .receipt-total {
+        align-self: flex-start;
+    }
+
+
+    /* TABLE */
+
+    .receipt-table th,
+    .receipt-table td {
+        padding: 13px 14px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .fee-receipt-page {
+        padding: 11px;
+    }
+
+    .fee-header-left {
+        gap: 10px;
+    }
+
+    .fee-header-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .fee-receipt-header h1 {
+        font-size: 20px;
+    }
+
+    .fee-card-heading h2 {
+        font-size: 16px;
+    }
+
+    .fee-card-heading p {
+        font-size: 12px;
+    }
+
+    .fee-receipt-form {
+        padding: 15px;
+    }
+
+    .fee-summary-card strong {
+        font-size: 20px;
+    }
+
+    .receipt-table {
+        min-width: 850px;
+    }
+
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .fee-receipt-page {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+body.dark .fee-header-icon {
+    background: #172554;
+}
+
+body.dark .fee-receipt-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .fee-breadcrumb {
+    color: #94a3b8;
+}
+
+body.dark .fee-breadcrumb span {
+    color: #475569;
+}
+
+body.dark .fee-receipt-header p {
+    color: #94a3b8;
+}
+
+body.dark .fee-header-summary {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark .fee-header-summary span {
+    color: #94a3b8;
+}
+
+body.dark .fee-header-summary strong {
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+body.dark .fee-summary-card {
+    background: #1e293b;
+    border-color: #334155;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .fee-summary-card:hover {
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+body.dark .fee-summary-icon {
+    background: #172554;
+}
+
+body.dark .fee-summary-card span {
+    color: #94a3b8;
+}
+
+body.dark .fee-summary-card strong {
+    color: #f1f5f9;
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+body.dark .fee-success {
+    background: #052e24;
+    border-color: #166534;
+    color: #34d399;
+}
+
+body.dark .fee-error {
+    background: #450a0a;
+    border-color: #7f1d1d;
+    color: #f87171;
+}
+
+
+/* =========================================================
+   RECEIPT GENERATION CARD
+========================================================= */
+
+body.dark .fee-receipt-card {
+    background: #1e293b;
+    border-color: #334155;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+body.dark .fee-card-heading {
+    border-bottom-color: #334155;
+}
+
+body.dark .fee-card-title-icon {
+    background: #052e24;
+    color: #34d399;
+}
+
+body.dark .fee-card-heading h2 {
+    color: #f1f5f9;
+}
+
+body.dark .fee-card-heading p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+body.dark .fee-form-group label {
+    color: #cbd5e1;
+}
+
+body.dark .fee-form-group label span {
+    color: #f87171;
+}
+
+body.dark .fee-form-group input,
+body.dark .fee-form-group select,
+body.dark .fee-form-group textarea {
+    background: #0f172a;
+    border-color: #475569;
+    color: #f8fafc;
+}
+
+body.dark .fee-form-group input::placeholder,
+body.dark .fee-form-group textarea::placeholder {
+    color: #64748b;
+}
+
+body.dark .fee-form-group input:hover,
+body.dark .fee-form-group select:hover,
+body.dark .fee-form-group textarea:hover {
+    border-color: #64748b;
+}
+
+body.dark .fee-form-group input:focus,
+body.dark .fee-form-group select:focus,
+body.dark .fee-form-group textarea:focus {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+body.dark .fee-form-group select option {
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+
+/* =========================================================
+   AMOUNT INPUT
+========================================================= */
+
+body.dark .fee-amount-input > span {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   GENERATE RECEIPT BUTTON
+========================================================= */
+
+body.dark .generate-receipt-btn {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .generate-receipt-btn:hover {
+    background: #1d4ed8;
+
+    box-shadow:
+        0 5px 14px rgba(37, 99, 235, 0.30);
+}
+
+
+/* =========================================================
+   RECEIPT HISTORY HEADER
+========================================================= */
+
+body.dark .receipt-history-header {
+    border-bottom-color: #334155;
+}
+
+body.dark .history-label {
+    color: #64748b;
+}
+
+body.dark .receipt-history-header h2 {
+    color: #f1f5f9;
+}
+
+body.dark .receipt-history-header p {
+    color: #94a3b8;
+}
+
+body.dark .receipt-total {
+    background: #172554;
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+body.dark .receipt-table thead {
+    background: #0f172a;
+}
+
+body.dark .receipt-table th {
+    color: #94a3b8;
+    border-bottom-color: #334155;
+}
+
+body.dark .receipt-table td {
+    background: #1e293b;
+    border-bottom-color: #334155;
+    color: #cbd5e1;
+}
+
+body.dark .receipt-table tbody tr:hover {
+    background: #263449;
+}
+
+body.dark .receipt-table tbody tr:hover td {
+    background: #263449;
+}
+
+
+/* =========================================================
+   RECEIPT NUMBER
+========================================================= */
+
+body.dark .receipt-document-icon {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .receipt-number-cell strong {
+    color: #f1f5f9;
+}
+
+body.dark .receipt-number-cell small {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   STUDENT
+========================================================= */
+
+body.dark .receipt-student-avatar {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .receipt-student-info strong {
+    color: #f1f5f9;
+}
+
+body.dark .receipt-student-info span {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   AMOUNT
+========================================================= */
+
+body.dark .receipt-amount {
+    color: #34d399;
+}
+
+
+/* =========================================================
+   PAYMENT MODE
+========================================================= */
+
+body.dark .payment-mode-badge {
+    background: #334155;
+    color: #cbd5e1;
+}
+
+body.dark .payment-mode-badge.upi {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .payment-mode-badge.cash {
+    background: #052e24;
+    color: #34d399;
+}
+
+body.dark .payment-mode-badge.card {
+    background: #2e1065;
+    color: #c4b5fd;
+}
+
+body.dark .payment-mode-badge.bank-transfer {
+    background: #431407;
+    color: #fb923c;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+body.dark .receipt-date {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+body.dark .receipt-status-badge {
+    background: #052e24;
+    color: #34d399;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+========================================================= */
+
+body.dark .download-receipt-btn {
+    background: #1e293b;
+    border-color: #475569;
+    color: #cbd5e1;
+}
+
+body.dark .download-receipt-btn:hover {
+    background: #334155;
+    border-color: #64748b;
+    color: #ffffff;
+}
+
+body.dark .download-spinner {
+    border-color: #475569;
+    border-top-color: #60a5fa;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+body.dark .fee-receipt-loading,
+body.dark .fee-history-loading {
+    color: #e2e8f0;
+}
+
+body.dark .fee-loading-spinner {
+    border-color: #334155;
+    border-top-color: #3b82f6;
+}
+
+body.dark .fee-receipt-loading p,
+body.dark .fee-history-loading p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+body.dark .fee-receipt-empty {
+    color: #e2e8f0;
+}
+
+body.dark .empty-fee-icon {
+    background: #0f172a;
+}
+
+body.dark .fee-receipt-empty h3 {
+    color: #e2e8f0;
+}
+
+body.dark .fee-receipt-empty p {
+    color: #94a3b8;
+}

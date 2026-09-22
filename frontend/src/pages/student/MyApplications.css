@@ -1,0 +1,1277 @@
+/* ==========================================
+   MY APPLICATIONS PAGE
+========================================== */
+
+.my-applications-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f5f7fb;
+    color: #0f172a;
+}
+
+
+/* ==========================================
+   MAIN HEADER
+========================================== */
+
+.my-applications-header {
+    max-width: 1250px;
+    margin: 0 auto 24px;
+    padding: 24px 26px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.my-applications-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.my-applications-header-main {
+    min-width: 0;
+    flex: 1;
+}
+
+
+/* ==========================================
+   BREADCRUMB
+========================================== */
+
+.my-applications-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-bottom: 12px;
+
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.my-applications-breadcrumb span {
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   HEADER BADGE
+========================================== */
+
+.my-applications-badge {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 9px;
+    padding: 6px 10px;
+
+    border: 1px solid #dbeafe;
+    border-radius: 7px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 0.6px;
+}
+
+
+/* ==========================================
+   HEADER TITLE
+========================================== */
+
+.my-applications-header h1 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+}
+
+.my-applications-header p {
+    max-width: 680px;
+
+    margin: 8px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   HEADER COUNT
+========================================== */
+
+.my-applications-count {
+    min-width: 110px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 18px;
+
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+
+    background: #f8fafc;
+
+    text-align: center;
+}
+
+.my-applications-count strong {
+    color: #2563eb;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 750;
+}
+
+.my-applications-count span {
+    margin-top: 5px;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+
+/* ==========================================
+   SUMMARY GRID
+========================================== */
+
+.application-summary-grid {
+    max-width: 1250px;
+    margin: 0 auto 26px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+/* ==========================================
+   SUMMARY CARD
+========================================== */
+
+.application-summary-card {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 17px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.application-summary-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #d5deeb;
+
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+}
+
+
+/* ==========================================
+   SUMMARY ICON
+========================================== */
+
+.application-summary-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 18px;
+}
+
+.application-summary-icon.total {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.application-summary-icon.applied {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.application-summary-icon.shortlisted {
+    background: #fef3c7;
+    color: #a16207;
+}
+
+.application-summary-icon.selected {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+
+/* ==========================================
+   SUMMARY CONTENT
+========================================== */
+
+.application-summary-content {
+    min-width: 0;
+}
+
+.application-summary-content span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.application-summary-content strong {
+    display: block;
+
+    color: #0f172a;
+
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 750;
+}
+
+
+/* ==========================================
+   APPLICATION SECTION HEADER
+========================================== */
+
+.my-applications-section-header {
+    max-width: 1250px;
+    margin: 0 auto 17px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.my-applications-section-badge {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 7px;
+
+    color: #2563eb;
+
+    font-size: 10px;
+    font-weight: 750;
+
+    letter-spacing: 0.7px;
+}
+
+.my-applications-section-header h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 750;
+}
+
+.my-applications-section-header p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   RESULT COUNT
+========================================== */
+
+.my-applications-result-count {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 12px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.my-applications-result-count strong {
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: 750;
+}
+
+
+/* ==========================================
+   APPLICATION LIST
+========================================== */
+
+.applications-list {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* ==========================================
+   APPLICATION CARD
+========================================== */
+
+.application-card {
+    overflow: hidden;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.application-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #d7e0ec;
+
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.075);
+}
+
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.application-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 19px 20px;
+}
+
+.application-company {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    flex: 1;
+}
+
+.application-company-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   JOB TITLE
+========================================== */
+
+.application-job-title {
+    min-width: 0;
+}
+
+.application-job-title h2 {
+    margin: 0 0 4px;
+
+    overflow: hidden;
+
+    color: #0f172a;
+
+    font-size: 16px;
+    line-height: 1.35;
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.application-job-title h3 {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   STATUS BADGE
+========================================== */
+
+.application-status {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.status-applied {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.status-shortlisted {
+    background: #fef3c7;
+    color: #a16207;
+}
+
+.status-selected {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-rejected {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+
+/* ==========================================
+   CARD DIVIDER
+========================================== */
+
+.application-card-divider {
+    height: 1px;
+    margin: 0 20px;
+
+    background: #eef2f7;
+}
+
+
+/* ==========================================
+   APPLICATION DETAILS
+========================================== */
+
+.application-card-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 17px 20px;
+
+    background: #fafbfc;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.application-detail-item {
+    min-width: 0;
+
+    padding: 0 17px;
+
+    border-right: 1px solid #e5e7eb;
+}
+
+.application-detail-item:first-child {
+    padding-left: 0;
+}
+
+.application-detail-item:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+.application-detail-item span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+}
+
+.application-detail-item strong {
+    display: block;
+
+    overflow: hidden;
+
+    color: #334155;
+
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 650;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   CARD FOOTER
+========================================== */
+
+.application-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 16px 20px;
+
+    background: #ffffff;
+}
+
+.application-current-status {
+    flex-shrink: 0;
+}
+
+.application-card-footer small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+.application-card-footer > div:first-child strong {
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.application-status-message {
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    text-align: right;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.my-applications-empty {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    padding: 65px 25px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.my-applications-empty-icon {
+    width: 66px;
+    height: 66px;
+
+    margin: 0 auto 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 28px;
+}
+
+.my-applications-empty h2 {
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.my-applications-empty p {
+    margin: 0 0 6px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.my-applications-empty span {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.my-applications-loading {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f7fb;
+
+    color: #64748b;
+}
+
+.my-applications-loader {
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 13px;
+
+    border: 3px solid #dbeafe;
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: applicationLoader 0.8s linear infinite;
+}
+
+.my-applications-loading p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@keyframes applicationLoader {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .my-applications-page {
+        padding: 25px 22px;
+    }
+
+    .application-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .application-card-details {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .application-detail-item {
+        padding: 0;
+        border-right: none;
+    }
+
+    .application-detail-item:nth-child(odd) {
+        padding-right: 18px;
+        border-right: 1px solid #e5e7eb;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+    .my-applications-page {
+        padding: 18px 14px;
+    }
+
+    .my-applications-header {
+        padding: 19px;
+    }
+
+    .my-applications-header-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .my-applications-header h1 {
+        font-size: 24px;
+    }
+
+    .my-applications-header p {
+        font-size: 12px;
+    }
+
+    .my-applications-count {
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: row;
+        gap: 7px;
+    }
+
+    .my-applications-count strong {
+        font-size: 20px;
+    }
+
+    .my-applications-count span {
+        margin-top: 0;
+    }
+
+
+    /* Section header */
+
+    .my-applications-section-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .my-applications-result-count {
+        align-self: flex-start;
+    }
+
+
+    /* Summary */
+
+    .application-summary-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .application-summary-card {
+        padding: 14px;
+    }
+
+    .application-summary-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+        font-size: 16px;
+    }
+
+    .application-summary-content span {
+        font-size: 10px;
+    }
+
+    .application-summary-content strong {
+        font-size: 18px;
+    }
+
+
+    /* Card */
+
+    .application-card-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+
+    .application-company {
+        width: 100%;
+    }
+
+    .application-status {
+        margin-left: 59px;
+    }
+
+    .application-card-divider {
+        margin: 0 16px;
+    }
+
+    .application-card-details {
+        padding: 16px;
+    }
+
+    .application-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 9px;
+
+        padding: 15px 16px;
+    }
+
+    .application-status-message {
+        text-align: left;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 420px) {
+
+    .my-applications-page {
+        padding: 15px 11px;
+    }
+
+    .my-applications-header {
+        padding: 17px;
+    }
+
+    .my-applications-header h1 {
+        font-size: 21px;
+    }
+
+    .my-applications-header p {
+        font-size: 11px;
+    }
+
+    .my-applications-breadcrumb {
+        font-size: 10px;
+    }
+
+    .my-applications-section-header h2 {
+        font-size: 18px;
+    }
+
+    .my-applications-section-header p {
+        font-size: 11px;
+    }
+
+    .application-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .application-card-details {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .application-detail-item,
+    .application-detail-item:nth-child(odd) {
+        padding: 0;
+        border-right: none;
+    }
+
+    .application-job-title h2 {
+        font-size: 15px;
+    }
+
+    .application-company-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .application-status {
+        margin-left: 0;
+    }
+
+}
+
+
+/* ==========================================
+   DARK MODE
+   Theme controlled from Landing Page
+========================================== */
+
+body.dark .my-applications-page {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   DARK HEADER
+========================================== */
+
+body.dark .my-applications-header {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .my-applications-breadcrumb {
+    color: #94a3b8;
+}
+
+body.dark .my-applications-breadcrumb span {
+    color: #475569;
+}
+
+body.dark .my-applications-badge {
+    background: #172554;
+    border-color: #1e3a8a;
+    color: #60a5fa;
+}
+
+body.dark .my-applications-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .my-applications-header p {
+    color: #94a3b8;
+}
+
+body.dark .my-applications-count {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark .my-applications-count strong {
+    color: #60a5fa;
+}
+
+body.dark .my-applications-count span {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   DARK SUMMARY CARDS
+========================================== */
+
+body.dark .application-summary-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .application-summary-card:hover {
+    background: #243247;
+    border-color: #475569;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+body.dark .application-summary-icon.total,
+body.dark .application-summary-icon.applied {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .application-summary-icon.shortlisted {
+    background: #422006;
+    color: #fbbf24;
+}
+
+body.dark .application-summary-icon.selected {
+    background: #052e24;
+    color: #34d399;
+}
+
+body.dark .application-summary-content span {
+    color: #94a3b8;
+}
+
+body.dark .application-summary-content strong {
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   DARK SECTION HEADER
+========================================== */
+
+body.dark .my-applications-section-badge {
+    color: #60a5fa;
+}
+
+body.dark .my-applications-section-header h2 {
+    color: #f8fafc;
+}
+
+body.dark .my-applications-section-header p {
+    color: #94a3b8;
+}
+
+body.dark .my-applications-result-count {
+    background: #1e293b;
+    border-color: #334155;
+    color: #94a3b8;
+}
+
+body.dark .my-applications-result-count strong {
+    color: #60a5fa;
+}
+
+
+/* ==========================================
+   DARK APPLICATION CARD
+========================================== */
+
+body.dark .application-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
+}
+
+body.dark .application-card:hover {
+    border-color: #475569;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+}
+
+
+/* ==========================================
+   DARK CARD HEADER
+========================================== */
+
+body.dark .application-card-header {
+    background: #1e293b;
+}
+
+body.dark .application-company-icon {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .application-job-title h2 {
+    color: #f8fafc;
+}
+
+body.dark .application-job-title h3 {
+    color: #94a3b8;
+}
+
+body.dark .application-card-divider {
+    background: #334155;
+}
+
+
+/* ==========================================
+   DARK STATUS
+========================================== */
+
+body.dark .status-applied {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .status-shortlisted {
+    background: #422006;
+    color: #fbbf24;
+}
+
+body.dark .status-selected {
+    background: #052e24;
+    color: #34d399;
+}
+
+body.dark .status-rejected {
+    background: #450a0a;
+    color: #f87171;
+}
+
+
+/* ==========================================
+   DARK DETAILS
+========================================== */
+
+body.dark .application-card-details {
+    background: #172033;
+    border-bottom-color: #334155;
+}
+
+body.dark .application-detail-item {
+    border-right-color: #334155;
+}
+
+body.dark .application-detail-item span {
+    color: #94a3b8;
+}
+
+body.dark .application-detail-item strong {
+    color: #e2e8f0;
+}
+
+
+/* ==========================================
+   DARK FOOTER
+========================================== */
+
+body.dark .application-card-footer {
+    background: #1e293b;
+}
+
+body.dark .application-card-footer small {
+    color: #94a3b8;
+}
+
+body.dark .application-card-footer > div:first-child strong {
+    color: #e2e8f0;
+}
+
+body.dark .application-status-message {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   DARK EMPTY STATE
+========================================== */
+
+body.dark .my-applications-empty {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .my-applications-empty-icon {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .my-applications-empty h2 {
+    color: #f8fafc;
+}
+
+body.dark .my-applications-empty p {
+    color: #94a3b8;
+}
+
+body.dark .my-applications-empty span {
+    color: #64748b;
+}
+
+
+/* ==========================================
+   DARK LOADING
+========================================== */
+
+body.dark .my-applications-loading {
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+body.dark .my-applications-loader {
+    border-color: #334155;
+    border-top-color: #3b82f6;
+}
+
+body.dark .my-applications-loading p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   DARK RESPONSIVE BORDERS
+========================================== */
+
+@media (max-width: 1000px) {
+
+    body.dark .application-detail-item:nth-child(odd) {
+        border-right-color: #334155;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    body.dark .application-detail-item,
+    body.dark .application-detail-item:nth-child(odd) {
+        border-right: none;
+    }
+
+}

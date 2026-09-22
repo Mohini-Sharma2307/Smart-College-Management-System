@@ -1,0 +1,990 @@
+/* ==========================================
+   CAREER PROFILE PAGE
+========================================== */
+
+.career-profile-page {
+    min-height: 100vh;
+    padding: 30px;
+
+    background: #f5f7fb;
+    color: #0f172a;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.career-profile-header {
+    max-width: 1250px;
+    margin: 0 auto 22px;
+
+    padding: 24px 26px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.career-profile-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.career-profile-header-main {
+    min-width: 0;
+    flex: 1;
+}
+
+
+/* ==========================================
+   BREADCRUMB
+========================================== */
+
+.career-profile-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 11px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.career-profile-breadcrumb span {
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   HEADER BADGE
+========================================== */
+
+.career-profile-badge {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 9px;
+    padding: 6px 10px;
+
+    border: 1px solid #dbeafe;
+    border-radius: 7px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 10px;
+    font-weight: 750;
+
+    letter-spacing: 0.6px;
+}
+
+
+/* ==========================================
+   HEADER TITLE
+========================================== */
+
+.career-profile-header h1 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+}
+
+.career-profile-header p {
+    max-width: 700px;
+
+    margin: 8px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   HEADER ICON
+========================================== */
+
+.career-header-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dbeafe;
+    border-radius: 15px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 27px;
+}
+
+
+/* ==========================================
+   SUCCESS / ERROR MESSAGES
+========================================== */
+
+.career-success-message,
+.career-error-message {
+    max-width: 1250px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 16px;
+
+    border-radius: 11px;
+
+    font-size: 12px;
+}
+
+
+/* Success */
+
+.career-success-message {
+    border: 1px solid #bbf7d0;
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.career-success-message .career-message-icon {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+
+/* Error */
+
+.career-error-message {
+    border: 1px solid #fecaca;
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.career-error-message .career-message-icon {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+
+/* Message icon */
+
+.career-message-icon {
+    width: 31px;
+    height: 31px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.career-success-message > div:last-child,
+.career-error-message > div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.career-success-message strong,
+.career-error-message strong {
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.career-success-message span,
+.career-error-message span {
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.career-profile-form {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   FORM SECTION
+========================================== */
+
+.career-form-section {
+    margin-bottom: 18px;
+
+    padding: 22px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.035);
+}
+
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.career-section-header {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-bottom: 21px;
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.career-section-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 18px;
+}
+
+.career-section-label {
+    margin-bottom: 4px;
+
+    color: #2563eb;
+
+    font-size: 9px;
+    font-weight: 750;
+
+    letter-spacing: 0.7px;
+}
+
+.career-section-header h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 750;
+}
+
+.career-section-header p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   FORM GRID
+========================================== */
+
+.career-form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.career-full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* ==========================================
+   FORM GROUP
+========================================== */
+
+.career-form-group {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.career-form-group label {
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.career-form-group input,
+.career-form-group select,
+.career-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid #dbe3ef;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #0f172a;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Input */
+
+.career-form-group input,
+.career-form-group select {
+    height: 43px;
+
+    padding: 0 13px;
+}
+
+
+/* Textarea */
+
+.career-form-group textarea {
+    min-height: 125px;
+
+    padding: 12px 13px;
+
+    resize: vertical;
+
+    line-height: 1.55;
+}
+
+
+/* Placeholder */
+
+.career-form-group input::placeholder,
+.career-form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+
+/* Focus */
+
+.career-form-group input:focus,
+.career-form-group select:focus,
+.career-form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+
+    background: #ffffff;
+}
+
+
+/* Small helper */
+
+.career-form-group small {
+    margin-top: 6px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   SELECT
+========================================== */
+
+.career-form-group select {
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.career-form-actions {
+    max-width: 1250px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 2px auto 30px;
+    padding: 0;
+}
+
+
+/* ==========================================
+   SAVE BUTTON
+========================================== */
+
+.save-career-btn {
+    min-width: 185px;
+
+    height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 19px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.save-career-btn:hover:not(:disabled) {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 16px rgba(37, 99, 235, 0.23);
+}
+
+.save-career-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.save-career-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   SAVE SPINNER
+========================================== */
+
+.career-save-spinner {
+    width: 14px;
+    height: 14px;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation: careerSaveLoader 0.7s linear infinite;
+}
+
+@keyframes careerSaveLoader {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.career-profile-loading {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f7fb;
+
+    color: #64748b;
+}
+
+.career-profile-loader {
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 13px;
+
+    border: 3px solid #dbeafe;
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: careerProfileLoader 0.8s linear infinite;
+}
+
+.career-profile-loading p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@keyframes careerProfileLoader {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .career-profile-page {
+        padding: 25px 20px;
+    }
+
+    .career-profile-header {
+        padding: 21px;
+    }
+
+    .career-form-section {
+        padding: 20px;
+    }
+
+    .career-form-grid {
+        gap: 16px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+    .career-profile-page {
+        padding: 18px 14px;
+    }
+
+    .career-profile-header {
+        padding: 19px;
+    }
+
+    .career-profile-header-content {
+        align-items: flex-start;
+    }
+
+    .career-profile-header h1 {
+        font-size: 24px;
+    }
+
+    .career-profile-header p {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .career-profile-breadcrumb {
+        font-size: 10px;
+    }
+
+    .career-profile-badge {
+        font-size: 9px;
+    }
+
+    .career-header-icon {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 12px;
+
+        font-size: 21px;
+    }
+
+
+    /* Messages */
+
+    .career-success-message,
+    .career-error-message {
+        align-items: flex-start;
+
+        padding: 12px;
+    }
+
+
+    /* Form sections */
+
+    .career-form-section {
+        padding: 18px;
+
+        border-radius: 13px;
+    }
+
+    .career-section-header {
+        gap: 10px;
+
+        margin-bottom: 18px;
+        padding-bottom: 15px;
+    }
+
+    .career-section-icon {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+
+        font-size: 16px;
+    }
+
+    .career-section-header h2 {
+        font-size: 16px;
+    }
+
+    .career-section-header p {
+        font-size: 11px;
+    }
+
+
+    /* Grid */
+
+    .career-form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .career-full-width {
+        grid-column: auto;
+    }
+
+
+    /* Button */
+
+    .career-form-actions {
+        margin-bottom: 20px;
+    }
+
+    .save-career-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 420px) {
+
+    .career-profile-page {
+        padding: 15px 11px;
+    }
+
+    .career-profile-header {
+        padding: 17px;
+    }
+
+    .career-profile-header-content {
+        gap: 12px;
+    }
+
+    .career-profile-header h1 {
+        font-size: 21px;
+    }
+
+    .career-profile-header p {
+        font-size: 11px;
+    }
+
+    .career-header-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+    .career-form-section {
+        padding: 16px;
+    }
+
+    .career-section-icon {
+        width: 35px;
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .career-section-header h2 {
+        font-size: 15px;
+    }
+
+    .career-section-header p {
+        font-size: 10px;
+    }
+
+    .career-form-group label {
+        font-size: 11px;
+    }
+
+    .career-form-group input,
+    .career-form-group select {
+        height: 41px;
+
+        font-size: 12px;
+    }
+
+    .career-form-group textarea {
+        font-size: 12px;
+    }
+
+    .career-form-group small {
+        font-size: 9px;
+    }
+
+}
+
+
+/* ==========================================
+   DARK MODE
+   Theme controlled from Landing Page
+========================================== */
+
+body.dark .career-profile-page {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   DARK HEADER
+========================================== */
+
+body.dark .career-profile-header {
+    background: #1e293b;
+    border-color: #334155;
+
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .career-profile-breadcrumb {
+    color: #94a3b8;
+}
+
+body.dark .career-profile-breadcrumb span {
+    color: #475569;
+}
+
+body.dark .career-profile-badge {
+    background: #172554;
+    border-color: #1e3a8a;
+    color: #60a5fa;
+}
+
+body.dark .career-profile-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .career-profile-header p {
+    color: #94a3b8;
+}
+
+body.dark .career-header-icon {
+    background: #172554;
+    border-color: #1e3a8a;
+    color: #60a5fa;
+}
+
+
+/* ==========================================
+   DARK SUCCESS MESSAGE
+========================================== */
+
+body.dark .career-success-message {
+    background: #052e24;
+    border-color: #065f46;
+    color: #6ee7b7;
+}
+
+body.dark .career-success-message .career-message-icon {
+    background: #064e3b;
+    color: #34d399;
+}
+
+
+/* ==========================================
+   DARK ERROR MESSAGE
+========================================== */
+
+body.dark .career-error-message {
+    background: #450a0a;
+    border-color: #7f1d1d;
+    color: #fca5a5;
+}
+
+body.dark .career-error-message .career-message-icon {
+    background: #7f1d1d;
+    color: #f87171;
+}
+
+
+/* ==========================================
+   DARK FORM SECTIONS
+========================================== */
+
+body.dark .career-form-section {
+    background: #1e293b;
+    border-color: #334155;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .career-section-header {
+    border-bottom-color: #334155;
+}
+
+body.dark .career-section-icon {
+    background: #172554;
+    color: #60a5fa;
+}
+
+body.dark .career-section-label {
+    color: #60a5fa;
+}
+
+body.dark .career-section-header h2 {
+    color: #f8fafc;
+}
+
+body.dark .career-section-header p {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   DARK FORM
+========================================== */
+
+body.dark .career-form-group label {
+    color: #e2e8f0;
+}
+
+body.dark .career-form-group input,
+body.dark .career-form-group select,
+body.dark .career-form-group textarea {
+    border-color: #475569;
+
+    background: #172033;
+    color: #f8fafc;
+}
+
+body.dark .career-form-group input::placeholder,
+body.dark .career-form-group textarea::placeholder {
+    color: #64748b;
+}
+
+body.dark .career-form-group input:focus,
+body.dark .career-form-group select:focus,
+body.dark .career-form-group textarea:focus {
+    border-color: #3b82f6;
+
+    background: #172033;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.14);
+}
+
+body.dark .career-form-group small {
+    color: #64748b;
+}
+
+
+/* ==========================================
+   DARK SELECT
+========================================== */
+
+body.dark .career-form-group select option {
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   DARK LOADING
+========================================== */
+
+body.dark .career-profile-loading {
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+body.dark .career-profile-loader {
+    border-color: #334155;
+    border-top-color: #3b82f6;
+}
+
+body.dark .career-profile-loading p {
+    color: #94a3b8;
+}

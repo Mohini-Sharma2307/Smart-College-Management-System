@@ -1,0 +1,1394 @@
+/* =========================================================
+   ATTENDANCE MANAGEMENT PAGE
+========================================================= */
+
+.attendance-management {
+    min-height: 100vh;
+    padding: 28px;
+    background: #f5f7fb;
+    color: #1e293b;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.attendance-header {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.attendance-header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.attendance-header-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #e8f0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.attendance-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #172033;
+}
+
+.attendance-header p {
+    margin: 5px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.attendance-total-badge {
+    min-width: 110px;
+    padding: 11px 16px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.attendance-total-badge span {
+    display: block;
+    font-size: 11px;
+    color: #64748b;
+    margin-bottom: 3px;
+}
+
+.attendance-total-badge strong {
+    font-size: 20px;
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.attendance-summary-grid {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.attendance-summary-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.attendance-summary-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: #eff6ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.attendance-summary-card span {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.attendance-summary-card strong {
+    display: block;
+    font-size: 23px;
+    color: #172033;
+}
+
+
+/* =========================================================
+   MARK ATTENDANCE FORM CARD
+========================================================= */
+
+.attendance-form-card {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+    overflow: hidden;
+}
+
+.attendance-form-header {
+    padding: 20px 22px;
+    border-bottom: 1px solid #e2e8f0;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.attendance-form-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+
+    background: #ecfdf5;
+    color: #059669;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.attendance-form-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #172033;
+}
+
+.attendance-form-header p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.attendance-form {
+    padding: 22px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    align-items: end;
+}
+
+.attendance-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.attendance-form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.attendance-form-group select,
+.attendance-form-group input {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 13px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #1e293b;
+
+    font-size: 13px;
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.attendance-form-group select:focus,
+.attendance-form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.attendance-form-group select:hover,
+.attendance-form-group input:hover {
+    border-color: #94a3b8;
+}
+
+
+/* =========================================================
+   MARK BUTTON
+========================================================= */
+
+.mark-attendance-btn {
+    height: 44px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.mark-attendance-btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 5px 14px rgba(37, 99, 235, 0.20);
+}
+
+.mark-attendance-btn:active {
+    transform: translateY(1px);
+}
+
+.mark-attendance-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   SUBMIT SPINNER
+========================================================= */
+
+.attendance-spinner {
+    width: 15px;
+    height: 15px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation: attendanceSpin 0.7s linear infinite;
+}
+
+@keyframes attendanceSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   RECORDS CARD
+========================================================= */
+
+.attendance-records-card {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+}
+
+.attendance-records-header {
+    padding: 21px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.attendance-records-header h2 {
+    margin: 0;
+
+    font-size: 18px;
+    color: #172033;
+}
+
+.attendance-records-header p {
+    margin: 4px 0 0;
+
+    font-size: 13px;
+    color: #64748b;
+}
+
+.records-count {
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.attendance-filters {
+    padding: 17px 22px;
+
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1fr auto;
+    gap: 12px;
+
+    background: #fafbfc;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.attendance-search-wrapper {
+    position: relative;
+}
+
+.attendance-search-icon {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 14px;
+    color: #64748b;
+
+    pointer-events: none;
+}
+
+.attendance-search-wrapper input {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 13px 0 38px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    font-size: 13px;
+    color: #1e293b;
+
+    outline: none;
+    box-sizing: border-box;
+}
+
+.attendance-search-wrapper input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.attendance-filters select {
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+.attendance-filters select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.clear-filter-btn {
+    height: 42px;
+
+    padding: 0 17px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #475569;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.clear-filter-btn:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    color: #1e293b;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.attendance-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.attendance-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+.attendance-table thead {
+    background: #f8fafc;
+}
+
+.attendance-table th {
+    padding: 14px 18px;
+
+    text-align: left;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #64748b;
+
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.attendance-table td {
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #eef2f7;
+
+    font-size: 13px;
+
+    color: #334155;
+}
+
+.attendance-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.attendance-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.attendance-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   STUDENT
+========================================================= */
+
+.attendance-student {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 150px;
+}
+
+.attendance-avatar {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e8f0ff;
+    color: #2563eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.attendance-student strong {
+    color: #1e293b;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.attendance-email {
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SUBJECT
+========================================================= */
+
+.attendance-subject strong {
+    color: #334155;
+    font-size: 13px;
+}
+
+.subject-code {
+    display: inline-flex;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: #f1f5f9;
+    color: #475569;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.attendance-date {
+    color: #475569;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.attendance-status {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 7px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.attendance-status.present {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.attendance-status.absent {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.attendance-loading {
+    min-height: 320px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.attendance-large-spinner {
+    width: 35px;
+    height: 35px;
+
+    border: 3px solid #dbeafe;
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: attendanceSpin 0.8s linear infinite;
+
+    margin-bottom: 16px;
+}
+
+.attendance-loading h3 {
+    margin: 0 0 6px;
+
+    font-size: 15px;
+    color: #334155;
+}
+
+.attendance-loading p {
+    margin: 0;
+
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.attendance-empty {
+    height: 260px;
+
+    text-align: center !important;
+
+    vertical-align: middle;
+
+    color: #64748b !important;
+}
+
+.attendance-empty-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 14px;
+
+    background: #f1f5f9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.attendance-empty strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    color: #334155;
+}
+
+.attendance-empty span {
+    display: block;
+
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .attendance-management {
+        padding: 22px;
+    }
+
+    .attendance-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .attendance-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .attendance-filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .attendance-search-wrapper {
+        grid-column: span 2;
+    }
+
+    .clear-filter-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .attendance-management {
+        padding: 15px;
+    }
+
+    .attendance-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .attendance-header-left {
+        width: 100%;
+    }
+
+    .attendance-header-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 21px;
+    }
+
+    .attendance-header h1 {
+        font-size: 22px;
+    }
+
+    .attendance-header p {
+        font-size: 12px;
+    }
+
+    .attendance-total-badge {
+        width: 100%;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        text-align: left;
+    }
+
+    .attendance-total-badge span {
+        margin: 0;
+    }
+
+
+    .attendance-summary-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .attendance-summary-card {
+        padding: 15px;
+    }
+
+
+    .attendance-form-header {
+        padding: 17px;
+    }
+
+    .attendance-form {
+        padding: 17px;
+
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+
+    .attendance-records-header {
+        padding: 17px;
+
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .records-count {
+        align-self: flex-start;
+    }
+
+
+    .attendance-filters {
+        padding: 15px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .attendance-search-wrapper {
+        grid-column: auto;
+    }
+
+    .attendance-filters select,
+    .clear-filter-btn {
+        width: 100%;
+    }
+
+
+    .attendance-table th,
+    .attendance-table td {
+        padding: 13px 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .attendance-management {
+        padding: 11px;
+    }
+
+    .attendance-header h1 {
+        font-size: 20px;
+    }
+
+    .attendance-header-left {
+        gap: 10px;
+    }
+
+    .attendance-header-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .attendance-summary-card strong {
+        font-size: 20px;
+    }
+
+    .attendance-form-header h2,
+    .attendance-records-header h2 {
+        font-size: 16px;
+    }
+
+    .attendance-form-header p,
+    .attendance-records-header p {
+        font-size: 12px;
+    }
+
+    .attendance-table {
+        min-width: 780px;
+    }
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .assignment-submissions-page {
+    color: #f8fafc;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+body.dark .submission-header-icon {
+    background: #172554;
+}
+
+body.dark .submission-page-header h1 {
+    color: #f8fafc;
+}
+
+body.dark .submission-page-header p {
+    color: #94a3b8;
+}
+
+body.dark .submission-count {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .submission-count span {
+    color: #818cf8;
+}
+
+body.dark .submission-count small {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+body.dark .submission-error {
+    background: #450a0a;
+    border-color: #7f1d1d;
+    color: #f87171;
+}
+
+body.dark .submission-error span {
+    background: #991b1b;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+body.dark .submission-summary-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .submission-summary-icon {
+    background: #172554;
+}
+
+body.dark .submission-summary-card span {
+    color: #94a3b8;
+}
+
+body.dark .submission-summary-card strong {
+    color: #f8fafc;
+}
+
+
+/* =========================================================
+   FILTER CARD
+========================================================= */
+
+body.dark .submission-filter-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .submission-search-box label,
+body.dark .submission-status-filter label {
+    color: #cbd5e1;
+}
+
+body.dark .submission-search-wrapper input,
+body.dark .submission-status-filter select {
+    background: #0f172a;
+    border-color: #475569;
+    color: #f8fafc;
+}
+
+body.dark .submission-search-wrapper input::placeholder {
+    color: #64748b;
+}
+
+body.dark .submission-search-wrapper input:focus,
+body.dark .submission-status-filter select:focus {
+    border-color: #6366f1;
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+body.dark .submission-status-filter select option {
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+
+/* =========================================================
+   CLEAR FILTER
+========================================================= */
+
+body.dark .clear-submission-filter {
+    background: #0f172a;
+    border-color: #475569;
+    color: #cbd5e1;
+}
+
+body.dark .clear-submission-filter:hover {
+    background: #334155;
+    border-color: #64748b;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESULT INFO
+========================================================= */
+
+body.dark .submission-result-info {
+    color: #94a3b8;
+}
+
+body.dark .submission-result-info strong {
+    color: #f1f5f9;
+}
+
+
+/* =========================================================
+   SUBMISSION CARD
+========================================================= */
+
+body.dark .submission-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.22);
+}
+
+body.dark .submission-card:hover {
+    box-shadow: 0 9px 28px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+body.dark .submission-card-header {
+    background: #172033;
+    border-bottom-color: #334155;
+}
+
+body.dark .submission-icon {
+    background: #172554;
+}
+
+body.dark .submission-title-area h2 {
+    color: #f8fafc;
+}
+
+body.dark .submission-title-area p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+body.dark .submission-status-badge.submitted {
+    background: #052e24;
+    color: #34d399;
+}
+
+body.dark .submission-status-badge.late {
+    background: #431407;
+    color: #fb923c;
+}
+
+
+/* =========================================================
+   STUDENT SECTION
+========================================================= */
+
+body.dark .submission-student-section {
+    background: #0f172a;
+    border-color: #334155;
+}
+
+body.dark .student-avatar {
+    background: #312e81;
+    color: #a5b4fc;
+}
+
+body.dark .student-submission-info strong {
+    color: #f1f5f9;
+}
+
+body.dark .student-submission-info span {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   SUBMISSION DETAILS
+========================================================= */
+
+body.dark .submission-details {
+    background: #334155;
+    border-color: #334155;
+}
+
+body.dark .submission-detail-item {
+    background: #1e293b;
+}
+
+body.dark .submission-detail-item span {
+    color: #94a3b8;
+}
+
+body.dark .submission-detail-item strong {
+    color: #e2e8f0;
+}
+
+
+/* =========================================================
+   CONTENT HEADINGS
+========================================================= */
+
+body.dark .content-section-heading h3 {
+    color: #f1f5f9;
+}
+
+body.dark .content-section-heading p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   STUDENT ANSWER
+========================================================= */
+
+body.dark .student-answer-box {
+    background: #0f172a;
+    border-color: #334155;
+    color: #cbd5e1;
+}
+
+body.dark .no-answer {
+    background: #172033;
+    border-color: #475569;
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   FILE SECTION
+========================================================= */
+
+body.dark .attached-file-box {
+    background: #172554;
+    border-color: #1e40af;
+}
+
+body.dark .file-icon {
+    background: #1e3a8a;
+}
+
+body.dark .attached-file-info strong {
+    color: #e2e8f0;
+}
+
+body.dark .attached-file-info small {
+    color: #94a3b8;
+}
+
+body.dark .view-file-btn {
+    background: #312e81;
+    border-color: #4f46e5;
+    color: #c7d2fe;
+}
+
+body.dark .view-file-btn:hover {
+    background: #3730a3;
+    border-color: #6366f1;
+}
+
+body.dark .no-file {
+    background: #172033;
+    border-color: #475569;
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   EVALUATION SECTION
+========================================================= */
+
+body.dark .evaluation-section {
+    background: #172033;
+    border-color: #334155;
+}
+
+body.dark .evaluation-icon {
+    background: #052e24;
+    color: #34d399;
+}
+
+body.dark .evaluation-header h3 {
+    color: #f1f5f9;
+}
+
+body.dark .evaluation-header p {
+    color: #94a3b8;
+}
+
+body.dark .evaluated-badge {
+    background: #052e24;
+    color: #34d399;
+}
+
+
+/* =========================================================
+   EVALUATION FORM
+========================================================= */
+
+body.dark .marks-group label,
+body.dark .feedback-group label {
+    color: #cbd5e1;
+}
+
+body.dark .marks-group input,
+body.dark .feedback-group textarea {
+    background: #0f172a;
+    border-color: #475569;
+    color: #f8fafc;
+}
+
+body.dark .marks-group input::placeholder,
+body.dark .feedback-group textarea::placeholder {
+    color: #64748b;
+}
+
+body.dark .marks-group input:focus,
+body.dark .feedback-group textarea:focus {
+    border-color: #6366f1;
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+
+/* =========================================================
+   EVALUATE BUTTON
+========================================================= */
+
+body.dark .evaluate-submission-btn {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+body.dark .evaluate-submission-btn:hover:not(:disabled) {
+    background: #4338ca;
+}
+
+
+/* =========================================================
+   CURRENT EVALUATION
+========================================================= */
+
+body.dark .current-evaluation {
+    background: #052e24;
+    border-color: #166534;
+}
+
+body.dark .current-marks-box {
+    border-right-color: #166534;
+}
+
+body.dark .current-marks-box span,
+body.dark .current-feedback span {
+    color: #94a3b8;
+}
+
+body.dark .current-marks-box strong {
+    color: #34d399;
+}
+
+body.dark .current-feedback p {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+body.dark .submission-loading {
+    color: #e2e8f0;
+}
+
+body.dark .submission-loader {
+    border-color: #334155;
+    border-top-color: #6366f1;
+}
+
+body.dark .submission-loading h3 {
+    color: #e2e8f0;
+}
+
+body.dark .submission-loading p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+body.dark .no-submissions {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .empty-submission-icon {
+    background: #0f172a;
+}
+
+body.dark .no-submissions h3 {
+    color: #e2e8f0;
+}
+
+body.dark .no-submissions p {
+    color: #94a3b8;
+}
