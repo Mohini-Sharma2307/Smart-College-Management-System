@@ -16,7 +16,7 @@ const StudentInterviews = () => {
         const fetchInterviews = async () => {
             try {
                 const response = await fetch(
-                    "http://localhost:5000/api/interviews/my-interviews",
+                    "https://smart-college-management-backend.onrender.com/api/interviews/my-interviews",
                     {
                         method: "GET",
                         headers: {

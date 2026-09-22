@@ -17,7 +17,7 @@ function Companies() {
         const fetchCompanies = async () => {
             try {
                 const response = await fetch(
-                    "http://localhost:5000/api/companies",
+                    "https://smart-college-management-backend.onrender.com/api/companies",
                     {
                         method: "GET",
                         headers: {

@@ -18,7 +18,7 @@ const PlacementRecords = () => {
     const fetchPlacementRecords = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/placement-records/my-placement-records",
+                "https://smart-college-management-backend.onrender.com/api/placement-records/my-placement-records",
                 {
                     method: "GET",
                     headers: {

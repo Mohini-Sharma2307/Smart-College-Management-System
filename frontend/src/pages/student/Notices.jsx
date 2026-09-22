@@ -13,7 +13,7 @@ function Notices() {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/notices",
+                    "https://smart-college-management-backend.onrender.com/api/notices",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -133,4 +133,5 @@ function Notices() {
 }
 
 export default Notices;
+
 

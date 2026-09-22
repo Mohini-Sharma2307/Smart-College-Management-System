@@ -18,7 +18,7 @@ function Fees() {
                 // ==========================================
 
                 const feeResponse = await fetch(
-                    "http://localhost:5000/api/fees/my-fee",
+                    "https://smart-college-management-backend.onrender.com/api/fees/my-fee",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -43,7 +43,7 @@ function Fees() {
                 // ==========================================
 
                 const receiptResponse = await fetch(
-                    "http://localhost:5000/api/fee-receipts/my-receipts",
+                    "https://smart-college-management-backend.onrender.com/api/fee-receipts/my-receipts",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -93,7 +93,7 @@ function Fees() {
                 localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/fee-receipts/student/${receiptId}/pdf`,
+                `https://smart-college-management-backend.onrender.com/api/fee-receipts/student/${receiptId}/pdf`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -431,4 +431,5 @@ function Fees() {
 }
 
 export default Fees;
+
 

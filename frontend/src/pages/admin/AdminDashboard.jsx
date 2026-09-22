@@ -41,11 +41,11 @@
 
 //         const [studentsResponse, admissionsResponse, noticesResponse] =
 //           await Promise.all([
-//             fetch("http://localhost:5000/api/students", { headers }),
+//             fetch("https://smart-college-management-backend.onrender.com/api/students", { headers }),
 
-//             fetch("http://localhost:5000/api/admissions", { headers }),
+//             fetch("https://smart-college-management-backend.onrender.com/api/admissions", { headers }),
 
-//             fetch("http://localhost:5000/api/notices", { headers }),
+//             fetch("https://smart-college-management-backend.onrender.com/api/notices", { headers }),
 //           ]);
 
 //         const studentsData = await studentsResponse.json();
@@ -477,15 +477,15 @@ function AdminDashboard() {
           admissionsResponse,
           noticesResponse,
         ] = await Promise.all([
-          fetch("http://localhost:5000/api/students", {
+          fetch("https://smart-college-management-backend.onrender.com/api/students", {
             headers,
           }),
 
-          fetch("http://localhost:5000/api/admissions", {
+          fetch("https://smart-college-management-backend.onrender.com/api/admissions", {
             headers,
           }),
 
-          fetch("http://localhost:5000/api/notices", {
+          fetch("https://smart-college-management-backend.onrender.com/api/notices", {
             headers,
           }),
         ]);

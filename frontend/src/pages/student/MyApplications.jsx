@@ -18,7 +18,7 @@ const MyApplications = () => {
     const fetchApplications = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/job-applications/my-applications",
+                "https://smart-college-management-backend.onrender.com/api/job-applications/my-applications",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

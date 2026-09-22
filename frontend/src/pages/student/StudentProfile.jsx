@@ -33,7 +33,7 @@
 //                 }
 
 //                 const response = await fetch(
-//                     "http://localhost:5000/api/auth/profile",
+//                     "https://smart-college-management-backend.onrender.com/api/auth/profile",
 //                     {
 //                         headers: {
 //                             Authorization: `Bearer ${token}`
@@ -142,7 +142,7 @@
 //             const token = localStorage.getItem("token");
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/auth/profile",
+//                 "https://smart-college-management-backend.onrender.com/api/auth/profile",
 //                 {
 //                     method: "PUT",
 
@@ -476,7 +476,7 @@ function StudentProfile() {
                 }
 
                 const response = await fetch(
-                    "http://localhost:5000/api/auth/profile",
+                    "https://smart-college-management-backend.onrender.com/api/auth/profile",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -610,7 +610,7 @@ function StudentProfile() {
             );
 
             const response = await fetch(
-                "http://localhost:5000/api/auth/profile/photo",
+                "https://smart-college-management-backend.onrender.com/api/auth/profile/photo",
                 {
                     method: "PUT",
 
@@ -780,7 +780,7 @@ function StudentProfile() {
                 localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/auth/profile",
+                "https://smart-college-management-backend.onrender.com/api/auth/profile",
                 {
                     method: "PUT",
 
@@ -890,7 +890,7 @@ function StudentProfile() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/auth/change-password",
+                "https://smart-college-management-backend.onrender.com/api/auth/change-password",
                 {
                     method: "PUT",
                     headers: {
@@ -1023,7 +1023,7 @@ function StudentProfile() {
 
     const profilePhotoUrl =
         user?.profilePhoto
-            ? `http://localhost:5000${user.profilePhoto}`
+            ? `https://smart-college-management-backend.onrender.com${user.profilePhoto}`
             : "";
 
     // ==========================================
@@ -2071,4 +2071,5 @@ function StudentProfile() {
 }
 
 export default StudentProfile;
+
 

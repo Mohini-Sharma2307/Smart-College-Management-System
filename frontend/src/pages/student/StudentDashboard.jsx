@@ -15,7 +15,7 @@ function StudentDashboard() {
     const fetchAttendance = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/attendance/my-attendance/summary",
+          "https://smart-college-management-backend.onrender.com/api/attendance/my-attendance/summary",
           {
             method: "GET",
             headers: {
@@ -329,4 +329,5 @@ function StudentDashboard() {
 }
 
 export default StudentDashboard;
+
 

@@ -36,7 +36,7 @@
 //             const token = localStorage.getItem("token");
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/students",
+//                 "https://smart-college-management-backend.onrender.com/api/students",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`
@@ -80,7 +80,7 @@
 //             const token = localStorage.getItem("token");
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/fee-receipts",
+//                 "https://smart-college-management-backend.onrender.com/api/fee-receipts",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`
@@ -142,7 +142,7 @@
 //             const token = localStorage.getItem("token");
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/fee-receipts",
+//                 "https://smart-college-management-backend.onrender.com/api/fee-receipts",
 //                 {
 //                     method: "POST",
 
@@ -223,7 +223,7 @@
 //                 localStorage.getItem("token");
 
 //             const response = await fetch(
-//                 `http://localhost:5000/api/fee-receipts/${receipt._id}/pdf`,
+//                 `https://smart-college-management-backend.onrender.com/api/fee-receipts/${receipt._id}/pdf`,
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`
@@ -838,7 +838,7 @@ function FeeReceiptManagement() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/students",
+                "https://smart-college-management-backend.onrender.com/api/students",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -879,7 +879,7 @@ function FeeReceiptManagement() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/fee-receipts",
+                "https://smart-college-management-backend.onrender.com/api/fee-receipts",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -942,7 +942,7 @@ function FeeReceiptManagement() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/fee-receipts",
+                "https://smart-college-management-backend.onrender.com/api/fee-receipts",
                 {
                     method: "POST",
 
@@ -1027,7 +1027,7 @@ function FeeReceiptManagement() {
                 localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/fee-receipts/${receipt._id}/pdf`,
+                `https://smart-college-management-backend.onrender.com/api/fee-receipts/${receipt._id}/pdf`,
                 {
                     headers: {
                         Authorization:

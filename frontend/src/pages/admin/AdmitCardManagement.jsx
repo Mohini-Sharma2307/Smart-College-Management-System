@@ -38,7 +38,7 @@
 //     const fetchStudents = async () => {
 //         try {
 //             const response = await fetch(
-//                 "http://localhost:5000/api/students",
+//                 "https://smart-college-management-backend.onrender.com/api/students",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`
@@ -66,7 +66,7 @@
 //     const fetchExams = async () => {
 //         try {
 //             const response = await fetch(
-//                 "http://localhost:5000/api/exams",
+//                 "https://smart-college-management-backend.onrender.com/api/exams",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`
@@ -97,7 +97,7 @@
 //             setError("");
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/admit-cards/",
+//                 "https://smart-college-management-backend.onrender.com/api/admit-cards/",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`
@@ -153,7 +153,7 @@
 
 //         try {
 //             const response = await fetch(
-//                 "http://localhost:5000/api/admit-cards",
+//                 "https://smart-college-management-backend.onrender.com/api/admit-cards",
 //                 {
 //                     method: "POST",
 
@@ -232,7 +232,7 @@
 //             setDownloadingId(card._id);
 
 //             const response = await fetch(
-//                 `http://localhost:5000/api/admit-cards/${card._id}/pdf`,
+//                 `https://smart-college-management-backend.onrender.com/api/admit-cards/${card._id}/pdf`,
 //                 {
 //                     method: "GET",
 
@@ -1212,7 +1212,7 @@ const AdmitCardManagement = () => {
     const fetchStudents = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/students",
+                "https://smart-college-management-backend.onrender.com/api/students",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -1237,7 +1237,7 @@ const AdmitCardManagement = () => {
     const fetchExams = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/exams",
+                "https://smart-college-management-backend.onrender.com/api/exams",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -1265,7 +1265,7 @@ const AdmitCardManagement = () => {
             setError("");
 
             const response = await fetch(
-                "http://localhost:5000/api/admit-cards/",
+                "https://smart-college-management-backend.onrender.com/api/admit-cards/",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -1312,7 +1312,7 @@ const AdmitCardManagement = () => {
             setSubmitting(true);
 
             const response = await fetch(
-                "http://localhost:5000/api/admit-cards",
+                "https://smart-college-management-backend.onrender.com/api/admit-cards",
                 {
                     method: "POST",
                     headers: {
@@ -1377,7 +1377,7 @@ const AdmitCardManagement = () => {
             setDownloadingId(card._id);
 
             const response = await fetch(
-                `http://localhost:5000/api/admit-cards/${card._id}/pdf`,
+                `https://smart-college-management-backend.onrender.com/api/admit-cards/${card._id}/pdf`,
                 {
                     method: "GET",
                     headers: {
@@ -2484,4 +2484,5 @@ const AdmitCardManagement = () => {
 };
 
 export default AdmitCardManagement;
+
 

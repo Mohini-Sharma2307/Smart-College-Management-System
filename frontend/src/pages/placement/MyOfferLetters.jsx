@@ -19,7 +19,7 @@ const MyOfferLetters = () => {
     const fetchOfferLetters = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/offer-letters/my-offer-letters",
+                "https://smart-college-management-backend.onrender.com/api/offer-letters/my-offer-letters",
                 {
                     method: "GET",
                     headers: {
@@ -56,7 +56,7 @@ const MyOfferLetters = () => {
             setDownloadingId(offerId);
 
             const response = await fetch(
-                `http://localhost:5000/api/offer-letters/${offerId}/student-pdf`,
+                `https://smart-college-management-backend.onrender.com/api/offer-letters/${offerId}/student-pdf`,
                 {
                     method: "GET",
                     headers: {

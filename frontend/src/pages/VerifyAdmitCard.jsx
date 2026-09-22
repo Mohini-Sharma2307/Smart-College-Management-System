@@ -20,7 +20,7 @@ const VerifyAdmitCard = () => {
                 }
 
                 const response = await fetch(
-                    `http://localhost:5000/api/admit-cards/verify/${verificationCode}`
+                    `https://smart-college-management-backend.onrender.com/api/admit-cards/verify/${verificationCode}`
                 );
 
                 const data = await response.json();
@@ -192,4 +192,5 @@ const VerifyAdmitCard = () => {
 };
 
 export default VerifyAdmitCard;
+
 

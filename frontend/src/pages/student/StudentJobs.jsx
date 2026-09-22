@@ -28,7 +28,7 @@ const StudentJobs = () => {
 
   const fetchJobs = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/jobs", {
+      const response = await fetch("https://smart-college-management-backend.onrender.com/api/jobs", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -134,7 +134,7 @@ const StudentJobs = () => {
       setApplying(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/job-applications/apply",
+        "https://smart-college-management-backend.onrender.com/api/job-applications/apply",
         {
           method: "POST",
 
@@ -610,3 +610,4 @@ const StudentJobs = () => {
 };
 
 export default StudentJobs;
+

@@ -32,7 +32,7 @@ const CareerProfile = () => {
     const fetchCareerProfile = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/career-profile/my-profile",
+                "https://smart-college-management-backend.onrender.com/api/career-profile/my-profile",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -125,7 +125,7 @@ const CareerProfile = () => {
                 .filter(Boolean);
 
             const response = await fetch(
-                "http://localhost:5000/api/career-profile",
+                "https://smart-college-management-backend.onrender.com/api/career-profile",
                 {
                     method: "POST",
 

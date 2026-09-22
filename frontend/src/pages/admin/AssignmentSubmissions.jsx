@@ -27,7 +27,7 @@ const AssignmentSubmissions = () => {
             setError("");
 
             const response = await fetch(
-                "http://localhost:5000/api/assignment-submissions",
+                "https://smart-college-management-backend.onrender.com/api/assignment-submissions",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -231,7 +231,7 @@ const AssignmentSubmissions = () => {
             setEvaluatingId(submissionId);
 
             const response = await fetch(
-                `http://localhost:5000/api/assignment-submissions/${submissionId}/evaluate`,
+                `https://smart-college-management-backend.onrender.com/api/assignment-submissions/${submissionId}/evaluate`,
                 {
                     method: "PUT",
 
@@ -315,7 +315,7 @@ const AssignmentSubmissions = () => {
         }
 
         const fileUrl =
-            `http://localhost:5000${submissionFile}`;
+            `https://smart-college-management-backend.onrender.com${submissionFile}`;
 
         window.open(
             fileUrl,

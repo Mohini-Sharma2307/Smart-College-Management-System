@@ -40,7 +40,7 @@ const InterviewManagement = () => {
             const [interviewResponse, applicationResponse] =
                 await Promise.all([
                     fetch(
-                        "http://localhost:5000/api/interviews",
+                        "https://smart-college-management-backend.onrender.com/api/interviews",
                         {
                             headers: {
                                 Authorization: `Bearer ${token}`
@@ -49,7 +49,7 @@ const InterviewManagement = () => {
                     ),
 
                     fetch(
-                        "http://localhost:5000/api/job-applications",
+                        "https://smart-college-management-backend.onrender.com/api/job-applications",
                         {
                             headers: {
                                 Authorization: `Bearer ${token}`
@@ -194,8 +194,8 @@ const InterviewManagement = () => {
 
         try {
             const url = editingInterview
-                ? `http://localhost:5000/api/interviews/${editingInterview._id}`
-                : "http://localhost:5000/api/interviews";
+                ? `https://smart-college-management-backend.onrender.com/api/interviews/${editingInterview._id}`
+                : "https://smart-college-management-backend.onrender.com/api/interviews";
 
             const method = editingInterview
                 ? "PUT"
@@ -253,7 +253,7 @@ const InterviewManagement = () => {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/interviews/${interviewId}`,
+                `https://smart-college-management-backend.onrender.com/api/interviews/${interviewId}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -1162,3 +1162,4 @@ const InterviewManagement = () => {
 };
 
 export default InterviewManagement;
+

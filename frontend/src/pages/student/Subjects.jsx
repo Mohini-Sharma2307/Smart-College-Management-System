@@ -13,7 +13,7 @@
 //                 const token = localStorage.getItem("token");
 
 //                 const response = await fetch(
-//                     "http://localhost:5000/api/subjects",
+//                     "https://smart-college-management-backend.onrender.com/api/subjects",
 //                     {
 //                         headers: {
 //                             Authorization: `Bearer ${token}`
@@ -151,7 +151,7 @@ function Subjects() {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/subjects",
+                    "https://smart-college-management-backend.onrender.com/api/subjects",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`

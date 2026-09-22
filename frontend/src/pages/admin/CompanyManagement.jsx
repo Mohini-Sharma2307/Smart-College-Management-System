@@ -44,7 +44,7 @@ const CompanyManagement = () => {
             setError("");
 
             const response = await fetch(
-                "http://localhost:5000/api/companies",
+                "https://smart-college-management-backend.onrender.com/api/companies",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -168,8 +168,8 @@ const CompanyManagement = () => {
             setSubmitting(true);
 
             const url = editingCompany
-                ? `http://localhost:5000/api/companies/${editingCompany._id}`
-                : "http://localhost:5000/api/companies";
+                ? `https://smart-college-management-backend.onrender.com/api/companies/${editingCompany._id}`
+                : "https://smart-college-management-backend.onrender.com/api/companies";
 
             const method = editingCompany ? "PUT" : "POST";
 
@@ -252,7 +252,7 @@ const CompanyManagement = () => {
             setMessage("");
 
             const response = await fetch(
-                `http://localhost:5000/api/companies/${deleteCompany._id}`,
+                `https://smart-college-management-backend.onrender.com/api/companies/${deleteCompany._id}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -1121,6 +1121,7 @@ const CompanyManagement = () => {
 };
 
 export default CompanyManagement;
+
 
 
 

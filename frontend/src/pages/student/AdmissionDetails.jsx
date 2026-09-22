@@ -20,7 +20,7 @@ function AdmissionDetails() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/admissions/my-admission",
+                "https://smart-college-management-backend.onrender.com/api/admissions/my-admission",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -61,7 +61,7 @@ function AdmissionDetails() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/admissions/apply",
+                "https://smart-college-management-backend.onrender.com/api/admissions/apply",
                 {
                     method: "POST",
                     headers: {

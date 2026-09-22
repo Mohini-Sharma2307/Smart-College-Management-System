@@ -44,7 +44,7 @@ const OfferLetterManagement = () => {
             const [offerResponse, applicationResponse] =
                 await Promise.all([
                     fetch(
-                        "http://localhost:5000/api/offer-letters",
+                        "https://smart-college-management-backend.onrender.com/api/offer-letters",
                         {
                             headers: {
                                 Authorization: `Bearer ${token}`
@@ -53,7 +53,7 @@ const OfferLetterManagement = () => {
                     ),
 
                     fetch(
-                        "http://localhost:5000/api/job-applications",
+                        "https://smart-college-management-backend.onrender.com/api/job-applications",
                         {
                             headers: {
                                 Authorization: `Bearer ${token}`
@@ -274,8 +274,8 @@ const OfferLetterManagement = () => {
 
         try {
             const url = editingOffer
-                ? `http://localhost:5000/api/offer-letters/${editingOffer._id}`
-                : "http://localhost:5000/api/offer-letters";
+                ? `https://smart-college-management-backend.onrender.com/api/offer-letters/${editingOffer._id}`
+                : "https://smart-college-management-backend.onrender.com/api/offer-letters";
 
             const method = editingOffer
                 ? "PUT"
@@ -345,7 +345,7 @@ const OfferLetterManagement = () => {
         try {
             const response =
                 await fetch(
-                    `http://localhost:5000/api/offer-letters/${offerId}`,
+                    `https://smart-college-management-backend.onrender.com/api/offer-letters/${offerId}`,
                     {
                         method: "DELETE",
 
@@ -397,7 +397,7 @@ const OfferLetterManagement = () => {
 
             const response =
                 await fetch(
-                    `http://localhost:5000/api/offer-letters/${offerId}/pdf`,
+                    `https://smart-college-management-backend.onrender.com/api/offer-letters/${offerId}/pdf`,
                     {
                         method: "GET",
 
@@ -1388,4 +1388,5 @@ const OfferLetterManagement = () => {
 };
 
 export default OfferLetterManagement;
+
 

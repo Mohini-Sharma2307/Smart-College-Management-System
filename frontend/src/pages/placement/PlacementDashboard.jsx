@@ -27,7 +27,7 @@ function PlacementDashboard() {
                 applicationsResponse
             ] = await Promise.all([
                 fetch(
-                    "http://localhost:5000/api/jobs",
+                    "https://smart-college-management-backend.onrender.com/api/jobs",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -36,7 +36,7 @@ function PlacementDashboard() {
                 ),
 
                 fetch(
-                    "http://localhost:5000/api/job-applications/my-applications",
+                    "https://smart-college-management-backend.onrender.com/api/job-applications/my-applications",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -673,4 +673,5 @@ function PlacementDashboard() {
 }
 
 export default PlacementDashboard;
+
 

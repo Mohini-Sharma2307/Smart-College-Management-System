@@ -14,7 +14,7 @@ function Results() {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/results/my-results",
+                    "https://smart-college-management-backend.onrender.com/api/results/my-results",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -48,7 +48,7 @@ function Results() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/results/my-results/pdf",
+                "https://smart-college-management-backend.onrender.com/api/results/my-results/pdf",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -294,3 +294,4 @@ function Results() {
 }
 
 export default Results;
+

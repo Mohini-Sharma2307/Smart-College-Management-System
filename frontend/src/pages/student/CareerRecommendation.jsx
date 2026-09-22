@@ -24,7 +24,7 @@ const CareerRecommendation = () => {
             setError("");
 
             const response = await fetch(
-                "http://localhost:5000/api/career-recommendations",
+                "https://smart-college-management-backend.onrender.com/api/career-recommendations",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -661,6 +661,7 @@ const CareerRecommendation = () => {
 };
 
 export default CareerRecommendation;
+
 
 
 

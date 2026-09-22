@@ -62,7 +62,7 @@ const PlacementRecordManagement = () => {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/placement-records",
+                "https://smart-college-management-backend.onrender.com/api/placement-records",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -109,7 +109,7 @@ const PlacementRecordManagement = () => {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/job-applications",
+                "https://smart-college-management-backend.onrender.com/api/job-applications",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -369,9 +369,9 @@ const PlacementRecordManagement = () => {
 
             const url = editingId
 
-                ? `http://localhost:5000/api/placement-records/${editingId}`
+                ? `https://smart-college-management-backend.onrender.com/api/placement-records/${editingId}`
 
-                : "http://localhost:5000/api/placement-records";
+                : "https://smart-college-management-backend.onrender.com/api/placement-records";
 
 
             const method =
@@ -465,7 +465,7 @@ const PlacementRecordManagement = () => {
 
             const response =
                 await fetch(
-                    `http://localhost:5000/api/placement-records/${id}`,
+                    `https://smart-college-management-backend.onrender.com/api/placement-records/${id}`,
                     {
                         method: "DELETE",
 
@@ -1562,4 +1562,5 @@ const PlacementRecordManagement = () => {
 };
 
 export default PlacementRecordManagement;
+
 

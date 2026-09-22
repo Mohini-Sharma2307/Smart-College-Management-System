@@ -16,7 +16,7 @@ const PlacementAnalytics = () => {
     const fetchPlacementAnalytics = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/placement-analytics/my-analytics",
+                "https://smart-college-management-backend.onrender.com/api/placement-analytics/my-analytics",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -507,4 +507,5 @@ const PlacementAnalytics = () => {
 };
 
 export default PlacementAnalytics;
+
 

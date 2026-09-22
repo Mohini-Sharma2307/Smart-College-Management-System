@@ -19,7 +19,7 @@ const ApplicationManagement = () => {
     const fetchApplications = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/job-applications",
+                "https://smart-college-management-backend.onrender.com/api/job-applications",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -58,7 +58,7 @@ const ApplicationManagement = () => {
         try {
 
             const response = await fetch(
-                `http://localhost:5000/api/job-applications/${applicationId}/status`,
+                `https://smart-college-management-backend.onrender.com/api/job-applications/${applicationId}/status`,
                 {
                     method: "PUT",
 
@@ -576,4 +576,5 @@ const ApplicationManagement = () => {
 };
 
 export default ApplicationManagement;
+
 

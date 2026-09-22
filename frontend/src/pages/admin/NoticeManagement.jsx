@@ -25,7 +25,7 @@
 //             const token = localStorage.getItem("token");
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/notices",
+//                 "https://smart-college-management-backend.onrender.com/api/notices",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`
@@ -66,7 +66,7 @@
 //             const token = localStorage.getItem("token");
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/notices",
+//                 "https://smart-college-management-backend.onrender.com/api/notices",
 //                 {
 //                     method: "POST",
 //                     headers: {
@@ -332,7 +332,7 @@ function NoticeManagement() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/notices",
+                "https://smart-college-management-backend.onrender.com/api/notices",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -383,7 +383,7 @@ function NoticeManagement() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/notices",
+                "https://smart-college-management-backend.onrender.com/api/notices",
                 {
                     method: "POST",
 

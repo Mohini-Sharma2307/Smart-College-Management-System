@@ -37,7 +37,7 @@
 //     try {
 //       const token = localStorage.getItem("token");
 
-//       const response = await fetch("http://localhost:5000/api/students", {
+//       const response = await fetch("https://smart-college-management-backend.onrender.com/api/students", {
 //         method: "GET",
 //         headers: {
 //           Authorization: `Bearer ${token}`,
@@ -80,7 +80,7 @@
 //     try {
 //       const token = localStorage.getItem("token");
 
-//       const response = await fetch("http://localhost:5000/api/students", {
+//       const response = await fetch("https://smart-college-management-backend.onrender.com/api/students", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -129,7 +129,7 @@
 //       const token = localStorage.getItem("token");
 
 //       const response = await fetch(
-//         `http://localhost:5000/api/students/${studentId}`,
+//         `https://smart-college-management-backend.onrender.com/api/students/${studentId}`,
 //         {
 //           method: "DELETE",
 //           headers: {
@@ -200,7 +200,7 @@
 //       const token = localStorage.getItem("token");
 
 //       const response = await fetch(
-//         `http://localhost:5000/api/students/${editingStudent._id}`,
+//         `https://smart-college-management-backend.onrender.com/api/students/${editingStudent._id}`,
 //         {
 //           method: "PUT",
 //           headers: {
@@ -626,7 +626,7 @@ function Students() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/students",
+        "https://smart-college-management-backend.onrender.com/api/students",
         {
           method: "GET",
           headers: {
@@ -672,7 +672,7 @@ function Students() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/students",
+        "https://smart-college-management-backend.onrender.com/api/students",
         {
           method: "POST",
           headers: {
@@ -723,7 +723,7 @@ function Students() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/students/${studentId}`,
+        `https://smart-college-management-backend.onrender.com/api/students/${studentId}`,
         {
           method: "DELETE",
           headers: {
@@ -799,7 +799,7 @@ function Students() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/students/${editingStudent._id}`,
+        `https://smart-college-management-backend.onrender.com/api/students/${editingStudent._id}`,
         {
           method: "PUT",
           headers: {
@@ -1580,3 +1580,4 @@ function Students() {
 }
 
 export default Students;
+

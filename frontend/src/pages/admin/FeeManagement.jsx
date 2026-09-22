@@ -21,7 +21,7 @@
 //                 const token = localStorage.getItem("token");
 
 //                 const response = await fetch(
-//                     "http://localhost:5000/api/students",
+//                     "https://smart-college-management-backend.onrender.com/api/students",
 //                     {
 //                         headers: {
 //                             Authorization: `Bearer ${token}`
@@ -65,7 +65,7 @@
 //             const token = localStorage.getItem("token");
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/fees", 
+//                 "https://smart-college-management-backend.onrender.com/api/fees", 
 //                 { 
 //                     method: "POST", 
 //                     headers: { 
@@ -232,7 +232,7 @@ function FeeManagement() {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/students",
+                    "https://smart-college-management-backend.onrender.com/api/students",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -285,7 +285,7 @@ function FeeManagement() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/fees",
+                "https://smart-college-management-backend.onrender.com/api/fees",
                 {
                     method: "POST",
                     headers: {

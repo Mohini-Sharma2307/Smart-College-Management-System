@@ -52,7 +52,7 @@ const JobManagement = () => {
             const [jobsResponse, companiesResponse] =
                 await Promise.all([
                     fetch(
-                        "http://localhost:5000/api/jobs",
+                        "https://smart-college-management-backend.onrender.com/api/jobs",
                         {
                             headers: {
                                 Authorization: `Bearer ${token}`
@@ -61,7 +61,7 @@ const JobManagement = () => {
                     ),
 
                     fetch(
-                        "http://localhost:5000/api/companies",
+                        "https://smart-college-management-backend.onrender.com/api/companies",
                         {
                             headers: {
                                 Authorization: `Bearer ${token}`
@@ -269,8 +269,8 @@ const JobManagement = () => {
             };
 
             const url = editingJob
-                ? `http://localhost:5000/api/jobs/${editingJob._id}`
-                : "http://localhost:5000/api/jobs";
+                ? `https://smart-college-management-backend.onrender.com/api/jobs/${editingJob._id}`
+                : "https://smart-college-management-backend.onrender.com/api/jobs";
 
             const method = editingJob
                 ? "PUT"
@@ -349,7 +349,7 @@ const JobManagement = () => {
             setMessage("");
 
             const response = await fetch(
-                `http://localhost:5000/api/jobs/${deleteJob._id}`,
+                `https://smart-college-management-backend.onrender.com/api/jobs/${deleteJob._id}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -1457,4 +1457,5 @@ const JobManagement = () => {
 };
 
 export default JobManagement;
+
 

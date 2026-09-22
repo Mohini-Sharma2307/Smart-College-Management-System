@@ -24,7 +24,7 @@ const AdmitCard = () => {
             setError("");
 
             const response = await fetch(
-                "http://localhost:5000/api/admit-cards/my-admit-card",
+                "https://smart-college-management-backend.onrender.com/api/admit-cards/my-admit-card",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -68,7 +68,7 @@ const AdmitCard = () => {
             setDownloading(true);
 
             const response = await fetch(
-                "http://localhost:5000/api/admit-cards/my-admit-card/pdf",
+                "https://smart-college-management-backend.onrender.com/api/admit-cards/my-admit-card/pdf",
                 {
                     method: "GET",
 

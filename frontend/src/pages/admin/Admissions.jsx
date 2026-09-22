@@ -19,7 +19,7 @@ function Admissions() {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/admissions/",
+                    "https://smart-college-management-backend.onrender.com/api/admissions/",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -59,7 +59,7 @@ function Admissions() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/admissions/${id}/status`,
+                `https://smart-college-management-backend.onrender.com/api/admissions/${id}/status`,
                 {
                     method: "PUT",
 

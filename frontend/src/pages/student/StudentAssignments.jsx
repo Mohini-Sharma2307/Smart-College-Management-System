@@ -20,7 +20,7 @@ const StudentAssignments = () => {
     const fetchAssignments = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/assignments/my-assignments",
+                "https://smart-college-management-backend.onrender.com/api/assignments/my-assignments",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -48,7 +48,7 @@ const StudentAssignments = () => {
     const fetchSubmissions = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/assignment-submissions/my-submissions",
+                "https://smart-college-management-backend.onrender.com/api/assignment-submissions/my-submissions",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -176,7 +176,7 @@ const StudentAssignments = () => {
             }
 
             const response = await fetch(
-                "http://localhost:5000/api/assignment-submissions",
+                "https://smart-college-management-backend.onrender.com/api/assignment-submissions",
                 {
                     method: "POST",
                     headers: {

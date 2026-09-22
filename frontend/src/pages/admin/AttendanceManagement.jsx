@@ -26,7 +26,7 @@
 //     const fetchStudents = async () => {
 //         try {
 //             const response = await fetch(
-//                 "http://localhost:5000/api/students",
+//                 "https://smart-college-management-backend.onrender.com/api/students",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@
 //     const fetchSubjects = async () => {
 //         try {
 //             const response = await fetch(
-//                 "http://localhost:5000/api/subjects",
+//                 "https://smart-college-management-backend.onrender.com/api/subjects",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`,
@@ -80,7 +80,7 @@
 //     const fetchAttendance = async () => {
 //         try {
 //             const response = await fetch(
-//                 "http://localhost:5000/api/attendance",
+//                 "https://smart-college-management-backend.onrender.com/api/attendance",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`,
@@ -124,7 +124,7 @@
 
 //         try {
 //             const response = await fetch(
-//                 "http://localhost:5000/api/attendance",
+//                 "https://smart-college-management-backend.onrender.com/api/attendance",
 //                 {
 //                     method: "POST",
 //                     headers: {
@@ -505,7 +505,7 @@ const AttendanceManagement = () => {
     const fetchStudents = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/students",
+                "https://smart-college-management-backend.onrender.com/api/students",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -532,7 +532,7 @@ const AttendanceManagement = () => {
     const fetchSubjects = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/subjects",
+                "https://smart-college-management-backend.onrender.com/api/subjects",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -559,7 +559,7 @@ const AttendanceManagement = () => {
     const fetchAttendance = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/attendance",
+                "https://smart-college-management-backend.onrender.com/api/attendance",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -615,7 +615,7 @@ const AttendanceManagement = () => {
             setSubmitting(true);
 
             const response = await fetch(
-                "http://localhost:5000/api/attendance",
+                "https://smart-college-management-backend.onrender.com/api/attendance",
                 {
                     method: "POST",
                     headers: {
@@ -1377,3 +1377,4 @@ const AttendanceManagement = () => {
 };
 
 export default AttendanceManagement;
+

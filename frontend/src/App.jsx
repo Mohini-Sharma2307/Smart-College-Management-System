@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // =========================
@@ -78,629 +77,565 @@ import AdminPlacementAnalytics from "./pages/admin/PlacementAnalytics";
 
 import VerifyAdmitCard from "./pages/VerifyAdmitCard";
 
-
 function App() {
-
-    return (
-        <BrowserRouter>
-
-            <Routes>
-
-                {/* =========================
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* =========================
                     LOGIN SELECTION
                 ========================= */}
 
-                <Route
-                    path="/"
-                    element={<LoginSelection />}
-                />
+        <Route path="/" element={<LoginSelection />} />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT LOGIN
                 ========================= */}
 
-                <Route
-                    path="/student-login"
-                    element={<StudentLogin />}
-                />
+        <Route path="/student-login" element={<StudentLogin />} />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT REGISTRATION
                 ========================= */}
 
-                <Route
-                    path="/register"
-                    element={<StudentRegistration />}
-                />
+        <Route path="/register" element={<StudentRegistration />} />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT DASHBOARD
                 ========================= */}
 
-                <Route
-                    path="/student-dashboard"
-                    element={
-                        <ProtectedRoute>
-                            <StudentDashboard />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/student-dashboard"
+          element={
+            <ProtectedRoute>
+              <StudentDashboard />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT PROFILE
                 ========================= */}
 
-                <Route
-                    path="/student-profile"
-                    element={
-                        <ProtectedRoute>
-                            <StudentProfile />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/student-profile"
+          element={
+            <ProtectedRoute>
+              <StudentProfile />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     ADMISSION DETAILS
                 ========================= */}
 
-                <Route
-                    path="/admission-details"
-                    element={
-                        <ProtectedRoute>
-                            <AdmissionDetails />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/admission-details"
+          element={
+            <ProtectedRoute>
+              <AdmissionDetails />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     SUBJECTS
                 ========================= */}
 
-                <Route
-                    path="/subjects"
-                    element={
-                        <ProtectedRoute>
-                            <Subjects />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/subjects"
+          element={
+            <ProtectedRoute>
+              <Subjects />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     EXAM TIMETABLE
                 ========================= */}
 
-                <Route
-                    path="/exam-timetable"
-                    element={
-                        <ProtectedRoute>
-                            <ExamTimetable />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/exam-timetable"
+          element={
+            <ProtectedRoute>
+              <ExamTimetable />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     RESULTS
                 ========================= */}
 
-                <Route
-                    path="/results"
-                    element={
-                        <ProtectedRoute>
-                            <Results />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/results"
+          element={
+            <ProtectedRoute>
+              <Results />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     FEES
                 ========================= */}
 
-                <Route
-                    path="/fees"
-                    element={
-                        <ProtectedRoute>
-                            <Fees />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/fees"
+          element={
+            <ProtectedRoute>
+              <Fees />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     NOTICES
                 ========================= */}
 
-                <Route
-                    path="/notices"
-                    element={
-                        <ProtectedRoute>
-                            <Notices />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/notices"
+          element={
+            <ProtectedRoute>
+              <Notices />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     ADMIT CARD
                 ========================= */}
 
-                <Route
-                    path="/admit-card"
-                    element={
-                        <ProtectedRoute>
-                            <AdmitCard />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/admit-card"
+          element={
+            <ProtectedRoute>
+              <AdmitCard />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT ATTENDANCE
                 ========================= */}
 
-                <Route
-                    path="/student-attendance"
-                    element={
-                        <ProtectedRoute>
-                            <StudentAttendance />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/student-attendance"
+          element={
+            <ProtectedRoute>
+              <StudentAttendance />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT ASSIGNMENTS
                 ========================= */}
 
-                <Route
-                    path="/student-assignments"
-                    element={
-                        <ProtectedRoute>
-                            <StudentAssignments />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/student-assignments"
+          element={
+            <ProtectedRoute>
+              <StudentAssignments />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =================================================
+        {/* =================================================
                     PLACEMENT PORTAL
                 ================================================= */}
 
-                <Route
-                    path="/placement-dashboard"
-                    element={
-                        <ProtectedRoute role="student">
-                            <PlacementDashboard />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/placement-dashboard"
+          element={
+            <ProtectedRoute role="student">
+              <PlacementDashboard />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT JOBS
                 ========================= */}
 
-                <Route
-                    path="/student-jobs"
-                    element={
-                        <ProtectedRoute role="student">
-                            <StudentJobs />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/student-jobs"
+          element={
+            <ProtectedRoute role="student">
+              <StudentJobs />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     MY APPLICATIONS
                 ========================= */}
 
-                <Route
-                    path="/my-applications"
-                    element={
-                        <ProtectedRoute role="student">
-                            <MyApplications />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/my-applications"
+          element={
+            <ProtectedRoute role="student">
+              <MyApplications />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     CAREER PROFILE
                 ========================= */}
 
-                <Route
-                    path="/career-profile"
-                    element={
-                        <ProtectedRoute role="student">
-                            <CareerProfile />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/career-profile"
+          element={
+            <ProtectedRoute role="student">
+              <CareerProfile />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     CAREER RECOMMENDATION
                 ========================= */}
 
-                <Route
-                    path="/career-recommendation"
-                    element={
-                        <ProtectedRoute role="student">
-                            <CareerRecommendation />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/career-recommendation"
+          element={
+            <ProtectedRoute role="student">
+              <CareerRecommendation />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     PLACEMENT COMPANIES
                 ========================= */}
 
-                <Route
-                    path="/placement-companies"
-                    element={
-                        <ProtectedRoute role="student">
-                            <Companies />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/placement-companies"
+          element={
+            <ProtectedRoute role="student">
+              <Companies />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT INTERVIEWS
                 ========================= */}
 
-                <Route
-                    path="/student-interviews"
-                    element={
-                        <ProtectedRoute role="student">
-                            <StudentInterviews />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/student-interviews"
+          element={
+            <ProtectedRoute role="student">
+              <StudentInterviews />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     MY OFFER LETTERS
                 ========================= */}
 
-                <Route
-                    path="/my-offer-letters"
-                    element={
-                        <ProtectedRoute role="student">
-                            <MyOfferLetters />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/my-offer-letters"
+          element={
+            <ProtectedRoute role="student">
+              <MyOfferLetters />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     PLACEMENT RECORDS
                 ========================= */}
 
-                <Route
-                    path="/placement-records"
-                    element={
-                        <ProtectedRoute role="student">
-                            <PlacementRecords />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/placement-records"
+          element={
+            <ProtectedRoute role="student">
+              <PlacementRecords />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT PLACEMENT ANALYTICS
                 ========================= */}
 
-                <Route
-                    path="/placement-analytics"
-                    element={
-                        <ProtectedRoute role="student">
-                            <PlacementAnalytics />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/placement-analytics"
+          element={
+            <ProtectedRoute role="student">
+              <PlacementAnalytics />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     ADMIN LOGIN
                 ========================= */}
 
-                <Route
-                    path="/admin-login"
-                    element={<AdminLogin />}
-                />
+        <Route path="/admin-login" element={<AdminLogin />} />
 
-
-                {/* =========================
+        {/* =========================
                     ADMIN DASHBOARD
                 ========================= */}
 
-                <Route
-                    path="/admin-dashboard"
-                    element={
-                        <ProtectedRoute>
-                            <AdminDashboard />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/admin-dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     STUDENT MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/students"
-                    element={
-                        <ProtectedRoute>
-                            <Students />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/students"
+          element={
+            <ProtectedRoute>
+              <Students />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     ADMISSION MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/admissions"
-                    element={
-                        <ProtectedRoute>
-                            <Admissions />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/admissions"
+          element={
+            <ProtectedRoute>
+              <Admissions />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     FEE MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/fee-management"
-                    element={
-                        <ProtectedRoute>
-                            <FeeManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/fee-management"
+          element={
+            <ProtectedRoute>
+              <FeeManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     RESULT MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/result-management"
-                    element={
-                        <ProtectedRoute>
-                            <ResultManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/result-management"
+          element={
+            <ProtectedRoute>
+              <ResultManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     EXAM MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/exam-management"
-                    element={
-                        <ProtectedRoute>
-                            <ExamManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/exam-management"
+          element={
+            <ProtectedRoute>
+              <ExamManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     NOTICE MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/notice-management"
-                    element={
-                        <ProtectedRoute>
-                            <NoticeManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/notice-management"
+          element={
+            <ProtectedRoute>
+              <NoticeManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     ADMIT CARD MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/admit-card-management"
-                    element={
-                        <ProtectedRoute>
-                            <AdmitCardManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/admit-card-management"
+          element={
+            <ProtectedRoute>
+              <AdmitCardManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     ATTENDANCE MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/attendance-management"
-                    element={
-                        <ProtectedRoute>
-                            <AttendanceManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/attendance-management"
+          element={
+            <ProtectedRoute>
+              <AttendanceManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     ASSIGNMENT MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/assignment-management"
-                    element={
-                        <ProtectedRoute>
-                            <AssignmentManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/assignment-management"
+          element={
+            <ProtectedRoute>
+              <AssignmentManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     ASSIGNMENT SUBMISSIONS
                 ========================= */}
 
-                <Route
-                    path="/assignment-submissions"
-                    element={
-                        <ProtectedRoute>
-                            <AssignmentSubmissions />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/assignment-submissions"
+          element={
+            <ProtectedRoute>
+              <AssignmentSubmissions />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =========================
+        {/* =========================
                     FEE RECEIPT MANAGEMENT
                 ========================= */}
 
-                <Route
-                    path="/fee-receipt-management"
-                    element={
-                        <ProtectedRoute>
-                            <FeeReceiptManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/fee-receipt-management"
+          element={
+            <ProtectedRoute>
+              <FeeReceiptManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =================================================
+        {/* =================================================
                     COMPANY MANAGEMENT
                 ================================================= */}
 
-                <Route
-                    path="/company-management"
-                    element={
-                        <ProtectedRoute role="admin">
-                            <CompanyManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/company-management"
+          element={
+            <ProtectedRoute role="admin">
+              <CompanyManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =================================================
+        {/* =================================================
                     JOB MANAGEMENT
                 ================================================= */}
 
-                <Route
-                    path="/job-management"
-                    element={
-                        <ProtectedRoute role="admin">
-                            <JobManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/job-management"
+          element={
+            <ProtectedRoute role="admin">
+              <JobManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =================================================
+        {/* =================================================
                     APPLICATION MANAGEMENT
                 ================================================= */}
 
-                <Route
-                    path="/application-management"
-                    element={
-                        <ProtectedRoute role="admin">
-                            <ApplicationManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/application-management"
+          element={
+            <ProtectedRoute role="admin">
+              <ApplicationManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =================================================
+        {/* =================================================
                     INTERVIEW MANAGEMENT
                 ================================================= */}
 
-                <Route
-                    path="/interview-management"
-                    element={
-                        <ProtectedRoute role="admin">
-                            <InterviewManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/interview-management"
+          element={
+            <ProtectedRoute role="admin">
+              <InterviewManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =================================================
+        {/* =================================================
                     OFFER LETTER MANAGEMENT
                 ================================================= */}
 
-                <Route
-                    path="/offer-letter-management"
-                    element={
-                        <ProtectedRoute role="admin">
-                            <OfferLetterManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/offer-letter-management"
+          element={
+            <ProtectedRoute role="admin">
+              <OfferLetterManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =================================================
+        {/* =================================================
                     PLACEMENT RECORD MANAGEMENT
                 ================================================= */}
 
-                <Route
-                    path="/placement-record-management"
-                    element={
-                        <ProtectedRoute role="admin">
-                            <PlacementRecordManagement />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/placement-record-management"
+          element={
+            <ProtectedRoute role="admin">
+              <PlacementRecordManagement />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =================================================
+        {/* =================================================
                     ADMIN PLACEMENT ANALYTICS
                 ================================================= */}
 
-                <Route
-                    path="/admin-placement-analytics"
-                    element={
-                        <ProtectedRoute role="admin">
-                            <AdminPlacementAnalytics />
-                        </ProtectedRoute>
-                    }
-                />
+        <Route
+          path="/admin-placement-analytics"
+          element={
+            <ProtectedRoute role="admin">
+              <AdminPlacementAnalytics />
+            </ProtectedRoute>
+          }
+        />
 
-
-                {/* =================================================
+        {/* =================================================
                     PUBLIC ADMIT CARD VERIFICATION
                 ================================================= */}
 
-                <Route
-                    path="/verify-admit-card/:verificationCode"
-                    element={<VerifyAdmitCard />}
-                />
-
-            </Routes>
-
-        </BrowserRouter>
-    );
+        <Route
+          path="/verify-admit-card/:verificationCode"
+          element={<VerifyAdmitCard />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-
 export default App;
-

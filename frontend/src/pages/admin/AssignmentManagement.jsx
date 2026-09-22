@@ -23,7 +23,7 @@
 //     const fetchSubjects = async () => {
 //         try {
 //             const response = await fetch(
-//                 "http://localhost:5000/api/subjects",
+//                 "https://smart-college-management-backend.onrender.com/api/subjects",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`
@@ -50,7 +50,7 @@
 //             setLoading(true);
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/assignments",
+//                 "https://smart-college-management-backend.onrender.com/api/assignments",
 //                 {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`
@@ -112,7 +112,7 @@
 //             setCreating(true);
 
 //             const response = await fetch(
-//                 "http://localhost:5000/api/assignments",
+//                 "https://smart-college-management-backend.onrender.com/api/assignments",
 //                 {
 //                     method: "POST",
 
@@ -625,7 +625,7 @@ const AssignmentManagement = () => {
     const fetchSubjects = async () => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/subjects",
+                "https://smart-college-management-backend.onrender.com/api/subjects",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -653,7 +653,7 @@ const AssignmentManagement = () => {
             setError("");
 
             const response = await fetch(
-                "http://localhost:5000/api/assignments",
+                "https://smart-college-management-backend.onrender.com/api/assignments",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -713,7 +713,7 @@ const AssignmentManagement = () => {
             setCreating(true);
 
             const response = await fetch(
-                "http://localhost:5000/api/assignments",
+                "https://smart-college-management-backend.onrender.com/api/assignments",
                 {
                     method: "POST",
 

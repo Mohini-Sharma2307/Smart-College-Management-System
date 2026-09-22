@@ -13,7 +13,7 @@
 //                 const token = localStorage.getItem("token");
 
 //                 const response = await fetch(
-//                     "http://localhost:5000/api/exams",
+//                     "https://smart-college-management-backend.onrender.com/api/exams",
 //                     {
 //                         headers: {
 //                             Authorization: `Bearer ${token}`
@@ -189,7 +189,7 @@ function ExamTimetable() {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/exams",
+                    "https://smart-college-management-backend.onrender.com/api/exams",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
