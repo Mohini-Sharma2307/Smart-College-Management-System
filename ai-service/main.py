@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
 import joblib
+from pathlib import Path
 
 
 # ==========================================
@@ -19,7 +20,11 @@ app = FastAPI(
 # LOAD TRAINED MODEL
 # ==========================================
 
-model = joblib.load("career_model.pkl")
+BASE_DIR = Path(__file__).resolve().parent
+
+model = joblib.load(
+    BASE_DIR / "career_model.pkl"
+)
 
 print("Career ML model loaded successfully.")
 
@@ -29,10 +34,15 @@ print("Career ML model loaded successfully.")
 # ==========================================
 
 class CareerRequest(BaseModel):
+
     skills: list[str] = []
+
     interests: list[str] = []
+
     cgpa: float = 0
+
     experience: str = "Fresher"
+
     career_goal: str = ""
 
 
@@ -42,6 +52,7 @@ class CareerRequest(BaseModel):
 
 @app.get("/")
 def home():
+
     return {
         "message": "Smart College AI Career Service is running"
     }
@@ -72,16 +83,27 @@ def predict_career(data: CareerRequest):
         ]
     )
 
+    # ==========================================
+    # PREDICT CAREER
+    # ==========================================
+
     prediction = model.predict(input_data)[0]
 
-    # Get prediction probabilities
+    # ==========================================
+    # GET PREDICTION PROBABILITIES
+    # ==========================================
+
     probabilities = model.predict_proba(input_data)[0]
 
     classes = model.classes_
 
     recommendations = []
 
-    for career, probability in zip(classes, probabilities):
+    for career, probability in zip(
+        classes,
+        probabilities
+    ):
+
         recommendations.append(
             {
                 "career": career,
@@ -92,10 +114,18 @@ def predict_career(data: CareerRequest):
             }
         )
 
+    # ==========================================
+    # SORT RECOMMENDATIONS
+    # ==========================================
+
     recommendations.sort(
         key=lambda x: x["confidence"],
         reverse=True
     )
+
+    # ==========================================
+    # RESPONSE
+    # ==========================================
 
     return {
         "predictedCareer": prediction,
