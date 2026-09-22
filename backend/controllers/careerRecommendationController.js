@@ -1,4 +1,3 @@
-
 const CareerProfile = require("../models/CareerProfile");
 const Job = require("../models/Job");
 
@@ -6,7 +5,8 @@ const Job = require("../models/Job");
 // PYTHON ML SERVICE
 // ==========================================
 
-const ML_SERVICE_URL = "http://127.0.0.1:8000/predict";
+const ML_SERVICE_URL =
+    "https://smart-college-management-system-ai.onrender.com/predict";
 
 // ==========================================
 // CAREER SKILL & INTEREST DATA
@@ -135,7 +135,6 @@ const careerRules = [
     }
 ];
 
-
 // ==========================================
 // GET CAREER RULE
 // ==========================================
@@ -147,7 +146,6 @@ const getCareerRule = (role) => {
             role.toLowerCase()
     );
 };
-
 
 // ==========================================
 // GET CAREER RECOMMENDATIONS
@@ -173,7 +171,6 @@ const getCareerRecommendations = async (req, res) => {
             });
         }
 
-
         // ==========================================
         // NORMALIZE STUDENT DATA
         // ==========================================
@@ -191,7 +188,6 @@ const getCareerRecommendations = async (req, res) => {
                     interest.toLowerCase().trim()
                 )
                 .filter(Boolean);
-
 
         // ==========================================
         // CALL PYTHON ML SERVICE
@@ -231,7 +227,6 @@ const getCareerRecommendations = async (req, res) => {
                 }
             );
 
-
             if (mlResponse.ok) {
 
                 const mlData =
@@ -256,7 +251,6 @@ const getCareerRecommendations = async (req, res) => {
             );
         }
 
-
         // ==========================================
         // PROCESS ML RECOMMENDATIONS
         // ==========================================
@@ -274,11 +268,8 @@ const getCareerRecommendations = async (req, res) => {
                             recommendation.confidence || 0
                         );
 
-
-                    // Find career rule
                     const careerRule =
                         getCareerRule(careerRole);
-
 
                     // ==========================================
                     // MATCHED SKILLS
@@ -294,7 +285,6 @@ const getCareerRecommendations = async (req, res) => {
                             )
                             : [];
 
-
                     // ==========================================
                     // MATCHED INTERESTS
                     // ==========================================
@@ -309,15 +299,12 @@ const getCareerRecommendations = async (req, res) => {
                             )
                             : [];
 
-
                     return {
 
                         role: careerRole,
 
-                        // Actual ML confidence
                         confidence: confidence,
 
-                        // Keep score for frontend compatibility
                         score: Math.round(
                             confidence
                         ),
@@ -327,7 +314,6 @@ const getCareerRecommendations = async (req, res) => {
                         matchedInterests
                     };
                 });
-
 
         // ==========================================
         // GET OPEN JOBS
@@ -340,7 +326,6 @@ const getCareerRecommendations = async (req, res) => {
             .sort({
                 createdAt: -1
             });
-
 
         // ==========================================
         // MATCH JOBS WITH STUDENT SKILLS
@@ -359,7 +344,6 @@ const getCareerRecommendations = async (req, res) => {
                             )
                             .filter(Boolean);
 
-
                     const matchedSkills =
                         requiredSkills.filter(
                             (skill) =>
@@ -368,10 +352,8 @@ const getCareerRecommendations = async (req, res) => {
                                 )
                         );
 
-
                     const matchScore =
                         matchedSkills.length;
-
 
                     return {
                         job,
@@ -380,12 +362,10 @@ const getCareerRecommendations = async (req, res) => {
                     };
                 })
 
-
                 .filter(
                     (item) =>
                         item.matchScore > 0
                 )
-
 
                 .sort(
                     (a, b) =>
@@ -393,9 +373,7 @@ const getCareerRecommendations = async (req, res) => {
                         a.matchScore
                 )
 
-
                 .slice(0, 5);
-
 
         // ==========================================
         // RESPONSE
@@ -430,7 +408,6 @@ const getCareerRecommendations = async (req, res) => {
     }
 };
 
-
 // ==========================================
 // EXPORT
 // ==========================================
@@ -438,4 +415,3 @@ const getCareerRecommendations = async (req, res) => {
 module.exports = {
     getCareerRecommendations
 };
-
