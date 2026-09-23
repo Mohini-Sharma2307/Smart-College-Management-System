@@ -10,7 +10,7 @@ The platform provides separate **Student** and **Admin** workflows for managing 
 
 ### Frontend
 
-👉 https://smart-college-management-frontend.onrender.com/
+👉 https://smart-college-management-system-frontend.onrender.com
 
 ### Backend API
 
