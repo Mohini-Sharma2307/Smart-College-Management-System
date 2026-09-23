@@ -633,6 +633,7 @@ function App() {
           path="/verify-admit-card/:verificationCode"
           element={<VerifyAdmitCard />}
         />
+        
       </Routes>
     </BrowserRouter>
   );

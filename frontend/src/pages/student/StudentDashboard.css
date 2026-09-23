@@ -125,7 +125,14 @@
     border-radius: 10px;
 }
 
-.sidebar-menu a {
+
+/* =========================================================
+   SIDEBAR BUTTON
+   ========================================================= */
+
+.sidebar-menu .sidebar-btn {
+    width: 100%;
+
     display: flex;
     align-items: center;
 
@@ -136,20 +143,30 @@
     margin-bottom: 3px;
     padding: 0 9px;
 
+    border: none;
     border-radius: 10px;
 
-    color: #475569;
-    text-decoration: none;
+    background: transparent;
 
+    color: #475569;
+
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
     font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
 
     transition: 0.2s ease;
 
     white-space: nowrap;
 }
 
-.sidebar-menu a span {
+
+/* Sidebar Button Icon */
+
+.sidebar-menu .sidebar-btn span {
     width: 18px;
     min-width: 18px;
 
@@ -160,12 +177,18 @@
     font-size: 13px;
 }
 
-.sidebar-menu a:hover {
+
+/* Sidebar Button Hover */
+
+.sidebar-menu .sidebar-btn:hover {
     background: #f1f5ff;
     color: #315bdc;
 }
 
-.sidebar-menu a.active {
+
+/* Active Sidebar Button */
+
+.sidebar-menu .sidebar-btn.active {
     background: #f1f5ff;
     color: #2454d7;
 
@@ -716,7 +739,7 @@
         padding: 0 6px 8px;
     }
 
-    .sidebar-menu a {
+    .sidebar-menu .sidebar-btn {
         min-height: 42px;
 
         gap: 5px;
@@ -728,14 +751,14 @@
         white-space: normal;
     }
 
-    .sidebar-menu a span {
+    .sidebar-menu .sidebar-btn span {
         width: 15px;
         min-width: 15px;
 
         font-size: 11px;
     }
 
-    .sidebar-menu a.active {
+    .sidebar-menu .sidebar-btn.active {
         padding-left: 2px;
     }
 
@@ -892,7 +915,7 @@
         padding: 0 5px 7px;
     }
 
-    .sidebar-menu a {
+    .sidebar-menu .sidebar-btn {
         min-height: 40px;
 
         gap: 4px;
@@ -902,14 +925,14 @@
         font-size: 7px;
     }
 
-    .sidebar-menu a span {
+    .sidebar-menu .sidebar-btn span {
         width: 14px;
         min-width: 14px;
 
         font-size: 10px;
     }
 
-    .sidebar-menu a.active {
+    .sidebar-menu .sidebar-btn.active {
         padding-left: 1px;
     }
 
@@ -1298,7 +1321,7 @@
         font-size: 4px;
     }
 
-    .sidebar-menu a {
+    .sidebar-menu .sidebar-btn {
         font-size: 6.5px;
 
         min-height: 39px;
@@ -1420,19 +1443,23 @@ body.dark .sidebar-logo h2 {
     color: #f8fafc;
 }
 
-body.dark .sidebar-menu a {
+
+/* Dark Mode Sidebar Buttons */
+
+body.dark .sidebar-menu .sidebar-btn {
     color: #94a3b8;
 }
 
-body.dark .sidebar-menu a:hover,
-body.dark .sidebar-menu a.active {
+body.dark .sidebar-menu .sidebar-btn:hover,
+body.dark .sidebar-menu .sidebar-btn.active {
     background: #1e293b;
     color: #ffffff;
 }
 
-body.dark .sidebar-menu a.active {
+body.dark .sidebar-menu .sidebar-btn.active {
     border-left-color: #5b7cfa;
 }
+
 
 body.dark .logout-btn {
     background: #351b22;
@@ -1547,7 +1574,7 @@ body.dark .notice-item > span {
 
 @media screen and (max-width: 700px) {
 
-    .sidebar-menu a {
+    .sidebar-menu .sidebar-btn {
         flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
@@ -1565,14 +1592,14 @@ body.dark .notice-item > span {
         font-weight: 600 !important;
     }
 
-    .sidebar-menu a span {
+    .sidebar-menu .sidebar-btn span {
         width: auto !important;
         min-width: 0 !important;
 
         font-size: 15px !important;
     }
 
-    .sidebar-menu a.active {
+    .sidebar-menu .sidebar-btn.active {
         padding-left: 2px !important;
 
         border-left: none !important;
@@ -1587,7 +1614,7 @@ body.dark .notice-item > span {
 
 @media screen and (max-width: 380px) {
 
-    .sidebar-menu a {
+    .sidebar-menu .sidebar-btn {
         min-height: 54px !important;
 
         gap: 3px !important;
@@ -1595,7 +1622,7 @@ body.dark .notice-item > span {
         font-size: 8.5px !important;
     }
 
-    .sidebar-menu a span {
+    .sidebar-menu .sidebar-btn span {
         font-size: 14px !important;
     }
 }
@@ -1607,7 +1634,7 @@ body.dark .notice-item > span {
 
 @media screen and (max-width: 320px) {
 
-    .sidebar-menu a {
+    .sidebar-menu .sidebar-btn {
         min-height: 52px !important;
 
         gap: 3px !important;
@@ -1615,7 +1642,7 @@ body.dark .notice-item > span {
         font-size: 8px !important;
     }
 
-    .sidebar-menu a span {
+    .sidebar-menu .sidebar-btn span {
         font-size: 13px !important;
     }
 }
